@@ -1,0 +1,242 @@
+//submenu animation
+@keyframes showMenu {
+    0% {
+        left: 20px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+// pc版 megamenu
+.megamenu {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 9;
+    clear: both;
+    background-color: $primaryColor;
+    @include screen('mobile') {
+        display: none;
+    }
+    // when scroll navBar add sticky classname
+    &.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $primaryColor;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        &>ul {
+            width: 100%;
+            max-width: $container-max;
+            margin: 0 auto;
+            ul {
+                max-width: $container-max;
+                margin: 0 auto;
+            }
+        }
+    }
+    // 預設選單 ul
+    >ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // 第一層選單樣式
+        >li {
+            flex: auto;
+            >a {
+                display: block;
+                padding: 0;
+                min-height: 2.8em;
+                font-weight: bold;
+                line-height: 2.8em;
+                color: #fff;
+                box-sizing: border-box;
+                letter-spacing: 0.05em;
+                text-align: center;
+            }
+            &.hasChild {
+                >a {
+                    &:after {
+                        content: '';
+                        width: 4px;
+                        height: 4px;
+                        display: inline-block;
+                        margin-left: 0.5em;
+                        vertical-align: middle;
+                        border: 2px solid #fff;
+                        transform: rotate(135deg);
+                        border-bottom: none;
+                        border-left: none;
+                        margin-bottom: 0.2em;
+                    }
+                }
+            }
+            &:hover {
+                >a {
+                    color: $linkColor;
+                    background-color: #fff;
+                    &:after {
+                        border: 2px solid $aHover;
+                        border-bottom: none;
+                        border-left: none;
+                    }
+                }
+            }
+        }
+    }
+    ul {
+        li {
+            a {
+                display: block;
+                text-decoration: none;
+            }
+            // 第二層選單樣式
+            ul {
+                // display: none;
+                display: flex;
+                overflow: visible;
+                width: 100%;
+                padding: 35px 20px 35px 50px;
+                margin: 0;
+                z-index: 999999;
+                position: absolute;
+                top: auto;
+                left: 0;
+                right: 0;
+                list-style: none;
+                text-align: left;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                background-color: #fff;
+                li {
+                    flex: none;
+                    flex-basis: 22%;
+                    margin: 0 1.5%;
+                    padding: 0;
+                    position: relative;
+                    a {
+                        padding: 0.3em 1.2em 0.3em 1.6em;
+                        color: $linkColor;
+                        font-weight: bold;
+                        box-sizing: border-box;
+                        position: relative;
+                        transition: .2s;
+                        &:before {
+                            content: '';
+                            width: 10px;
+                            height: 3px;
+                            background-color: $linkColor;
+                            position: absolute;
+                            left: 8px;
+                            top: 13px;
+                        }
+                        &:hover,
+                        &:focus {
+                            color: #fff;
+                            background-color: lighten($primaryColor, 5);
+                            &:before {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                    &.plancountry {
+                        flex-basis: calc(100% - 30%);
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        ul.countryarea {
+                            display: block !important;
+                            li {
+                                display: block;
+                                float: left;
+                                flex: auto !important;
+                                width: auto !important;
+                                flex-basis: auto !important;
+                                position: static;
+                                a{
+                                    padding:0.3em 1em;
+
+                                }
+                            }
+                        }
+                        .countrylist {
+                            display:none;
+                            clear: both;
+                            float: none;
+                            margin-bottom: 40px;
+                           
+                            >ul {
+                                position: relative;
+                                left: auto;
+                                padding:0;
+                                margin:0;
+                                display: flex;
+                                flex-wrap: wrap;
+                                font-size: 0.938em;
+                                li {
+                                    flex:none;
+                                    flex-basis: 22%;
+                                    margin:0 1.5% ;
+                                    a {
+                                        white-space: nowrap;
+                                        padding:0.3em 1em;
+                                        box-sizing:border-box;
+                                        &:before {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // 第三層選單樣式
+                    >ul {
+                        margin: 5px 0 20px;
+                        padding: 0 !important;
+                        @include screen('mobile') {
+                            margin: 0 !important;
+                            padding: 0 !important;
+                        }
+                        li {
+                            margin: 0;
+                            padding: 0;
+                            a {
+                                font-size: 0.938em;
+                                &:before {
+                                    display: none;
+                                }
+                            }
+                            ul {
+                                margin: 0;
+                                padding: 0 0 0 1em !important;
+                            }
+                        }
+                    }
+                }
+                li.hasChild {
+                    >ul {
+                        position: relative;
+                        z-index: 999;
+                        top: 0;
+                        left: 0;
+                        animation: none;
+                        display: block;
+                        li {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+                ul {
+                    top: 0;
+                    left: 100%;
+                    animation: none;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
