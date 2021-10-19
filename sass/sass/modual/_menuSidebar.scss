@@ -170,6 +170,13 @@ $menuItems: 15;
                                 }
                             }
                             &.plancountry {
+                                display: block;
+                                ul.countryarea {
+                                    li {
+                                        width: 100% !important;
+                                        flex-basis: 100% !important;
+                                    }
+                                }
                                 .countrylist {
                                     margin-bottom: 20px;
                                     width: 100%;
@@ -179,7 +186,7 @@ $menuItems: 15;
                                         li {
                                             flex-basis: 100%;
                                             margin: 0;
-                                            a{
+                                            a {
                                                 padding: 0.5em 1em 0.5em 5em !important;
                                             }
                                         }
