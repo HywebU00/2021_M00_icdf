@@ -185,89 +185,6 @@ a.more {
     }
 }
 // 首頁固定側邊區塊選單
-// .fixed_sidebar_group2 {
-//     position: fixed;
-//     right: .5%;
-//     top: 22%;
-//     z-index: 99;
-//     background-color: rgba(83, 83, 83, .5);
-//     padding: 10px 4px;
-//     box-sizing: border-box;
-//     max-width: 50px;
-//     transition: .5s;
-//     border-radius: 50px;
-//     &:hover, &.open {
-//         background-color: rgba(0, 0, 0, .9);
-//         ul {
-//             li {
-//                 a {
-//                     &:before {
-//                         background-color: #fff;
-//                     }
-//                     &.active {
-//                         &:before {
-//                            background-color: $secondaryColor;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-//     ul {
-//         margin: 0;
-//         padding: 0;
-//         list-style: none;
-//         // display: flex;
-//         // justify-content: center;
-//         // flex-direction: column;
-//         li {
-//             margin: 0;
-//             padding: 0;
-//             a {
-//                 padding: 0 0 0 20px;
-//                 position: relative;
-//                 color: #fff;
-//                 display: block;
-//                 white-space: nowrap;
-//                 text-decoration: none;
-//                 font-size: 0;
-//                 &:before {
-//                     content: '';
-//                     width: 6px;
-//                     height: 6px;
-//                     background-color: #fff;
-//                     border-radius: 50%;
-//                     position: absolute;
-//                     left: calc(50% - 3px);
-//                     top: 10px;
-//                     transition: .2s;
-//                 }
-//                 &:hover, &:focus {
-//                     color: #fff;
-//                     &:before {
-//                         background-color: #fff;
-//                         width: 12px;
-//                         height: 12px;
-//                         left: calc(50% - 6px);
-//                     }
-//                 }
-//                 &.active {
-//                     &:before {
-//                         width: 12px;
-//                         height: 12px;
-//                         left: calc(50% - 6px);
-//                         top: 6px;
-//                         background-color: $secondaryColor;
-//                     }
-//                 }
-//                 &:focus {
-//                     box-shadow: none;
-//                 }
-//             }
-//         }
-//     }
-// }
-// 
 .fixed_sidebar_group {
     position: fixed;
     right: 0.5%;
@@ -355,7 +272,7 @@ a.more {
 // mpbanner輪播
 .mpslider_block {
     position: relative;
-    .shareblock {
+    .sharelist {
         position: absolute;
         top: 10%;
         left: 1%;
@@ -374,21 +291,66 @@ a.more {
             justify-content: center;
             align-items: center;
             li {
+                margin: 5px 0;
                 a {
                     display: block;
-                    padding: 2px 0;
+                    padding: 0;
                     box-sizing: border-box;
-                    img {
-                        width: 20px;
-                        height: 20px;
-                        transition: .5s;
-                    }
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 20px;
+                    width: 20px;
+                    height: 20px;
+                    font-size: 0;
+                    transition: .5s;
                     &:hover {
-                        img {
-                            width: 40px;
-                            height: 40px;
+                        background-size: 40px;
+                        width: 40px;
+                        height: 40px;
+                    }
+                    &.fb {
+                        background-image: url('../images/shareicon_f.svg');
+                        &:hover {
+                            background-image: url('../images/shareicon_f_hover.svg');
                         }
                     }
+                    &.youtube {
+                        background-image: url('../images/shareicon_youtube.svg');
+                        &:hover {
+                            background-image: url('../images/shareicon_youtube_hover.svg');
+                        }
+                    }
+                    &.podcast {
+                        background-image: url('../images/shareicon_mike.svg');
+                        &:hover {
+                            background-image: url('../images/shareicon_mike_hover.svg');
+                        }
+                    }
+                    &.instagram {
+                        background-image: url('../images/shareicon_instagram.svg');
+                        &:hover {
+                            background-image: url('../images/shareicon_instagram_hover.svg');
+                        }
+                    }
+                    &.blog {
+                        background-image: url('../images/shareicon_blog.svg');
+                        &:hover {
+                            background-image: url('../images/shareicon_blog_hover.svg');
+                        }
+                    }
+                    &.peopo {
+                        background-image: url('../images/shareicon_peopo.svg');
+                        &:hover {
+                            background-image: url('../images/shareicon_peopo_hover.svg');
+                        }
+                    }
+                    &.flickr {
+                        background-image: url('../images/shareicon_flickr.svg');
+                        &:hover {
+                            background-image: url('../images/shareicon_flickr_hover.svg');
+                        }
+                    }
+                    // 
                 }
             }
         }
@@ -463,31 +425,47 @@ a.more {
                         border-radius: 50%;
                         position: absolute;
                         left: 50%;
-                        top: 50%;
+                        top: 30%;
                         margin-left: -40px;
                         margin-top: -40px;
                         display: block;
                         z-index: 2;
+                        @include screen('mobile') {
+                            top: 20%;
+                        }
                     }
                     &:after {
                         content: '';
-                        border: 20px solid #fff;
+                        border: 24px solid #fff;
                         border-top-color: transparent;
                         border-right-color: transparent;
                         border-bottom-color: transparent;
                         position: absolute;
                         left: 50%;
-                        top: 50%;
-                        margin-top: -10px;
+                        top: 30%;
+                        margin-top: -12px;
+                        margin-left: 2px;
                         display: block;
                         z-index: 3;
+                        @include screen('mobile') {
+                            top: 20%;
+                        }
                     }
                 }
             }
             .wordcontent {
                 width: 40vw;
-                left: 5%;
+                left: 6%;
                 top: 10%;
+                @include screen('tablet') {
+                    width: 50vw;
+                }
+                @include screen('mobile') {
+                    width: 100vw;
+                    left: auto;
+                    top: auto;
+                    bottom: 13%;
+                }
             }
             &.align_center {
                 justify-content: center;
@@ -496,6 +474,15 @@ a.more {
                     width: 50vw;
                     left: auto;
                     top: auto;
+                    @include screen('tablet') {
+                        width: 60vw;
+                    }
+                    @include screen('mobile') {
+                        width: 100vw;
+                        left: auto;
+                        top: auto;
+                        bottom: 13%;
+                    }
                 }
             }
             &.align_bottom {
@@ -516,6 +503,16 @@ a.more {
                     left: auto;
                     top: 10%;
                     right: 5%;
+                    @include screen('tablet') {
+                        width: 50vw;
+                    }
+                    @include screen('mobile') {
+                        width: 100vw;
+                        left: auto;
+                        top: auto;
+                        right: auto;
+                        bottom: 13%;
+                    }
                 }
             }
         }
@@ -569,6 +566,9 @@ a.more {
             box-sizing: border-box;
             top: 10%;
             left: 5%;
+            @include screen('mobile') {
+                padding: 30px 40px 30px 60px;
+            }
             .bigword, .smallword {
                 opacity: 0;
                 a {
@@ -584,13 +584,20 @@ a.more {
                 margin-bottom: 15px;
                 line-height: 1.3em;
                 word-break: normal;
-                // text-shadow: rgb(46, 46, 46) 0px 1px 2px;
+                @include screen('mobile') {
+                    font-size: 1.375em;
+                }
+                @include screen('xs_mobile') {
+                    font-size: 1.125em;
+                }
             }
             .smallword {
                 font-size: 0.813em;
                 line-height: 1.6em;
                 word-break: normal;
-                // text-shadow: rgb(46, 46, 46) 0px 1px 2px;
+                @include screen('xs_mobile') {
+                    font-size: 0.688em;
+                }
             }
             @keyframes bigworddynamic {
                 0% {
@@ -638,6 +645,9 @@ a.more {
         li {
             /* 兩點的距離 */
             margin: 0 10px;
+            @include screen('mobile') {
+                margin: 0 3px;
+            }
             button {
                 /* 點的顏色 */
                 background: #fff;
@@ -646,6 +656,9 @@ a.more {
                 height: 2px;
                 border-radius: 0;
                 position: relative;
+                @include screen('mobile') {
+                    width: 40px;
+                }
                 &:hover, &:focus {
                     opacity: 1;
                     /* 點hover的顏色 */
@@ -676,6 +689,10 @@ a.more {
                         animation-name: dots;
                         animation-duration: 8s;
                         background: #65c0b8;
+                        @include screen('mobile') {
+                            width: 40px;
+                            animation-name: dots2;
+                        }
                     }
                     &:hover {
                         /* 點 active  hover的顏色 */
@@ -692,10 +709,72 @@ a.more {
                                     width: 100px;
                                 }
                             }
+                            @keyframes dots2 {
+                                from {
+                                    width: 0;
+                                }
+                                to {
+                                    width: 40px;
+                                }
+                            }
                         }
                     }
                 }
             }
+        }
+    }
+}
+// 影片燈箱movie_lightbox
+.movie_lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 99;
+    display: none;
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .close {
+        background-image: url('../images/icon/icon_close2.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        display: block;
+        cursor: pointer;
+    }
+    .content {
+        width: 60vw;
+        height: 60vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        background-color: #000;
+        border-radius: 0;
+        overflow: auto;
+        text-align: left;
+        @include screen('notebook') {
+            width: 70vw;
+        }
+        @include screen('tablet') {
+            width: 80vw;
+        }
+        @include screen('mobile') {
+            height: 50vh;
+            top: 10%;
+            transform: translateX(-50%);
         }
     }
 }
@@ -765,6 +844,8 @@ a.more {
                                     font-weight: bold;
                                     padding: 2px 15px;
                                     margin-bottom: 15px;
+                                    font-size: 1.125em;
+                                    letter-spacing: 0.01em;
                                 }
                                 .title {
                                     font-weight: bold;
@@ -838,7 +919,7 @@ a.more {
                                 padding: 0 20px 0 20px;
                                 box-sizing: border-box;
                                 @include screen('xs_mobile') {
-                                    padding: 0;
+                                    padding: 0 20px 20px 20px;
                                 }
                                 span {
                                     display: inline-block;
@@ -847,6 +928,8 @@ a.more {
                                     font-weight: bold;
                                     padding: 2px 15px;
                                     margin-bottom: 15px;
+                                    font-size: 1.125em;
+                                    letter-spacing: 0.01em;
                                 }
                                 .title {
                                     font-weight: bold;
@@ -880,7 +963,7 @@ a.more {
         }
         .popular_services_pic {
             position: relative;
-            height: 810px;
+            height: 900px;
             flex-basis: 30%;
             max-width: 30%;
             @media(max-width: 1300px) {
@@ -998,7 +1081,7 @@ a.more {
                             color: #fff;
                             display: block;
                             text-align: center;
-                            font-size: 1.125em;
+                            font-size: 1.25em;
                             letter-spacing: 0.05em;
                             img {
                                 width: 80px;
@@ -1199,6 +1282,24 @@ a.more {
                     }
                 }
             }
+            // 箭頭
+            .slick-prev, .slick-next {
+                @include screen('mobile') {
+                    width: 60px !important;
+                    height: 60px !important;
+                    top: 35%;
+                }
+            }
+            .slick-prev{
+                @include screen('mobile'){
+                    left: 10px;
+                }
+            }
+            .slick-next {
+                @include screen('mobile'){
+                    right: 10px;
+                }
+            }
             // 點點
             .slick-dots {
                 justify-content: center;
@@ -1252,13 +1353,15 @@ a.more {
                                 max-height: 100%;
                                 max-width: 100%;
                                 animation-name: dots;
-                                animation-duration: 4s;
+                                animation-duration: 5s;
                                 background: $primaryColor;
                                 @include screen('mobile') {
                                     width: 70px;
+                                    animation-name: dots_70;
                                 }
                                 @media(max-width: 600px) {
                                     width: 40px;
+                                    animation-name: dots_40;
                                 }
                             }
                             &:hover {
@@ -1274,12 +1377,22 @@ a.more {
                                         }
                                         to {
                                             width: 100px;
-                                            @include screen('mobile') {
-                                                width: 70px;
-                                            }
-                                            @media(max-width: 600px) {
-                                                width: 40px;
-                                            }
+                                        }
+                                    }
+                                    @keyframes dots_70 {
+                                        from {
+                                            width: 0;
+                                        }
+                                        to {
+                                            width: 70px;
+                                        }
+                                    }
+                                    @keyframes dots_40 {
+                                        from {
+                                            width: 0;
+                                        }
+                                        to {
+                                            width: 40px;
                                         }
                                     }
                                 }
@@ -1343,6 +1456,7 @@ a.more {
         // 探索地圖區塊
         .exploremap_group {
             flex: auto;
+            position: relative;
             // 探索地圖按鈕選項
             .exploremap_btn {
                 display: flex;
@@ -1424,7 +1538,7 @@ a.more {
             .partner_block, .tool_block {
                 clear: both;
                 @include screen('tablet') {
-                    overflow-x: auto;
+                    // overflow-x: auto;
                 }
                 .tool_group, .partner_group {
                     @include screen('tablet') {
@@ -1558,7 +1672,7 @@ a.more {
                 height: 100%;
                 background-color: #fff;
                 transition: .5s;
-                border: 2px solid #e6eae9;
+                // border: 2px solid #e6eae9;
                 @include screen('tablet') {
                     display: flex;
                 }
@@ -1566,10 +1680,11 @@ a.more {
                     display: block;
                 }
                 &:hover {
-                    color: $aHover;
+                    color: #fff;
                     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
                     transform: scale(1.1);
-                    border: 2px solid $secondaryColor;
+                    // border: 2px solid $secondaryColor;
+                    background-color: $secondaryColor;
                     @include screen('tablet') {
                         transform: scale(1.05);
                     }
@@ -1788,7 +1903,7 @@ a.more {
                         transition: .5s;
                     }
                     &:hover {
-                        background-color: rgba(0, 0, 0, 0.7);
+                        background-color: rgba(0, 0, 0, 0.4);
                         padding: 25px 60px 25px 50px;
                         &:after {
                             right: 40px;
@@ -1809,21 +1924,66 @@ a.more {
                     justify-content: center;
                     align-items: center;
                     li {
+                        margin: 0 6px;
                         a {
                             display: block;
-                            padding: 0 6px;
+                            padding: 0;
                             box-sizing: border-box;
-                            img {
-                                width: 40px;
-                                height: 40px;
-                                transition: .5s;
-                            }
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 40px;
+                            width: 40px;
+                            height: 40px;
+                            font-size: 0;
+                            transition: .5s;
                             &:hover {
-                                img {
-                                    width: 60px;
-                                    height: 60px;
+                                background-size: 60px;
+                                width: 60px;
+                                height: 60px;
+                            }
+                            &.fb {
+                                background-image: url('../images/shareicon_f.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_f_hover.svg');
                                 }
                             }
+                            &.youtube {
+                                background-image: url('../images/shareicon_youtube.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_youtube_hover.svg');
+                                }
+                            }
+                            &.podcast {
+                                background-image: url('../images/shareicon_mike.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_mike_hover.svg');
+                                }
+                            }
+                            &.instagram {
+                                background-image: url('../images/shareicon_instagram.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_instagram_hover.svg');
+                                }
+                            }
+                            &.blog {
+                                background-image: url('../images/shareicon_blog.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_blog_hover.svg');
+                                }
+                            }
+                            &.peopo {
+                                background-image: url('../images/shareicon_peopo.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_peopo_hover.svg');
+                                }
+                            }
+                            &.flickr {
+                                background-image: url('../images/shareicon_flickr.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_flickr_hover.svg');
+                                }
+                            }
+                            // 
                         }
                     }
                 }

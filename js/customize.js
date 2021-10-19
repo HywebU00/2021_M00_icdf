@@ -277,7 +277,7 @@ $(function() {
         arrows: true,
         dots: true,
         autoplay: true, //自動播放
-        autoplaySpeed: 4000,
+        autoplaySpeed: 5000,
         responsive: [{
             breakpoint: 1200,
             settings: {
@@ -413,3 +413,18 @@ $(function() {
     // 
     // svg
 });
+// 影片燈箱
+$(function() {
+    $('.mpSlider2 .img-container .movie').click(function() {
+        $('.movie_lightbox').fadeIn();
+        $('body').addClass('noscroll');
+    })
+    $('.movie_lightbox .close').click(function() {
+        $('.movie_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+    $('.movie_lightbox .overlay').click(function() {
+        $('.movie_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+})

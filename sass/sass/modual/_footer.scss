@@ -5,7 +5,7 @@ footer {
     padding: 4em 0 3em;
     background-color: #48595e;
     .container {
-       @include gutter(60px);
+        @include gutter(60px);
         >div {
             padding-bottom: 1em;
         }
@@ -15,8 +15,8 @@ footer {
             display: block;
         }
     }
-    .accesskey{
-        color:#48595e;
+    .accesskey {
+        color: #48595e;
     }
     a {
         text-decoration: none;
@@ -42,13 +42,13 @@ footer {
                 max-width: 60%;
                 margin: 0 auto 1em;
             }
-            @include screen('mobile'){
+            @include screen('mobile') {
                 flex-basis: 80%;
                 max-width: 80%;
             }
-            @include screen('xs_mobile'){
+            @include screen('xs_mobile') {
                 flex-basis: 100%;
-                max-width:100%;
+                max-width: 100%;
             }
         }
         .footer_info {
@@ -97,36 +97,75 @@ footer {
                 }
             }
             .sharelist {
-                flex: auto;
-                flex-basis: 100%;
-                max-width: 100%;
                 ul {
                     display: flex;
-                    height: 70px;
+                    height: 60px;
                     margin: 0;
                     padding: 0;
                     list-style-type: none;
-                    justify-content: flex-end;
+                    justify-content: center;
                     align-items: center;
-                    @include screen('tablet') {
-                        justify-content: center;
-                    }
                     li {
+                        margin: 0 6px;
                         a {
                             display: block;
-                            padding: 0 6px;
+                            padding: 0;
                             box-sizing: border-box;
-                            img {
-                                width: 30px;
-                                height: 30px;
-                                transition: .5s;
-                            }
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 30px;
+                            width: 30px;
+                            height: 30px;
+                            font-size: 0;
+                            transition: .5s;
                             &:hover {
-                                img {
-                                    width: 50px;
-                                    height: 50px;
+                                background-size: 50px;
+                                width: 50px;
+                                height: 50px;
+                            }
+                            &.fb {
+                                background-image: url('../images/shareicon_f.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_f_hover.svg');
                                 }
                             }
+                            &.youtube {
+                                background-image: url('../images/shareicon_youtube.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_youtube_hover.svg');
+                                }
+                            }
+                            &.podcast {
+                                background-image: url('../images/shareicon_mike.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_mike_hover.svg');
+                                }
+                            }
+                            &.instagram {
+                                background-image: url('../images/shareicon_instagram.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_instagram_hover.svg');
+                                }
+                            }
+                            &.blog {
+                                background-image: url('../images/shareicon_blog.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_blog_hover.svg');
+                                }
+                            }
+                            &.peopo {
+                                background-image: url('../images/shareicon_peopo.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_peopo_hover.svg');
+                                }
+                            }
+                            &.flickr {
+                                background-image: url('../images/shareicon_flickr.svg');
+                                &:hover {
+                                    background-image: url('../images/shareicon_flickr_hover.svg');
+                                }
+                            }
+                            // 
                         }
                     }
                 }
@@ -139,8 +178,11 @@ footer {
         max-width: 100%;
         color: #fff;
         letter-spacing: 0.03em;
-        @include screen('tablet'){
+        @include screen('tablet') {
             text-align: center;
+        }
+        img{
+            vertical-align: middle;
         }
     }
     // .footer_icon {

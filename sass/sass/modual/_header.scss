@@ -6,7 +6,7 @@
     left: 0;
     z-index: 99;
     transition: 0.3s ease-out;
-    background-color:#f8f9fa;
+    background-color: #f8f9fa;
     // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     @extend %clearfix;
     @include screen('mobile') {
@@ -26,7 +26,7 @@
         z-index: -1;
         @include screen('mobile') {
             height: 60px;
-             background-color:#f8f9fa;
+            background-color: #f8f9fa;
         }
     }
     // mobile btn for extend
@@ -84,7 +84,7 @@
             &:before {
                 width: 40px;
                 height: 40px;
-                background: url(../images/basic/icon_search.png) no-repeat center center;
+                background: url('../images/icon_search.svg') no-repeat center center;
                 background-size: 28px;
                 opacity: 0.6;
                 content: '';
@@ -111,15 +111,14 @@
             height: 66px;
         }
         @include screen('mobile') {
-            padding: 2px 60px;
+            padding: 2px 80px 2px 20px;
             width: 100%;
             text-align: center;
             height: 60px;
             margin: 0;
             img {
-              width: 100%;
-               height: 54px;
-              
+                width: 100%;
+                height: 54px;
                 margin: 0px auto;
                 transform: scale(0.8);
             }
@@ -150,19 +149,18 @@
                     display: block;
                     display: flex;
                     justify-content: center;
-                    align-items:center;
+                    align-items: center;
                     padding: 0 0.2em;
                     line-height: 1em;
                     text-decoration: none;
-                    background-color:#f8f9fa;
-                    width:35px;
+                    background-color: #f8f9fa;
+                    width: 35px;
                     height: 35px;
-                    border-radius:50%;
+                    border-radius: 50%;
                     transition: .5s;
                     @include aSetting_nocolor;
-                    &:hover{
-                        background-color:#ddd;
-                        
+                    &:hover {
+                        background-color: #ddd;
                     }
                 }
             }
@@ -189,12 +187,19 @@
 // 訂閱電子報按鈕
 .subscription_epaper {
     margin: 0 10px 0 0;
+    @include screen('mobile') {
+        margin: 0 40px 0 0;
+    }
     a {
         display: block;
         padding: 10px 16px;
         line-height: 1em;
         color: #fff;
         background-color: $secondaryColor;
+        white-space: nowrap;
+        @include screen('mobile'){
+             padding: 10px 8px;
+        }
         &:hover {
             background-color: darken($secondaryColor, 10);
         }

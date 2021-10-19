@@ -20,7 +20,7 @@
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -114,7 +114,7 @@
                             </ul>
                         </li>
                         <li><a href="#">合作計畫</a>
-                            <ul>
+                            <ul class="mappic">
                                 <li><a href="#">全球合作總覽</a></li>
                                 <li class="plancountry"><a href="#">合作計畫國家</a>
                                     <ul class="countryarea">
@@ -222,18 +222,18 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">活動資訊</a></li>
-                                <li><a href="#">出版品與影音</a>
+                                <li><a href="#">出版品</a>
                                     <ul>
                                         <li><a href="#">國際開發援助現場季刊</a></li>
                                         <li><a href="#">年報</a></li>
-                                        <li><a href="#">Podcast節目</a></li>
-                                        <li><a href="#">影音專區</a></li>
                                         <li><a href="#">簡介摺頁</a></li>
                                         <li><a href="#">叢書</a></li>
                                         <li><a href="#">歷史期刊</a></li>
                                         <li><a href="#">其他</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="#">影片與節目</a></li>
+                                <li><a href="#">Podcast</a></li>
                             </ul>
                         </li>
                         <li><a href="#">採購與公告</a>
@@ -319,14 +319,14 @@
             <!-- 首頁固定側邊區塊選單 start  -->
             <div class="fixed_sidebar_group">
                 <ul>
-                    <li><a href="#">圖片輪播01</a></li>
-                    <li><a href="#">新聞與活動02</a></li>
-                    <li><a href="#">熱門活動03</a></li>
-                    <li><a href="#">優先領域04</a></li>
-                    <li><a href="#">合作計畫05</a></li>
-                    <li><a href="#">關注我們06</a></li>
-                    <li><a href="#">線上攝影展07</a></li>
-                    <li><a href="#">社群動態08</a></li>
+                    <li><a href="#">圖片輪播</a></li>
+                    <li><a href="#">新聞與活動</a></li>
+                    <li><a href="#">熱門活動</a></li>
+                    <li><a href="#">優先領域</a></li>
+                    <li><a href="#">合作計畫</a></li>
+                    <li><a href="#">關注我們</a></li>
+                    <li><a href="#">線上攝影展</a></li>
+                    <li><a href="#">社群動態</a></li>
                 </ul>
             </div>
             <!-- 首頁固定側邊區塊選單 end   -->
@@ -335,20 +335,20 @@
                 <div class="container">
                     <div class="col">
                         <!-- 分享shareblock start -->
-                        <div class="shareblock">
+                        <div class="sharelist">
                             <ul>
-                                <li><a href="#"><img src="images/shareicon_f.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_youtube.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_mike.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_instagram.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_blog.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_peopo.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_flickr.svg" alt=""></a></li>
+                                <li><a href="#" class="fb">facebook</a></li>
+                                <li><a href="#" class="youtube">youtube</a></li>
+                                <li><a href="#" class="podcast">podcast</a></li>
+                                <li><a href="#" class="instagram">instagram</a></li>
+                                <li><a href="#" class="blog">blog</a></li>
+                                <li><a href="#" class="peopo">peopo</a></li>
+                                <li><a href="#" class="flickr">flickr</a></li>
                             </ul>
                         </div>
                         <!-- 分享shareblock start -->
                         <!-- 圖片輪播圖變大 start-->
-                        <section class="mpSlider2 mask">
+                        <section class="mpSlider2">
                             <div class="img-container">
                                 <a href="#" title="" class="image">
                                     <img src="images/mpSlider_banner01.jpg" alt="">
@@ -386,6 +386,15 @@
                                 </div>
                             </div>
                         </section>
+                        <!-- 影片燈箱 start-->
+                        <div class="movie_lightbox">
+                            <div class="overlay"></div>
+                            <div class="close"></div>
+                            <div class="content">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZBKhsPkiyvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <!-- 影片燈箱 end-->
                         <!-- 圖片輪播圖變大 end-->
                         <div class="explore_block">
                             <a href="#">
@@ -555,7 +564,7 @@
                                         <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s"><a href="#"><span><img src="images/services_icon06.svg" alt=""></span>人才公告</a></li>
                                         <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.2s"><a href="#"><span><img src="images/services_icon07.svg" alt=""></span>中美洲基金</a></li>
                                         <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.4s"><a href="#"><span><img src="images/services_icon08.svg" alt=""></span>公關聯絡</a></li>
-                                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.6s"><a href="#"><span><img src="images/services_icon09.svg" alt=""></span>志工區</a></li>
+                                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.6s"><a href="#"><span><img src="images/services_icon09.svg" alt=""></span>志工專區</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -579,7 +588,7 @@
                                         <div class="image"><img src="images/themes_pic01.jpg" alt=""></div>
                                         <div class="content">
                                             <div class="title">公衛醫療<span>Public Health and Medicine </span></div>
-                                            <div class="sdgs">聯合國永續發展目標(SDGS) <ul>
+                                            <div class="sdgs">聯合國永續發展目標(SDGs) <ul>
                                                     <li><img src="images/SDGs_icon02.jpg" alt=""></li>
                                                     <li><img src="images/SDGs_icon03.jpg" alt=""></li>
                                                     <li><img src="images/SDGs_icon06.jpg" alt=""></li>
@@ -734,7 +743,7 @@
                                             <button type="button" class="select">Select</button>
                                         </div>
                                         <div class="partner_list">
-                                            <div class="title">技術圖</div>
+                                            <div class="title">技術團</div>
                                             <button type="button" class="select">Select</button>
                                         </div>
                                         <div class="partner_list">
@@ -893,13 +902,13 @@
                                 <h2 class="title"><span>Social Networks</span>社群動態</h2>
                                 <div class="sharelist">
                                     <ul>
-                                        <li><a href="#"><img src="images/shareicon_f.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/shareicon_youtube.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/shareicon_mike.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/shareicon_instagram.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/shareicon_blog.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/shareicon_peopo.svg" alt=""></a></li>
-                                        <li><a href="#"><img src="images/shareicon_flickr.svg" alt=""></a></li>
+                                        <li><a href="#" class="fb">facebook</a></li>
+                                        <li><a href="#" class="youtube">youtube</a></li>
+                                        <li><a href="#" class="podcast">podcast</a></li>
+                                        <li><a href="#" class="instagram">instagram</a></li>
+                                        <li><a href="#" class="blog">blog</a></li>
+                                        <li><a href="#" class="peopo">peopo</a></li>
+                                        <li><a href="#" class="flickr">flickr</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1010,19 +1019,20 @@
                         </ul>
                         <div class="sharelist">
                             <ul>
-                                <li><a href="#"><img src="images/shareicon_f.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_youtube.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_mike.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_instagram.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_blog.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_peopo.svg" alt=""></a></li>
-                                <li><a href="#"><img src="images/shareicon_flickr.svg" alt=""></a></li>
+                                <li><a href="#" class="fb">facebook</a></li>
+                                <li><a href="#" class="youtube">youtube</a></li>
+                                <li><a href="#" class="podcast">podcast</a></li>
+                                <li><a href="#" class="instagram">instagram</a></li>
+                                <li><a href="#" class="blog">blog</a></li>
+                                <li><a href="#" class="peopo">peopo</a></li>
+                                <li><a href="#" class="flickr">flickr</a></li>
                             </ul>
                         </div>
                     </div>
                     <!-- data -->
                     <div class="footer_data">
-                        <p> 地址 : 111047台北市天母⻄路62巷9號12-15樓<br /> 電話 : 886-2-28732323</p>
+                        <p> 地址 : 111047台北市天母⻄路62巷9號12-15樓 <span> <a href="#"><img src="images/icon_map.jpg" alt=""></a> <a href="#"><img src="images/icon_google.jpg" alt=""></a></span>
+                            <br /> 電話 : 886-2-28732323</p>
                         <span class="update">更新日期:<em>2021/08/01</em></span>
                         <span class="counter">瀏覽人次:<em>46476653</em></span>
                         <p class="Copyright"> International Cooperation and Development Fund © 2021. All Rights Reserved.</p>
