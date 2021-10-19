@@ -114,6 +114,7 @@ $(function () {
         _menu.find('li ul').hide();
     });
 
+
     // 先複製過去
     _nav.clone().prependTo(_mArea);
     _menu.clone().prependTo(_mArea);
@@ -213,6 +214,7 @@ $(function () {
                     e.preventDefault();
                 });
             //
+             $('.megamenu').find('.countrylist').find('ul').show();
             _body.off('touchmove');
             $('.m_search').hide();
             $('.language').find('ul').hide();

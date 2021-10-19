@@ -172,11 +172,16 @@ $menuItems: 15;
                             &.plancountry {
                                 .countrylist {
                                     margin-bottom: 20px;
+                                    width: 100%;
                                     >ul {
                                         background-color: darken($primaryColor, 5);
+                                        display: block !important;
                                         li {
                                             flex-basis: 100%;
                                             margin: 0;
+                                            a{
+                                                padding: 0.5em 1em 0.5em 5em !important;
+                                            }
                                         }
                                     }
                                 }
