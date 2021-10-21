@@ -184,6 +184,11 @@ footer {
         img{
             vertical-align: middle;
         }
+        p{
+            span{
+                display: inline-block;
+            }
+        }
     }
     // .footer_icon {
     //     flex: 0 1 200px;

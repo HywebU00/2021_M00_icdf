@@ -430,6 +430,8 @@ a.more {
                         margin-top: -40px;
                         display: block;
                         z-index: 2;
+                        transition: .5s;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                         @include screen('mobile') {
                             top: 20%;
                         }
@@ -449,6 +451,12 @@ a.more {
                         z-index: 3;
                         @include screen('mobile') {
                             top: 20%;
+                        }
+                    }
+                    &:hover {
+                        &:before {
+                            background-color: $secondaryColor;
+                            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
                         }
                     }
                 }
@@ -1290,13 +1298,13 @@ a.more {
                     top: 35%;
                 }
             }
-            .slick-prev{
-                @include screen('mobile'){
+            .slick-prev {
+                @include screen('mobile') {
                     left: 10px;
                 }
             }
             .slick-next {
-                @include screen('mobile'){
+                @include screen('mobile') {
                     right: 10px;
                 }
             }
@@ -1538,7 +1546,7 @@ a.more {
             .partner_block, .tool_block {
                 clear: both;
                 @include screen('tablet') {
-                    // overflow-x: auto;
+                    overflow-x: auto;
                 }
                 .tool_group, .partner_group {
                     @include screen('tablet') {
@@ -1854,8 +1862,9 @@ a.more {
         background-position: left top;
         padding: 70px 0 70px;
     }
-    h2 {
+    h2.title {
         color: #fff;
+        text-align: center;
     }
     .sharedynamic_group {
         display: flex;

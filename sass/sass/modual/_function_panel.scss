@@ -84,6 +84,7 @@ div.function {
                 border-color: $function_color;
                 color: #fff;
                 border-radius: 4px;
+
                 &:hover,
                 &:focus {
                     background: darken($aHover, 0);
@@ -130,31 +131,32 @@ div.function {
         flex-basis: auto;
     }
     .function {
-        height: 32px;
+        height: 40px;
         margin: 0;
         ul {
             display: flex;
             li {
                 font-size: 1em;
                 margin: 0 0.2em;
-                flex: 0 0 32px;
+                flex: 0 0 40px;
                 a {
                     display: block;
                     box-sizing: border-box;
-                    width: 32px;
-                    height: 32px;
+                    width: 40px;
+                    height: 40px;
                     text-align: center;
-                    line-height: 32px;
+                    line-height: 40px;
                     border-radius: 50%;
-                    background: #f1f1f1;
+                    background: #474646;
                     text-indent: -9999px;
                     position: relative;
+                    color:#fff;
                     &:hover,
                     &:focus {
                         background: $aHover;
                         color: #fff;
                         &:before {
-                            filter: invert(100%);
+                            // filter: invert(100%);
                         }
                     }
                     &:before {
@@ -164,6 +166,12 @@ div.function {
                         height: 60%;
                         top: 20%;
                         left: 20%;
+                    }
+                }
+                &.en{
+                    a:before {
+                        background: url(../images/basic/icon_EN.svg) no-repeat center center;
+                        background-size: 100%;
                     }
                 }
                 &.back {
@@ -202,15 +210,15 @@ div.function {
         display: flex;
         li {
             margin: 0px 3px 3px;
-            flex: 0 0 32px;
+            flex: 0 0 40px;
             a {
                 display: block;
-                height: 32px;
+                height: 40px;
             }
             @include screen('tablet') {
                 margin: 0px 1px 2px;
-                width: 32px;
-                height: 32px;
+                width: 40px;
+                height: 40px;
             }
             img {
                 width: 100%;
@@ -224,15 +232,15 @@ div.function {
     .share {
         box-sizing: border-box;
         text-align: center;
-        height: 32px;
+        height: 40px;
         margin: 0 4px;
         position: relative;
         a.shareButton {
             display: block;
-            background: #f1f1f1;
+            background: #474646;
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             text-indent: -9999px;
             text-align: center;
             position: relative;
@@ -258,7 +266,7 @@ div.function {
                 //   filter: invert(100%);
                 // }
                 &:before {
-                    filter: invert(100%);
+                    // filter: invert(100%);
                 }
             }
         }

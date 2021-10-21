@@ -303,6 +303,23 @@ $(function() {
     $('.m_search ,.searchCtrl').click(function(e) {
         e.stopPropagation();
     });
+    // 電腦版查詢 
+    var _searchPc = $('.header .functionbtn_block .search_btn');
+    _searchPc.off().on('click', function(e) {
+        if (search_mode == false) {
+            $(this).siblings('.search').stop(true, false).slideDown('400', 'easeOutQuint');
+            $('body').keydown(function(e) {
+                if (e.keyCode == 27) {
+                    $('.functionbtn_block .search').slideUp();
+                }
+            });
+            _window.off('resize');
+            search_mode = true;
+        } else {
+            $(this).next('.search').stop().slideUp();
+            search_mode = false;
+        }
+    });
     // fixed navbar
     var resizeNavTimer;
     if ($('header .menu').length > 0) {
@@ -599,11 +616,11 @@ $(function() {
     $('.function_panel .share').find('li:last>a').focusout(function(event) {
         $(this).parent().parent('ul').hide();
     });
-    // 點外面關閉share
+    // 點外面關閉
     $(document).on('touchend click', function(e) {
-        var container = $('.function_panel .share');
+        var container = $('.function_panel .share, .header .functionbtn_block .search_btn, .header .functionbtn_block .search');
         if (!container.is(e.target) && container.has(e.target).length === 0) {
-            $('.function_panel .share ul').hide();
+            $('.function_panel .share ul, .header .functionbtn_block .search').slideUp();
         }
     });
     /*------------------------------------*/

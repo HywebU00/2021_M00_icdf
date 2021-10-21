@@ -176,10 +176,7 @@ $(function() {
         focusOnSelect: true,
         infinite: true,
     });
-    // header search
-    $('.functionbtn_block .search_btn').click(function() {
-        $('.functionbtn_block .search').slideToggle();
-    })
+    
     // 圖片輪播圖變大
     var $carousel = $('.mpSlider2').slick({
         mobileFirst: true,
@@ -334,6 +331,9 @@ $(function() {
         // $(this).parent().siblings('.tool_list').find('button.select').removeClass('check')
         // $(this).parent().siblings('.tool_list').removeClass('active')
     })
+    // 探索地圖中間鈕
+      var _switchbtn = $('.exploremap_btn .contentbtn .switchbtn')
+
     // 工具區塊hover
     $('.tool_list').mouseover(function() {
         $(this).find('.introduction').stop().fadeIn();

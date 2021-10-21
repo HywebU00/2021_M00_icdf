@@ -45,7 +45,7 @@ body {
 }
 h2.title {
     font-size: 1.875em;
-   line-height: 0.8em;
+    line-height: 1.3em;
     margin: 0 0 50px;
     text-align: center;
     color: #0b1e2d;
@@ -65,14 +65,17 @@ h2.title {
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     >.container {
-        padding-top: 1em;
         @include gutter(); //gutter 代表左右要留白
         display: flex;
+        @include screen('mobile'){
+             @include gutter(60px);
+        }
     }
     .center_block {
         flex: none;
         flex-basis: 100%;
         max-width: 100%;
+        padding-bottom: 4em;
     }
     .left_block {
         flex: none;
@@ -106,6 +109,9 @@ h2.title {
     }
     &.large_size {
         font-size: 1.125em;
+    }
+    h2.title{
+        text-align: left;
     }
 }
 .hidden {
