@@ -428,3 +428,20 @@ $(function() {
         $('body').removeClass('noscroll');
     })
 })
+
+// 影音專區
+$(function() {
+    $('.movie_block .movie_group .movie_list .image.movie').click(function() {
+        $('.movie_lightbox').fadeIn();
+        $('body').addClass('noscroll');
+    })
+    $('.movie_lightbox .close').click(function() {
+        $('.movie_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+    $('.movie_lightbox .overlay').click(function() {
+        $('.movie_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+})
+
