@@ -773,6 +773,7 @@ a.more {
         border-radius: 0;
         overflow: auto;
         text-align: left;
+        overflow: hidden;
         @include screen('notebook') {
             width: 70vw;
         }

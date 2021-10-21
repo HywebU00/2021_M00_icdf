@@ -4,11 +4,12 @@
     position: relative;
     >.container {
         @include gutter(0); //gutter 代表左右要留白
+        max-width: 100% !important;
     }
     .img-container {
         position: relative;
         background: #F1F1F1;
-        @include aspect-ratio(16, 4);
+        @include aspect-ratio(16, 3);
         img {
             position: absolute;
             width: 100% !important;
