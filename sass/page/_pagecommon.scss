@@ -9,7 +9,7 @@
     .img-container {
         position: relative;
         background: #F1F1F1;
-        @include aspect-ratio(16, 3);
+        @include aspect-ratio(16, 4);
         img {
             position: absolute;
             width: 100% !important;
@@ -42,8 +42,151 @@
             font-size: 1.5em
         }
     }
+    // 國家
+    &.countrypic {
+        &:before {
+            content: '';
+            background-color: rgba(0, 0, 0, .3);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -100%;
+            right: 0;
+            left: 0;
+            z-index: 2;
+            box-shadow: rgba(0, 0, 0, 0.8) 0px 22px 160px 4px;
+        }
+        .img-container {
+            position: relative;
+            background: #F1F1F1;
+            @include aspect-ratio(16, 5.5);
+            img {
+                position: absolute;
+                max-width: 100% !important;
+                max-height: 100% !important;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                object-fit: cover;
+                z-index: 1;
+            }
+        }
+        // 國家資料
+        .countrydata {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            .country_name {
+                flex: none;
+                font-size: 12em;
+                color: #fff;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 400;
+                line-height: 0.5em;
+                margin-bottom: .4em;
+                margin-top: .1em;
+                text-shadow: 0px 0px 50px #444;
+                @include screen('notebook') {
+                    font-size: 10em;
+                }
+                @include screen('tablet') {
+                    font-size: 8em;
+                }
+                @include screen('mobile') {
+                    font-size: 6em;
+                }
+                @media(max-width: 600px) {
+                    font-size: 5em;
+                }
+                @media(max-width: 500px) {
+                    font-size: 4em;
+                }
+                @media(max-width: 400px) {
+                    font-size: 3em;
+                }
+                span {
+                    font-size: 18px;
+                    display: block;
+                    font-weight: bolder;
+                    padding-left: 1em;
+                    @include screen('notebook') {
+                        font-size: 16px;
+                    }
+                    @include screen('tablet') {
+                        padding-left: 0.5em;
+                    }
+                    @include screen('mobile') {
+                        padding-left: 0em;
+                        margin-bottom: 0.5em;
+                        font-size: 15px;
+                    }
+                    @media(max-width: 500px) {
+                        font-size: 13px;
+                    }
+                    @media(max-width: 400px) {
+                        font-size: 11px;
+                        margin-bottom: 0.8em;
+                    }
+                }
+            }
+            .priority_areas {
+                flex: none;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    list-style-type: none;
+                    li {
+                        margin: 0 5px;
+                        img {
+                            width: 60px;
+                            @include screen('tablet') {
+                                width: 55px;
+                            }
+                            @include screen('mobile') {
+                                width: 46px;
+                            }
+                            @media(max-width: 600px) {
+                                width: 40px;
+                            }
+                            @media(max-width: 500px) {
+                                width: 30px;
+                            }
+                            @media(max-width: 400px) {
+                                width: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-// 期刊 block
+// 季刊列表頁面
+// 季刊 block
 .periodical_block {
     display: flex;
     flex-wrap: wrap;
@@ -136,6 +279,7 @@
         }
     }
 }
+// 年報列表頁面
 // 年報
 .annual_report_block {
     .annual_report_group {
@@ -185,7 +329,7 @@
                         right: 0;
                         bottom: 0;
                         object-fit: cover;
-                        border:1px solid #ddd;
+                        border: 1px solid #ddd;
                     }
                 }
                 .title {
@@ -201,6 +345,7 @@
         }
     }
 }
+// 影音專區頁面
 // 影音專區
 .movie_block {
     .movie_group {
@@ -218,12 +363,25 @@
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             border-radius: 5px;
             transition: .5s;
+            @include screen('mobile') {
+                flex-basis: 46%;
+                max-width: 46%;
+                margin: 0 2% 2em;
+            }
+            @include screen('xs_mobile') {
+                flex-basis: 100%;
+                max-width: 100%;
+                margin: 0 0 2em;
+            }
             .image {
                 width: 100%;
                 height: 180px;
                 position: relative;
                 margin: 0 auto 1em;
                 overflow: hidden;
+                @include screen('xs_mobile') {
+                    height: 250px;
+                }
                 &.movie {
                     a {
                         &:before {
@@ -241,9 +399,6 @@
                             z-index: 2;
                             transition: .5s;
                             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                            @include screen('mobile') {
-                                top: 20%;
-                            }
                         }
                         &:after {
                             content: '';
@@ -258,9 +413,6 @@
                             margin-left: 0px;
                             display: block;
                             z-index: 3;
-                            @include screen('mobile') {
-                                top: 20%;
-                            }
                         }
                         &:hover {
                             &:before {
@@ -319,13 +471,24 @@
     margin: 2em 0 0;
     background-color: #eee;
     border-radius: 50px;
+    @include screen('mobile') {
+        flex-wrap: wrap;
+        border-radius: 5px;
+    }
     .question {
         flex: none;
+        @include screen('mobile') {
+            margin-bottom: 10px;
+        }
     }
     .options_block {
         flex: none;
+        @include screen('mobile') {
+            margin-bottom: 10px;
+        }
         label {
             margin: 0;
+            display: inline-block;
             input[type='radio'] {
                 margin: 0 0.5em 0.3em;
             }
@@ -334,5 +497,129 @@
     .btn_grp {
         flex: none;
         padding: 0;
+        @include screen('mobile') {
+            flex-basis: 100%;
+        }
+    }
+}
+// 國家頁
+// 國家優先領域區塊
+.priority_areas_block {
+    padding: 0 0 80px 0;
+    .priority_areas_group {
+        display: flex;
+        align-items: center;
+        @include screen('mobile') {
+            display: block;
+        }
+        .leftbg {
+            flex: auto;
+            @include screen('mobile') {
+                margin: 0 0 30px;
+            }
+            .title {
+                color: $color-word;
+                display: block;
+                font-size: 1.5em;
+                letter-spacing: 0.05em;
+                margin-bottom: 25px;
+            }
+            .priority_list {
+                ul {
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    flex-wrap: wrap;
+                    @include screen('mobile') {
+                        justify-content: center;
+                    }
+                    li {
+                        flex: none;
+                        margin-right: 15px;
+                        margin-bottom: 15px;
+                        font-size: 1.125em;
+                        text-align: center;
+                        img {
+                            width: 90px;
+                            height: 90px;
+                            display: block;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .rightbg {
+            flex: none;
+            flex-basis: 300px;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            @include screen('mobile') {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+            .country_map {
+                width: 100%;
+                border-radius: 50%;
+                @include screen('mobile') {
+                    width: 300px;
+                    margin: 0 auto;
+                }
+                @media(max-width: 400px) {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+// 相關計畫區塊
+.related_plan_block {
+    padding: 0 0 80px 0;
+    .projectstab {
+        .plansilder {
+            .plansblock {
+                padding: 0 60px 0 0;
+                position: relative;
+                a {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                        transition: .5s;
+                    }
+                    .img-container {
+                        position: relative;
+                        @include aspect-ratio(16, 8);
+                         img {
+                            position: absolute;
+                            width: 100% !important;
+                            height: 100% !important;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            object-fit: cover;
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

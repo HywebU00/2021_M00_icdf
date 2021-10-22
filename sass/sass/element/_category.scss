@@ -18,14 +18,12 @@
         font-size: 1.063em;
         box-sizing: border-box;
         background-color: $primaryColor;
-        border-radius:5px;
-
-        
+        border-radius: 5px;
         &:hover,
         &:focus,
         &.active {
             color: #fff;
-            background-color:darken($lightColor, 20);
+            background-color: darken($lightColor, 20);
             border: 1px solid darken($lightColor, 20);
             box-shadow: none;
         }

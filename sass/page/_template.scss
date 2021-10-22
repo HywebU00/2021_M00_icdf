@@ -67,8 +67,8 @@ h2.title {
     >.container {
         @include gutter(); //gutter 代表左右要留白
         display: flex;
-        @include screen('mobile'){
-             @include gutter(60px);
+        @include screen('notebook') {
+            @include gutter(60px);
         }
     }
     .center_block {
@@ -110,8 +110,16 @@ h2.title {
     &.large_size {
         font-size: 1.125em;
     }
-    h2.title{
+    h2.title {
         text-align: left;
+        margin: 0 0 30px;
+        &.style2{
+            span {
+                font-family: 'Oswald', sans-serif;
+                font-weight: 400;
+                margin-bottom: 0.1em;
+            }
+        }
     }
 }
 .hidden {

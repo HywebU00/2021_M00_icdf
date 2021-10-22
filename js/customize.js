@@ -176,7 +176,6 @@ $(function() {
         focusOnSelect: true,
         infinite: true,
     });
-    
     // 圖片輪播圖變大
     var $carousel = $('.mpSlider2').slick({
         mobileFirst: true,
@@ -332,8 +331,7 @@ $(function() {
         // $(this).parent().siblings('.tool_list').removeClass('active')
     })
     // 探索地圖中間鈕
-      var _switchbtn = $('.exploremap_btn .contentbtn .switchbtn')
-
+    var _switchbtn = $('.exploremap_btn .contentbtn .switchbtn')
     // 工具區塊hover
     $('.tool_list').mouseover(function() {
         $(this).find('.introduction').stop().fadeIn();
@@ -341,39 +339,6 @@ $(function() {
     $('.tool_list').mouseout(function() {
         $(this).find('.introduction').stop().fadeOut();
     })
-    // 工具區塊 
-    // $('.tool_group').slick({
-    //     dots: false,
-    //     infinite: false,
-    //     speed: 300,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     responsive: [{
-    //             breakpoint: 992,
-    //             settings: {
-    //                 slidesToShow: 3,
-    //                 slidesToScroll: 3,
-    //                 infinite: true,
-    //                 dots: true
-    //             }
-    //         }, {
-    //             breakpoint: 600,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 2
-    //             }
-    //         }, {
-    //             breakpoint: 480,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1
-    //             }
-    //         }
-    //         // You can unslick at a given breakpoint now by adding:
-    //         // settings: "unslick"
-    //         // instead of a settings object
-    //     ]
-    // });
     // link輪播
     $('.linksilder_list').slick({
         dots: false,
@@ -411,6 +376,39 @@ $(function() {
         $('html, body').animate({ scrollTop: $('.news_activities_block').offset().top }, 0, 'linear');
     });
     // 
+    $('.plansilder').slick({
+        dots: false,
+        infinite: false,
+        autoplay: false, 
+        autoplaySpeed: 3000,  
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint:992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 12
+                }
+            }, {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
     // svg
 });
 // 影片燈箱
@@ -428,7 +426,6 @@ $(function() {
         $('body').removeClass('noscroll');
     })
 })
-
 // 影音專區
 $(function() {
     $('.movie_block .movie_group .movie_list .image.movie').click(function() {
@@ -444,4 +441,3 @@ $(function() {
         $('body').removeClass('noscroll');
     })
 })
-

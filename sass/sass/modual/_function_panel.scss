@@ -1,6 +1,6 @@
 // function_panel setting   ------------------------
 .function_panel {
-    margin: 0.2em 0;
+    margin: 0em 0 0.2em;
     padding: 0.5em 0 0.5em;
     min-height: 35px;
     display: flex;
@@ -49,10 +49,8 @@
         }
     }
 }
-
 // function   ------------------------
 $function_color: #666;
-
 //可自訂顏色，或是自帶既有變數，但請注意背景色與字的對比度
 //icon基本設定
 %function_before {
@@ -84,7 +82,6 @@ div.function {
                 border-color: $function_color;
                 color: #fff;
                 border-radius: 4px;
-
                 &:hover,
                 &:focus {
                     background: darken($aHover, 0);
@@ -150,7 +147,7 @@ div.function {
                     background: #474646;
                     text-indent: -9999px;
                     position: relative;
-                    color:#fff;
+                    color: #fff;
                     &:hover,
                     &:focus {
                         background: $aHover;
@@ -168,7 +165,7 @@ div.function {
                         left: 20%;
                     }
                 }
-                &.en{
+                &.en {
                     a:before {
                         background: url(../images/basic/icon_EN.svg) no-repeat center center;
                         background-size: 100%;
@@ -180,7 +177,6 @@ div.function {
                         background-size: 100%;
                     }
                 }
-
                 &.print {
                     a:before {
                         background: url(../images/basic/icon_print-style2.svg) no-repeat center center;
@@ -200,7 +196,6 @@ div.function {
         }
     }
 }
-
 // share 基本樣式   ------------------------
 .share {
     box-sizing: border-box;
