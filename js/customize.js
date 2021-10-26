@@ -332,6 +332,21 @@ $(function() {
     })
     // 探索地圖中間鈕
     var _switchbtn = $('.exploremap_btn .contentbtn .switchbtn')
+    _switchbtn.click(function() {
+        if (_switchbtn.hasClass("right")) {
+            $('.tool').find('a').removeClass('active');
+            $('.partner').find('a').addClass('active');
+            $('.switchbtn').removeClass('right');
+            $('.tool_block').hide();
+            $('.partner_block').show();
+        } else {
+            $('.partner').find('a').removeClass('active');
+            $('.tool').find('a').addClass('active');
+            $('.switchbtn').addClass('right');
+            $('.partner_block').hide();
+            $('.tool_block').show();
+        }
+    })
     // 工具區塊hover
     $('.tool_list').mouseover(function() {
         $(this).find('.introduction').stop().fadeIn();
@@ -375,12 +390,13 @@ $(function() {
         e.preventDefault();
         $('html, body').animate({ scrollTop: $('.news_activities_block').offset().top }, 0, 'linear');
     });
-    // 
+    // 相關計畫區塊
     $('.plansilder').slick({
         dots: false,
         infinite: false,
-        autoplay: false, 
-        autoplaySpeed: 3000,  
+        autoplay: false,
+         arrows: true,
+        autoplaySpeed: 3000,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [{
@@ -388,25 +404,86 @@ $(function() {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
+                    
                 }
             }, {
-                breakpoint:992,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 12
+                    slidesToScroll: 1,
                 }
             }, {
                 breakpoint: 575,
                 settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+            
+        ]
+    });
+    // 相關最新消息
+    $('.relatednews_silder').slick({
+        dots: false,
+        infinite: false,
+        autoplay: false,
+         arrows: true,
+        autoplaySpeed: 3000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    
+                }
+            }, {
+                breakpoint: 992,
+                settings: {
                     slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
                     slidesToScroll: 1
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
+            
+        ]
+    });
+    // 相關最新消息
+    $('.social_networks_silder').slick({
+        dots: false,
+        infinite: false,
+        autoplay: false,
+         arrows: true,
+        autoplaySpeed: 3000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    
+                }
+            }, {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            
         ]
     });
     // svg

@@ -427,7 +427,6 @@ $(function() {
             ww = _window.outerWidth();
             tabSet();
             tabSet2();
-            
         }, 50);
     });
     //原始
@@ -567,13 +566,21 @@ $(function() {
                 _tabItemNow.addClass('active');
                 if (ww <= wwSmall) {
                     _tabItem.not('.active').next().slideUp();
-                    _tabItemNow.next().slideDown();
+                    // _tabItemNow.next().slideDown();
+                    _tabItemNow.next().slideDown("0", function() {
+                        $(".plansilder").slick("setPosition", 0);
+                    });
                     $('html,body').stop(true, false).animate({ scrollTop: scollDistance });
                 } else {
-                    _tabItem.not('.active').next().hide();
-                    _tabItemNow.next().show();
+                    // _tabItem.not('.active').next().hide();
+                    // _tabItemNow.next().show();
+                    // 抓到slick的寬高
+                    _tabItem.not(".active").next().fadeOut();
+                    _tabItemNow.next().fadeIn("0", function() {
+                        $(".plansilder").slick("setPosition", 0);
+                    });
                     tabContentHeight = _tabItemNow.next().innerHeight();
-                    _tab.height(tabContentHeight + tabItemHeight);
+                    // _tab.height(tabContentHeight + tabItemHeight);
                 }
                 e.preventDefault();
             }

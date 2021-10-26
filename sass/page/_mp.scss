@@ -1424,11 +1424,9 @@ a.more {
         padding: 50px;
         box-sizing: border-box;
         overflow: hidden;
+        position: relative;
         @include screen('tablet') {
             display: block;
-        }
-        @include screen('xs_mobile') {
-            padding: 50px 20px;
         }
         .wordcontent {
             color: $h2Color;
@@ -1465,15 +1463,29 @@ a.more {
         // 探索地圖區塊
         .exploremap_group {
             flex: auto;
-            position: relative;
+            // position: absolute;
+            // z-index: 8;
+            // top: 0;
+            // bottom: 0;
+            // left: 0;
+            // right: 0;
+            // padding: 50px;
+            // width: 100%;
+            // height: 100%;
+            box-sizing: border-box;
+            // display: flex;
+            // align-content: flex-end;
+            // flex-wrap: wrap;
+            @include screen('tablet') {
+                // overflow-x: auto;
+            }
             // 探索地圖按鈕選項
             .exploremap_btn {
                 display: flex;
                 align-items: center;
                 margin-bottom: 30px;
-                @include screen('xs_mobile') {
-                    display: block;
-                }
+                flex: auto;
+                flex-basis: 100%;   
                 .title {
                     font-weight: bolder;
                     font-size: 1.438em;
@@ -1546,9 +1558,11 @@ a.more {
             // 夥伴區塊
             .partner_block, .tool_block {
                 clear: both;
-                @include screen('tablet') {
-                    overflow-x: auto;
-                }
+                flex: auto;
+                flex-basis: 100%;
+                // @include screen('tablet') {
+                //     overflow-x: auto;
+                // }
                 .tool_group, .partner_group {
                     @include screen('tablet') {
                         min-width: 1100px;
@@ -1697,6 +1711,11 @@ a.more {
                     @include screen('tablet') {
                         transform: scale(1.05);
                     }
+                    .timeblock {
+                        img {
+                            filter: invert(100%);
+                        }
+                    }
                 }
             }
             .image {
@@ -1750,6 +1769,7 @@ a.more {
                         width: 16px;
                         margin-left: 5px;
                         vertical-align: middle;
+                        transition: .5s;
                     }
                 }
             }

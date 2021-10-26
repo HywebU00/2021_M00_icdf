@@ -3,6 +3,7 @@
 .cp {
     font-size: 1em * 1.0666666;
     line-height: 1.65em;
+    margin-bottom: 5em;
     @include screen('xs_mobile') {
         font-size: 1em * 1.2;
     }
@@ -14,7 +15,7 @@
         margin-bottom: 1.25em;
     }
     h3 {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
     h4 {
         font-size: 1.25em;
