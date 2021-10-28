@@ -3,8 +3,7 @@
     margin-bottom: 1em;
     position: relative;
     >.container {
-        @include gutter(0); //gutter 代表左右要留白
-        max-width: 100% !important;
+        // @include gutter(0); //gutter 代表左右要留白
     }
     .img-container {
         position: relative;
@@ -217,34 +216,33 @@
 }
 .innerpage_block {
     &.countrypage {
-        .breadcrumb, .function_panel {
-           
-            max-width: $container-max; //請看_variable.scss
-            margin:0;
-            
-        }
-        .container {
-            overflow: hidden;
-            .center_block {
-                margin-left: 20%;
-                @media(max-width: 1700px) {
-                    margin-left: 15%;
-                }
-                @media(max-width:1400px) {
-                    margin-left: 10%;
-                }
-                @media(max-width:1200px) {
-                    margin-left: 30px;
-                }
-            }
-        }
+        // .container {
+        //     overflow: hidden;
+        //     .center_block {
+        //         margin-left: 20%;
+        //         @media(max-width: 1700px) {
+        //             margin-left: 15%;
+        //         }
+        //         @media(max-width:1400px) {
+        //             margin-left: 10%;
+        //         }
+        //         @media(max-width:1200px) {
+        //             margin-left: 30px;
+        //         }
+        //     }
+        // }
     }
+}
+.shared_function {
+    .container {}
 }
 // 季刊列表頁面
 // 季刊 block
 .periodical_block {
-    display: flex;
-    flex-wrap: wrap;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
     .periodical_group {
         flex: none;
         flex-basis: 23%;
@@ -337,6 +335,7 @@
 // 年報列表頁面
 // 年報
 .annual_report_block {
+    .container {}
     .annual_report_group {
         display: flex;
         flex-wrap: wrap;
@@ -403,6 +402,7 @@
 // 影音專區頁面
 // 影音專區
 .movie_block {
+    .container {}
     .movie_group {
         display: flex;
         flex-wrap: wrap;
@@ -519,14 +519,14 @@
 }
 // 資訊問答
 .dataqa_block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-    margin: 2em 0 0;
-    max-width: 1200px;
-    @include screen('mobile') {
-        flex-wrap: wrap;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 0;
+        @include screen('mobile') {
+            flex-wrap: wrap;
+        }
     }
     .question {
         flex: none;
@@ -561,8 +561,9 @@
     padding: 0 0 40px;
     .priority_areas_group {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         max-width: 1200px;
+        margin: 20px 0;
         @include screen('mobile') {
             display: block;
         }
@@ -577,8 +578,10 @@
                 font-size: 1.5em;
                 letter-spacing: 0.05em;
                 margin-bottom: 25px;
+                font-weight: bolder;
             }
             .priority_list {
+                margin: 0 0 30px;
                 ul {
                     display: flex;
                     margin: 0;
@@ -599,6 +602,30 @@
                             height: 90px;
                             display: block;
                             margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+            // 聯合國永續發展目標
+            .sdgs_block {
+                margin: 0;
+                position: relative;
+                .title {
+                    color: $color-word;
+                    display: block;
+                    font-size: 1.5em;
+                    letter-spacing: 0.05em;
+                    margin-bottom: 25px;
+                    font-weight: bolder;
+                }
+                .sdgscontent {
+                    padding: 15px;
+                    .sdgs_list {
+                        margin-bottom: 20px;
+                        img {
+                            vertical-align: middle;
+                            width: 50px;
+                            margin-right: 15px;
                         }
                     }
                 }
@@ -637,8 +664,19 @@
 // 相關計畫區塊
 .related_plan_block {
     padding: 0;
+    .related_plan_group {
+        margin-left: 20%;
+        @media(max-width: 1700px) {
+            margin-left: 15%;
+        }
+        @media(max-width:1400px) {
+            margin-left: 10%;
+        }
+        @media(max-width:1200px) {
+            margin-left: 30px;
+        }
+    }
     .projectstab {
-        // padding: 0 0 0 20% ;
         .plansilder {
             margin: 0px -18% 0 0;
             position: relative;
@@ -697,7 +735,7 @@
                 position: relative;
                 float: left;
                 @include screen('xs_mobile') {
-                    padding: 50px 30px ;
+                    padding: 50px 30px;
                 }
                 a {
                     position: relative;
@@ -847,14 +885,25 @@
 }
 // 相關最新消息
 .related_news_block {
-    padding: 0 0 80px 0;
+    padding: 0;
+    .container {}
     .relatednews_group {
-        padding: 0 15px 0 0;
+        margin-left: 20%;
+        overflow: hidden;
+        padding: 0 0 50px;
+        @media(max-width: 1700px) {
+            margin-left: 15%;
+        }
+        @media(max-width:1400px) {
+            margin-left: 10%;
+        }
+        @media(max-width:1200px) {
+            margin-left: 30px;
+        }
     }
     .relatednews_silder {
         margin: 0px -18% 0 0;
         position: relative;
-        padding: 0 0 100px;
         @media(max-width: 1700px) {
             margin: 0px -16% 0 0;
         }
@@ -880,7 +929,7 @@
             background-color: #bec1ba;
             position: absolute;
             left: 11%;
-            bottom: 32px;
+            bottom: -67px;
             z-index: 1;
             @include screen('tablet') {
                 left: 8%;
@@ -896,7 +945,7 @@
             background-color: $secondaryColor;
             position: absolute;
             left: 11%;
-            bottom: 32px;
+            bottom: -67px;
             z-index: 2;
             @include screen('tablet') {
                 left: 8%;
@@ -1015,7 +1064,7 @@
         // 箭頭
         .slick-prev, .slick-next {
             top: auto;
-            bottom: 0;
+            bottom: -100px;
             border: 1px solid #ccc;
             width: 70px !important;
             height: 70px !important;
@@ -1065,9 +1114,9 @@
         }
     }
     .more {
-        margin: -53px 5% 0 0;
+        margin: 45px 5% 0 0;
         @include screen('tablet') {
-            margin: 22px 3% 0 0;
+            margin: 120px 3% 0 0;
         }
     }
 }
@@ -1075,7 +1124,16 @@
 .social_networks_block {
     padding: 0 0 80px 0;
     .social_networks_group {
-        padding: 0;
+        margin-left: 20%;
+        @media(max-width: 1700px) {
+            margin-left: 15%;
+        }
+        @media(max-width:1400px) {
+            margin-left: 10%;
+        }
+        @media(max-width:1200px) {
+            margin-left: 30px;
+        }
         .social_networks_silder {
             margin: 0px 0 0 0;
             position: relative;
@@ -1431,38 +1489,19 @@
         }
     }
 }
-// 聯合國永續發展目標
-.sdgs_block {
-    margin: 0;
-    position: relative;
-    .title {
-        font-size: 1.5em;
-        margin-bottom: 15px;
-    }
-    .sdgscontent {
-        padding: 15px;
-        .sdgs_list {
-            margin-bottom: 20px;
-            img {
-                vertical-align: middle;
-                width: 50px;
-                margin-right: 15px;
-            }
-        }
-    }
-}
-.publish_info_block{
-    padding:2em 0;
-    ul{
+// 發布資料
+.publish_info_block {
+    padding: 2em 0;
+    ul {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin:0;
-        padding:0;
-        list-style-type:none;
-        li{
-            flex:none;
-            margin:0 1em 10px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            flex: none;
+            margin: 0 1em 10px;
         }
     }
 }

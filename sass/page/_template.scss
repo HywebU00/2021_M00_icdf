@@ -31,6 +31,9 @@ body {
     margin: 0 auto;
     max-width: $container-max; //請看_variable.scss
     @include gutter();
+    @media(max-width: 1200px) {
+        @include gutter(60px);
+    }
 }
 .main {
     position: relative;
@@ -56,21 +59,21 @@ h2.title {
         font-weight: 400;
         font-size: 2em;
         display: block;
-        margin-bottom: .5em;
+        margin-bottom: .2em;
         letter-spacing: 0.02em;
-        line-height: 1.25em;
+        line-height: 1em;
     }
 }
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    >.container {
-        @include gutter(); //gutter 代表左右要留白
-        display: flex;
-        @include screen('notebook') {
-            @include gutter(60px);
-        }
-    }
+    // >.container {
+    //     @include gutter(); //gutter 代表左右要留白
+    //     display: flex;
+    //     @include screen('notebook') {
+    //         @include gutter(60px);
+    //     }
+    // }
     .center_block {
         flex: none;
         flex-basis: 100%;
@@ -111,16 +114,12 @@ h2.title {
         font-size: 1.125em;
     }
     h2.title {
+        max-width: 1200px;
+        margin: 0 auto 30px;
+        @include gutter();
         text-align: left;
-        margin: 0 0 30px;
-        font-size: 2em;
-        &.style2 {
-            span {
-                font-family: 'Oswald', sans-serif;
-                font-weight: 400;
-                margin-bottom: 0.1em;
-                font-size: 1.875em;
-            }
+        @media(max-width: 1200px) {
+            @include gutter(60px);
         }
     }
 }

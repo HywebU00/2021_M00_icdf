@@ -579,7 +579,7 @@ $(function() {
                     _tabItemNow.next().fadeIn("0", function() {
                         $(".plansilder").slick("setPosition", 0);
                     });
-                    tabContentHeight = _tabItemNow.next().innerHeight();
+                    // tabContentHeight = _tabItemNow.next().innerHeight();
                     // _tab.height(tabContentHeight + tabItemHeight);
                 }
                 e.preventDefault();
