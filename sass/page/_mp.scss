@@ -876,7 +876,7 @@ a.more {
                 }
                 .dataright_block {
                     flex: auto;
-                    padding: 0 0 0 30px;
+                    padding: 0 30px 0 30px;
                     box-sizing: border-box;
                     @include screen('mobile') {
                         padding: 0;
@@ -935,6 +935,7 @@ a.more {
                                     background-color: $secondaryColor;
                                     color: #fff;
                                     font-weight: bold;
+                                    margin-top: 15px;
                                     padding: 2px 15px;
                                     margin-bottom: 15px;
                                     font-size: 1.125em;
@@ -1192,7 +1193,7 @@ a.more {
                         left: 0;
                         margin: 0 auto;
                         width: 100%;
-                        // height: 100%;
+                        height: 94%;
                         object-fit: cover;
                     }
                     // @include screen('xs_mobile') {
@@ -1362,7 +1363,7 @@ a.more {
                                 max-height: 100%;
                                 max-width: 100%;
                                 animation-name: dots;
-                                animation-duration: 5s;
+                                animation-duration: 8s;
                                 background: $primaryColor;
                                 @include screen('mobile') {
                                     width: 70px;
@@ -1459,6 +1460,54 @@ a.more {
             img {
                 width: 90%;
             }
+            // 國家點
+            .country_point {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                a {
+                    span {
+                        position: relative;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: #000;
+                        display: block;
+                        @include screen('tablet') {
+                            width: 6px;
+                            height: 6px;
+                        }
+                        em {
+                            display: none;
+                        }
+                    }
+                    &.blue_point {
+                        span {
+                            background-color: #04629a;
+                        }
+                    }
+                    &.brightblue_point {
+                        span {
+                            background-color: #16b1c1;
+                        }
+                    }
+                    &.green_point {
+                        span {
+                            background-color: #66bb6a;
+                        }
+                    }
+                    &.bluegreen_point {
+                        span {
+                            background-color: #0bb89c;
+                        }
+                    }
+                }
+            }
         }
         // 探索地圖區塊
         .exploremap_group {
@@ -1485,7 +1534,7 @@ a.more {
                 align-items: center;
                 margin-bottom: 30px;
                 flex: auto;
-                flex-basis: 100%;   
+                flex-basis: 100%;
                 .title {
                     font-weight: bolder;
                     font-size: 1.438em;

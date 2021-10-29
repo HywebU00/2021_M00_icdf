@@ -273,7 +273,8 @@ $(function() {
         arrows: true,
         dots: true,
         autoplay: true, //自動播放
-        autoplaySpeed: 5000,
+        infinite: true,
+        autoplaySpeed: 8000,
         responsive: [{
             breakpoint: 1200,
             settings: {
@@ -398,7 +399,7 @@ $(function() {
          arrows: true,
         autoplaySpeed: 3000,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 1, 
         responsive: [{
                 breakpoint: 1200,
                 settings: {
@@ -486,6 +487,38 @@ $(function() {
             
         ]
     });
+    // 相關最新消息
+    $('.relatedpic_silder').slick({
+        dots: false,
+        infinite: false,
+        autoplay: false,
+         arrows: true,
+        autoplaySpeed: 3000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    
+                }
+            }, {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            
+        ]
+    });
     // svg
 });
 // 影片燈箱
@@ -506,6 +539,21 @@ $(function() {
 // 影音專區
 $(function() {
     $('.movie_block .movie_group .movie_list .image.movie').click(function() {
+        $('.movie_lightbox').fadeIn();
+        $('body').addClass('noscroll');
+    })
+    $('.movie_lightbox .close').click(function() {
+        $('.movie_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+    $('.movie_lightbox .overlay').click(function() {
+        $('.movie_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+})
+// 國家頁面
+$(function() {
+    $('.community_block .youtube_block a.movie').click(function() {
         $('.movie_lightbox').fadeIn();
         $('body').addClass('noscroll');
     })
