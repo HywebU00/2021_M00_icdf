@@ -519,6 +519,38 @@ $(function() {
             
         ]
     });
+    // videos
+    $('.videos_silder').slick({
+        dots: false,
+        infinite: false,
+        autoplay: false,
+         arrows: true,
+        autoplaySpeed: 3000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    
+                }
+            }, {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            
+        ]
+    });
     // svg
 });
 // 影片燈箱
@@ -564,5 +596,33 @@ $(function() {
     $('.movie_lightbox .overlay').click(function() {
         $('.movie_lightbox').fadeOut();
         $('body').removeClass('noscroll');
+    })
+})
+// 人才公告 videos
+$(function() {
+    $('.videos_block .videos_block a.movie').click(function() {
+        $('.movie_lightbox').fadeIn();
+        $('body').addClass('noscroll');
+    })
+    $('.movie_lightbox .close').click(function() {
+        $('.movie_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+    $('.movie_lightbox .overlay').click(function() {
+        $('.movie_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+})
+// 當內容頁上方沒有function_panel時
+$(function(){
+    $( ".breadcrumb:only-child" ).css( "margin-bottom", "3em" );
+})
+
+// 招募流程
+
+$(function(){
+    $('.recruitment_list .jobprocess>a').click(function(){
+        $(this).parents('.recruitment_list').addClass('open');
+         $(this).parents('.recruitment_list').siblings('.recruitment_list').removeClass('open');
     })
 })
