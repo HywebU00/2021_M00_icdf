@@ -1948,7 +1948,6 @@
                         }
                         .title {
                             top: 37%;
-                            // text-shadow: 0 0 5px #666, 0 0 10px #666;
                             @include screen('tablet') {
                                 top: 27%;
                             }
