@@ -683,17 +683,17 @@
                 }
             }
             .plansblock {
-                padding: 30px 30px;
+                padding: 0px 30px 30px;
                 position: relative;
                 float: left;
                 @include screen('tablet') {
-                    padding: 30px 20px;
+                    padding: 0px 20px 30px;
                 }
                 @include screen('mobile') {
-                    padding: 30px 10px;
+                    padding: 0px 10px 30px;
                 }
                 @include screen('xs_mobile') {
-                    padding: 30px 0;
+                    padding: 0px 0 30px;
                 }
                 a {
                     position: relative;
@@ -900,17 +900,17 @@
             }
         }
         .relatednews_block {
-            padding: 30px 30px;
+            padding: 0px 30px 30px;
             position: relative;
             float: left;
             @include screen('tablet') {
-                padding: 30px 20px;
+                padding: 0px 20px 30px;
             }
             @include screen('mobile') {
-                padding: 30px 10px;
+                padding: 0px 10px 30px;
             }
             @include screen('xs_mobile') {
-                padding: 30px 0;
+                padding: 0px 0 30px;
             }
             a {
                 position: relative;
@@ -1455,17 +1455,17 @@
             }
         }
         .pic_block {
-            padding: 30px 30px;
+            padding: 0px 30px 30px;
             position: relative;
             float: left;
             @include screen('tablet') {
-                padding: 30px 20px;
+                padding: 0px 20px 30px;
             }
             @include screen('mobile') {
-                padding: 30px 10px;
+                padding: 0px 10px 30px;
             }
             @include screen('xs_mobile') {
-                padding: 30px 0;
+                padding: 0px 0 30px;
             }
             a {
                 position: relative;
@@ -2011,17 +2011,17 @@
             }
         }
         .videos_block {
-            padding: 50px 30px;
+            padding: 0px 30px 30px;
             position: relative;
             float: left;
             @include screen('tablet') {
-                padding: 50px 20px;
+                padding: 0px 20px 30px;
             }
             @include screen('mobile') {
-                padding: 50px 10px;
+                padding: 0px 10px 30px;
             }
             @include screen('xs_mobile') {
-                padding: 50px 0;
+                padding: 0px 0 30px;
             }
             a {
                 position: relative;
