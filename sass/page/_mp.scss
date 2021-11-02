@@ -739,7 +739,7 @@ a.more {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .9);
     z-index: 99;
     display: none;
     .overlay {
@@ -763,7 +763,7 @@ a.more {
     }
     .content {
         width: 60vw;
-        height: 60vh;
+        height: 70vh;
         position: absolute;
         top: 50%;
         left: 50%;

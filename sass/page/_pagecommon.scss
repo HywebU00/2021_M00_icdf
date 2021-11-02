@@ -530,7 +530,7 @@
 // 國家頁
 // 國家優先領域區塊
 .priority_areas_block {
-    padding: 0 0 40px;
+    padding: 0 0 20px;
     .priority_areas_group {
         display: flex;
         align-items: flex-start;
@@ -635,55 +635,31 @@
 }
 // 相關計畫區塊
 .related_plan_block {
-    padding: 0;
     .related_plan_group {
-        margin-left: 20%;
-        @media(max-width: 1700px) {
-            margin-left: 15%;
-        }
-        @media(max-width:1400px) {
-            margin-left: 10%;
-        }
-        @media(max-width:1200px) {
-            margin-left: 30px;
-        }
+        padding: 0 30px 50px;
     }
     .projectstab {
         .plansilder {
-            margin: 0px -18% 0 0;
+            margin: 0;
             position: relative;
-            @media(max-width: 1700px) {
-                margin: 0px -16% 0 0;
-            }
-            @media(max-width:1400px) {
-                margin: 0px -12% 0 0;
-            }
-            @media(max-width:1200px) {
-                margin: 0px -13% 0 0;
-            }
-            @include screen('tablet') {
-                margin: 0px -30% 0 0;
-            }
-            @include screen('mobile') {
-                margin: 0px -80% 0 0;
-            }
-            @include screen('xs_mobile') {
-                margin: 0;
-            }
             &:before {
                 content: '';
                 width: 30%;
                 height: 2px;
                 background-color: #bec1ba;
                 position: absolute;
-                left: 11%;
+                left: 25%;
                 bottom: -67px;
                 z-index: 1;
                 @include screen('tablet') {
-                    left: 8%;
+                    left: 25%;
                 }
                 @include screen('mobile') {
-                    left: 5%;
+                    width: 40%;
+                    left: 15%;
+                }
+                @include screen('xs_mobile') {
+                    left: 0;
                 }
             }
             &:after {
@@ -692,22 +668,32 @@
                 height: 2px;
                 background-color: $secondaryColor;
                 position: absolute;
-                left: 11%;
+                left: 25%;
                 bottom: -67px;
                 z-index: 2;
                 @include screen('tablet') {
-                    left: 8%;
+                    left: 25%;
                 }
                 @include screen('mobile') {
-                    left: 5%;
+                    width: 20%;
+                    left: 15%;
+                }
+                @include screen('xs_mobile') {
+                    left: 0;
                 }
             }
             .plansblock {
-                padding: 50px 60px 50px 0;
+                padding: 30px 30px;
                 position: relative;
                 float: left;
+                @include screen('tablet') {
+                    padding: 30px 20px;
+                }
+                @include screen('mobile') {
+                    padding: 30px 10px;
+                }
                 @include screen('xs_mobile') {
-                    padding: 50px 30px;
+                    padding: 30px 0;
                 }
                 a {
                     position: relative;
@@ -784,6 +770,9 @@
                             box-sizing: border-box;
                             z-index: 3;
                             display: block;
+                            @include screen('mobile') {
+                                right: -1px;
+                            }
                             img {
                                 width: 24px !important;
                                 height: 11px !important;
@@ -816,34 +805,34 @@
                 }
             }
             .slick-prev {
-                left: 45%;
+                left: 60%;
                 background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
                 background-size: 24px 11px;
                 background-color: #e6eae9;
-                @include screen('mobile') {
-                    left: 40%;
-                }
                 /* 箭頭 hover及focus 樣式 */
                 &:hover, &:focus {
                     background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
                     background-size: 24px 11px;
                     background-color: #ccc;
                 }
+                @include screen('xs_mobile') {
+                    left: 50%;
+                }
             }
             .slick-next {
                 right: auto;
-                left: calc(45% + 85px);
+                left: calc(60% + 85px);
                 background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
                 background-size: 24px 11px;
                 background-color: #e6eae9;
-                @include screen('mobile') {
-                    left: calc(40% + 85px);
-                }
                 /* 箭頭 hover及focus 樣式 */
                 &:hover, &:focus {
                     background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
                     background-size: 24px 11px;
                     background-color: #ccc;
+                }
+                @include screen('xs_mobile') {
+                    left: calc(50% + 85px);
                 }
             }
             .slick-disabled {
@@ -861,57 +850,33 @@
     padding: 0;
     .container {}
     .relatednews_group {
-        margin-left: 20%;
         overflow: hidden;
-        padding: 0 0 50px;
-        @media(max-width: 1700px) {
-            margin-left: 15%;
-        }
-        @media(max-width:1400px) {
-            margin-left: 10%;
-        }
-        @media(max-width:1200px) {
-            margin-left: 30px;
-        }
+        padding: 0 30px 50px;
         &.relatedpic_group {
             padding: 0 0 100px;
         }
     }
     .relatednews_silder {
-        margin: 0px -18% 0 0;
+        margin: 0px;
         position: relative;
-        @media(max-width: 1700px) {
-            margin: 0px -16% 0 0;
-        }
-        @media(max-width:1400px) {
-            margin: 0px -12% 0 0;
-        }
-        @media(max-width:1200px) {
-            margin: 0px -13% 0 0;
-        }
-        @include screen('tablet') {
-            margin: 0px -30% 0 0;
-        }
-        @include screen('mobile') {
-            margin: 0px -80% 0 0;
-        }
-        @include screen('xs_mobile') {
-            margin: 0;
-        }
         &:before {
             content: '';
             width: 30%;
             height: 2px;
             background-color: #bec1ba;
             position: absolute;
-            left: 11%;
+            left: 25%;
             bottom: -67px;
             z-index: 1;
             @include screen('tablet') {
-                left: 8%;
+                left: 25%;
             }
             @include screen('mobile') {
-                left: 5%;
+                width: 40%;
+                left: 15%;
+            }
+            @include screen('xs_mobile') {
+                left: 0;
             }
         }
         &:after {
@@ -920,22 +885,32 @@
             height: 2px;
             background-color: $secondaryColor;
             position: absolute;
-            left: 11%;
+            left: 25%;
             bottom: -67px;
             z-index: 2;
             @include screen('tablet') {
-                left: 8%;
+                left: 25%;
             }
             @include screen('mobile') {
-                left: 5%;
+                width: 20%;
+                left: 15%;
+            }
+            @include screen('xs_mobile') {
+                left: 0;
             }
         }
         .relatednews_block {
-            padding: 50px 60px 50px 0;
+            padding: 30px 30px;
             position: relative;
             float: left;
+            @include screen('tablet') {
+                padding: 30px 20px;
+            }
+            @include screen('mobile') {
+                padding: 30px 10px;
+            }
             @include screen('xs_mobile') {
-                padding: 50px 30px 50px 0;
+                padding: 30px 0;
             }
             a {
                 position: relative;
@@ -985,6 +960,7 @@
                         left: 0;
                         top: 0;
                         padding: 5px 15px;
+                        z-index: 2;
                     }
                     .explaincontent {
                         position: absolute;
@@ -1019,6 +995,9 @@
                         box-sizing: border-box;
                         z-index: 3;
                         display: block;
+                        @include screen('mobile') {
+                            right: -1px;
+                        }
                         img {
                             width: 24px !important;
                             height: 11px !important;
@@ -1030,9 +1009,6 @@
                             left: auto;
                             object-fit: contain;
                         }
-                        // background-image:url('../images/more_icon02.png');
-                        // background-repeat:no-repeat;
-                        // background-position:center bottom;
                     }
                 }
             }
@@ -1051,12 +1027,12 @@
             }
         }
         .slick-prev {
-            left: 45%;
+            left: 60%;
             background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
             background-size: 24px 11px;
             background-color: #e6eae9;
-            @include screen('mobile') {
-                left: 40%;
+            @include screen('xs_mobile') {
+                left: 50%;
             }
             /* 箭頭 hover及focus 樣式 */
             &:hover, &:focus {
@@ -1067,12 +1043,12 @@
         }
         .slick-next {
             right: auto;
-            left: calc(45% + 85px);
+            left: calc(60% + 85px);
             background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
             background-size: 24px 11px;
             background-color: #e6eae9;
-            @include screen('mobile') {
-                left: calc(40% + 85px);
+            @include screen('xs_mobile') {
+                left: calc(50% + 85px);
             }
             /* 箭頭 hover及focus 樣式 */
             &:hover, &:focus {
@@ -1100,73 +1076,48 @@
 .social_networks_block {
     padding: 0 0 80px 0;
     .social_networks_group {
-        margin-left: 20%;
-        @media(max-width: 1700px) {
-            margin-left: 15%;
-        }
-        @media(max-width:1400px) {
-            margin-left: 10%;
-        }
-        @media(max-width:1200px) {
-            margin-left: 30px;
-        }
         .social_networks_silder {
-            margin: 0px 0 0 0;
+            margin: 0;
             position: relative;
             padding: 0 0 100px 0;
-            @media(max-width: 1700px) {
-                margin: 0px 0 0 0;
-            }
-            @media(max-width:1400px) {
-                margin: 0px 0 0 0;
-            }
-            @media(max-width:1200px) {
-                margin: 0px 0 0 0;
-            }
-            @include screen('xs_mobile') {
-                margin: 0 15px 0 0;
-            }
             &:before {
                 content: '';
-                width: 35%;
+                width: 30%;
                 height: 2px;
                 background-color: #bec1ba;
                 position: absolute;
-                left: 13%;
+                left: 25%;
                 bottom: 32px;
                 z-index: 1;
                 @include screen('tablet') {
-                    left: 11%;
-                    width: 39%;
+                    left: 25%;
                 }
                 @include screen('mobile') {
-                    left: 9%;
-                    width: 54%;
+                    width: 40%;
+                    left: 15%;
                 }
                 @include screen('xs_mobile') {
-                    left: 5%;
-                    width: 35%;
+                    left: 30px;
                 }
             }
             &:after {
                 content: '';
-                width: 11%;
+                width: 10%;
                 height: 2px;
                 background-color: $secondaryColor;
                 position: absolute;
-                left: 13%;
+                left: 25%;
                 bottom: 32px;
                 z-index: 2;
                 @include screen('tablet') {
-                    left: 10%;
-                    width: 15%;
+                    left: 25%;
                 }
                 @include screen('mobile') {
-                    left: 9%;
+                    width: 20%;
+                    left: 15%;
                 }
                 @include screen('xs_mobile') {
-                    left: 5%;
-                    width: 11%;
+                    left: 30px;
                 }
             }
             .community_block {
@@ -1413,18 +1364,12 @@
                 }
             }
             .slick-prev {
-                left: 52%;
+                left: 60%;
                 background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
                 background-size: 24px 11px;
                 background-color: #e6eae9;
-                @include screen('tablet') {
-                    left: 58%;
-                }
-                @include screen('mobile') {
-                    left: 70%;
-                }
                 @include screen('xs_mobile') {
-                    left: 46%;
+                    left: 50%;
                 }
                 /* 箭頭 hover及focus 樣式 */
                 &:hover, &:focus {
@@ -1435,18 +1380,12 @@
             }
             .slick-next {
                 right: auto;
-                left: calc(52% + 85px);
+                left: calc(60% + 85px);
                 background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
                 background-size: 24px 11px;
                 background-color: #e6eae9;
-                @include screen('tablet') {
-                    left: calc(58% + 85px);
-                }
-                @include screen('mobile') {
-                    left: calc(70% + 85px);
-                }
                 @include screen('xs_mobile') {
-                    left: calc(46% + 85px)
+                    left: calc(50% + 85px);
                 }
                 /* 箭頭 hover及focus 樣式 */
                 &:hover, &:focus {
@@ -1467,57 +1406,32 @@
 }
 // 相關圖片
 .relatedpic_block {
-    padding: 0;
+    padding: 0 0 30px;
     .container {}
     .relatedpic_group {
-        margin-left: 20%;
         overflow: hidden;
-        padding: 0 0 100px;
-        @media(max-width: 1700px) {
-            margin-left: 15%;
-        }
-        @media(max-width:1400px) {
-            margin-left: 10%;
-        }
-        @media(max-width:1200px) {
-            margin-left: 30px;
-        }
+        padding: 0 30px 100px;
     }
     .relatedpic_silder {
-        margin: 0px -18% 0 0;
         position: relative;
-        @media(max-width: 1700px) {
-            margin: 0px -16% 0 0;
-        }
-        @media(max-width:1400px) {
-            margin: 0px -12% 0 0;
-        }
-        @media(max-width:1200px) {
-            margin: 0px -13% 0 0;
-        }
-        @include screen('tablet') {
-            margin: 0px -30% 0 0;
-        }
-        @include screen('mobile') {
-            margin: 0px -80% 0 0;
-        }
-        @include screen('xs_mobile') {
-            margin: 0;
-        }
         &:before {
             content: '';
             width: 30%;
             height: 2px;
             background-color: #bec1ba;
             position: absolute;
-            left: 11%;
+            left: 25%;
             bottom: -67px;
             z-index: 1;
             @include screen('tablet') {
-                left: 8%;
+                left: 25%;
             }
             @include screen('mobile') {
-                left: 5%;
+                width: 40%;
+                left: 15%;
+            }
+            @include screen('xs_mobile') {
+                left: 0;
             }
         }
         &:after {
@@ -1526,22 +1440,32 @@
             height: 2px;
             background-color: $secondaryColor;
             position: absolute;
-            left: 11%;
+            left: 25%;
             bottom: -67px;
             z-index: 2;
             @include screen('tablet') {
-                left: 8%;
+                left: 25%;
             }
             @include screen('mobile') {
-                left: 5%;
+                width: 20%;
+                left: 15%;
+            }
+            @include screen('xs_mobile') {
+                left: 0;
             }
         }
         .pic_block {
-            padding: 50px 60px 50px 0;
+            padding: 30px 30px;
             position: relative;
             float: left;
+            @include screen('tablet') {
+                padding: 30px 20px;
+            }
+            @include screen('mobile') {
+                padding: 30px 10px;
+            }
             @include screen('xs_mobile') {
-                padding: 50px 30px 50px 0;
+                padding: 30px 0;
             }
             a {
                 position: relative;
@@ -1646,12 +1570,12 @@
             }
         }
         .slick-prev {
-            left: 45%;
+            left: 60%;
             background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
             background-size: 24px 11px;
             background-color: #e6eae9;
-            @include screen('mobile') {
-                left: 40%;
+            @include screen('xs_mobile') {
+                left: 50%;
             }
             /* 箭頭 hover及focus 樣式 */
             &:hover, &:focus {
@@ -1662,12 +1586,12 @@
         }
         .slick-next {
             right: auto;
-            left: calc(45% + 85px);
+            left: calc(60% + 85px);
             background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
             background-size: 24px 11px;
             background-color: #e6eae9;
-            @include screen('mobile') {
-                left: calc(40% + 85px);
+            @include screen('xs_mobile') {
+                left: calc(50% + 85px);
             }
             /* 箭頭 hover及focus 樣式 */
             &:hover, &:focus {
@@ -1775,6 +1699,9 @@
         @include gutter();
         max-width: 1400px !important;
         margin: 0 auto;
+        @include screen('xs_mobile') {
+            @include gutter(60px);
+        }
     }
     .recruitment_group {
         display: flex;
@@ -2000,10 +1927,10 @@
                         top: 90px;
                         right: -40%;
                         transition: .5s;
-                        @include screen('xs_mobile'){
+                        @include screen('xs_mobile') {
                             right: -23%;
                         }
-                        @media(max-width: 480px){
+                        @media(max-width: 480px) {
                             right: -30%;
                         }
                     }
@@ -2049,14 +1976,18 @@
             height: 2px;
             background-color: #bec1ba;
             position: absolute;
-            left: 16%;
+            left: 25%;
             bottom: -17px;
             z-index: 1;
             @include screen('tablet') {
-                left: 8%;
+                left: 25%;
             }
             @include screen('mobile') {
-                left: 5%;
+                width: 40%;
+                left: 15%;
+            }
+            @include screen('xs_mobile') {
+                left: 0;
             }
         }
         &:after {
@@ -2065,14 +1996,18 @@
             height: 2px;
             background-color: $secondaryColor;
             position: absolute;
-            left: 16%;
+            left: 25%;
             bottom: -17px;
             z-index: 2;
             @include screen('tablet') {
-                left: 8%;
+                left: 25%;
             }
             @include screen('mobile') {
-                left: 5%;
+                width: 20%;
+                left: 15%;
+            }
+            @include screen('xs_mobile') {
+                left: 0;
             }
         }
         .videos_block {
@@ -2208,13 +2143,13 @@
             }
         }
         .slick-prev {
-            left: 50%;
+            left: 60%;
             background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
             background-size: 24px 11px;
             background-color: #e6eae9;
-            // @include screen('mobile') {
-            //     left: 40%;
-            // }
+            @include screen('xs_mobile') {
+                left: 50%;
+            }
             /* 箭頭 hover及focus 樣式 */
             &:hover, &:focus {
                 background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
@@ -2224,13 +2159,13 @@
         }
         .slick-next {
             right: auto;
-            left: calc(50% + 85px);
+            left: calc(60% + 85px);
             background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
             background-size: 24px 11px;
             background-color: #e6eae9;
-            // @include screen('mobile') {
-            //     left: calc(40% + 85px);
-            // }
+            @include screen('xs_mobile') {
+                left: calc(50% + 85px);
+            }
             /* 箭頭 hover及focus 樣式 */
             &:hover, &:focus {
                 background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);

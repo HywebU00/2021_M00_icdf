@@ -403,7 +403,7 @@ $(function() {
         responsive: [{
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     
                 }
@@ -414,7 +414,7 @@ $(function() {
                     slidesToScroll: 1,
                 }
             }, {
-                breakpoint: 575,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -435,7 +435,7 @@ $(function() {
         responsive: [{
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     
                 }
@@ -446,7 +446,7 @@ $(function() {
                     slidesToScroll: 1,
                 }
             }, {
-                breakpoint: 575,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -455,7 +455,7 @@ $(function() {
             
         ]
     });
-    // 相關最新消息
+    // 相關社群動態
     $('.social_networks_silder').slick({
         dots: false,
         infinite: false,
@@ -478,7 +478,7 @@ $(function() {
                     slidesToScroll: 1,
                 }
             }, {
-                breakpoint: 575,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -499,7 +499,7 @@ $(function() {
         responsive: [{
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     
                 }
@@ -510,7 +510,7 @@ $(function() {
                     slidesToScroll: 1,
                 }
             }, {
-                breakpoint: 575,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1

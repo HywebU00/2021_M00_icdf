@@ -115,7 +115,7 @@ h2.title {
     }
     h2.title {
         max-width: 1200px;
-        margin: 0 auto 30px;
+        margin: 0 auto 20px;
         @include gutter();
         text-align: left;
         @media(max-width: 1200px) {
