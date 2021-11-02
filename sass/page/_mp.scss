@@ -762,8 +762,8 @@ a.more {
         cursor: pointer;
     }
     .content {
-        width: 50vw;
-        height: 60vh;
+        width: 60vw;
+        height: 33.75vw;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -774,34 +774,9 @@ a.more {
         overflow: auto;
         text-align: left;
         overflow: hidden;
-        @media(max-width: 1600px) {
-            width: 60vw;
-        }
-        @include screen('notebook') {
-            width: 70vw;
-        }
         @media(max-width: 1200px) {
             width: 80vw;
-        }
-        @media(max-width: 1050px) {
-            width: 90vw;
-        }
-        @include screen('tablet') {
-            width: 90vw;
-            height: 55vh;
-        }
-        @include screen('mobile') {
-            width: 90vw;
-            height: 45vh;
-            
-        }
-        @media(max-width: 530px) {
-            width: 90vw;
-            height: 35vh;
-        }
-        @media(max-width: 400px) {
-            width: 90vw;
-            height: 30vh;
+            height: 45vw;
         }
     }
 }
