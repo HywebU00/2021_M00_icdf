@@ -1,0 +1,121 @@
+// 影片燈箱movie_lightbox
+.movie_lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 99;
+    display: none;
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .close {
+        background-image: url('../images/icon/icon_close2.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        display: block;
+        cursor: pointer;
+    }
+    .content {
+        width: 60vw;
+        height: 33.75vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        background-color: #000;
+        border-radius: 0;
+        overflow: auto;
+        text-align: left;
+        overflow: hidden;
+        @media(max-width: 1200px) {
+            width: 80vw;
+            height: 45vw;
+        }
+    }
+}
+// 查詢燈箱search_lightbox
+.search_lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 99;
+    display: none;
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .close {
+        background-image: url('../images/icon/icon_close2.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        display: block;
+        cursor: pointer;
+    }
+    .content {
+        width: 650px;
+        height: 420px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        background-color: #fff;
+        border-radius: 0;
+        overflow: auto;
+        text-align: left;
+        overflow: hidden;
+        @include screen('mobile') {
+            width: 75vw;
+            height: 80%;
+        }
+        @include screen('xs_mobile') {
+            width: 90vw;
+        }
+    }
+}
+// 條件查詢
+.search_condition {
+    padding: 30px;
+    box-sizing: border-box;
+    @include screen('xs_mobile') {
+        padding: 30px 15px;
+    }
+    .title {
+        color: $primaryColor;
+        font-size: 1.75em;
+        text-align: center;
+        margin-bottom: 1em;
+        font-weight: bolder;
+    }
+    .form_grid {
+        overflow-y: scroll;
+        height: 300px;
+        @include screen('mobile') {
+            height: 80%;
+        }
+    }
+}

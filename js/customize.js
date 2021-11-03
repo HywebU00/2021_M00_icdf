@@ -613,6 +613,21 @@ $(function() {
         $('body').removeClass('noscroll');
     })
 })
+// 條件查詢
+$(function() {
+    $('.function_panel a.condition_btn').click(function() {
+        $('.search_lightbox').fadeIn();
+        $('body').addClass('noscroll');
+    })
+    $('.search_lightbox .close').click(function() {
+        $('.search_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+    $('.search_lightbox .overlay').click(function() {
+        $('.search_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+})
 // 當內容頁上方沒有function_panel時
 $(function(){
     $( ".breadcrumb:only-child" ).css( "margin-bottom", "3em" );

@@ -343,6 +343,7 @@
                             <!-- function功能區塊 -->
                             <div class="function">
                                 <ul>
+                                    <li class="searchbtn"><a href="#" class="condition_btn">條件查詢</a></li>
                                     <li class="en"><a href="#">EN</a></li>
                                     <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
                                     <li class="print"><a href="#">友善列印</a></li>
@@ -363,6 +364,62 @@
                                     <li><a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk"></a></li>
                                 </ul>
                             </div>
+                            <!-- 查詢燈箱 start-->
+                            <div class="search_lightbox">
+                                <div class="overlay"></div>
+                                <div class="close"></div>
+                                <div class="content">
+                                    <!-- 條件查詢 start-->
+                                    <div class="search_condition">
+                                        <div class="title">條件查詢</div>
+                                        <div class="flex-form form_grid">
+                                            <div class="form_grp">
+                                                <label for="selectSample" class="form_title">優先領域</label>
+                                                <div class="form_content form_inline">
+                                                    <select id="selectSample" name="">
+                                                        <option value="">全部</option>
+                                                        <option value="">環境</option>
+                                                        <option value="">公衛醫療</option>
+                                                        <option value="">農業</option>
+                                                        <option value="">教育</option>
+                                                        <option value="">資通訊</option>
+                                                        <option value="">中小企業</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="address" class="form_title">標題</label>
+                                                <div class="form_content">
+                                                    <input name="" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="form_title">起始日期</div>
+                                                <div class="form_content">
+                                                    <div class="datepick">
+                                                        <input name="" type="date" value="" class="calendar" placeholder="開始日期">
+                                                    </div>
+                                                    <div class="datepick">
+                                                        <input name="" type="date" value="" class="calendar" placeholder="結束日期">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="address" class="form_title">關鍵字</label>
+                                                <div class="form_content">
+                                                    <input name="" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="btn_grp form_inline">
+                                                <button class="btn btn-submit">查詢</button>
+                                                <button class="btn btn-reset">清除</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 條件查詢 end-->
+                                </div>
+                            </div>
+                            <!-- 查詢燈箱 end-->
                         </div>
                         <!-- function_panel end-->
                     </div>

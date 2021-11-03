@@ -419,9 +419,8 @@
                             border-radius: 50%;
                             position: absolute;
                             left: 50%;
-                            top: 40%;
-                            margin-left: -30px;
-                            margin-top: -3px;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
                             display: block;
                             z-index: 2;
                             transition: .5s;
@@ -434,10 +433,9 @@
                             border-right-color: transparent;
                             border-bottom-color: transparent;
                             position: absolute;
-                            left: 49%;
-                            top: 30%;
-                            margin-top: 32px;
-                            margin-left: 0px;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-15%, -50%);
                             display: block;
                             z-index: 3;
                         }
@@ -1144,9 +1142,8 @@
                             border-radius: 50%;
                             position: absolute;
                             left: 50%;
-                            top: 40%;
-                            margin-left: -30px;
-                            margin-top: -3px;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
                             display: block;
                             z-index: 2;
                             transition: .5s;
@@ -1159,10 +1156,9 @@
                             border-right-color: transparent;
                             border-bottom-color: transparent;
                             position: absolute;
-                            left: 49%;
-                            top: 33.5%;
-                            margin-top: 32px;
-                            margin-left: 0px;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-15%, -50%);
                             display: block;
                             z-index: 3;
                         }
@@ -2035,9 +2031,8 @@
                     border-radius: 50%;
                     position: absolute;
                     left: 50%;
-                    top: 40%;
-                    margin-left: -30px;
-                    margin-top: -3px;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
                     display: block;
                     z-index: 2;
                     transition: .5s;
@@ -2050,10 +2045,9 @@
                     border-right-color: transparent;
                     border-bottom-color: transparent;
                     position: absolute;
-                    left: 49%;
-                    top: 33.5%;
-                    margin-top: 32px;
-                    margin-left: 0px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-15%, -50%);
                     display: block;
                     z-index: 3;
                 }
@@ -2062,15 +2056,20 @@
                         background-color: $secondaryColor;
                         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
                     }
+                    .image {
+                        &:after {
+                            background-color: rgba(0, 0, 0, 0);
+                        }
+                    }
                 }
                 .image {
                     position: relative;
                     width: 100%;
                     overflow: visible;
-                    height: 300px;
-                    @include screen('xs_mobile') {
-                        height: 300px;
-                    }
+                    @include aspect-ratio(16, 9);
+                    // @include screen('xs_mobile') {
+                    //     height: 300px;
+                    // }
                     img {
                         position: absolute;
                         width: 100% !important;
@@ -2082,7 +2081,7 @@
                         object-fit: cover;
                         transition: .5s;
                     }
-                    &:before {
+                    &:after {
                         content: '';
                         position: absolute;
                         top: 0;
@@ -2091,14 +2090,9 @@
                         bottom: 0;
                         width: 100%;
                         height: 100%;
-                        background-color: rgba(0, 0, 0, 0.3);
+                        background-color: rgba(0, 0, 0, 0.2);
                         z-index: 1;
                         transition: .5s;
-                    }
-                    &:hover {
-                        &:before {
-                            background-color: rgba(0, 0, 0, .1);
-                        }
                     }
                     .details {
                         background-color: $primaryColor;
