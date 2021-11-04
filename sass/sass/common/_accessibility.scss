@@ -3,7 +3,9 @@
 // tab的外框線
 a:focus {
     outline: none;
-    box-shadow: 0 0px 0px 2px $aFocus inset;
+    // box-shadow: 0 0px 0px 2px $aFocus inset;
+    box-shadow: none !important;
+    // border:none !important;
     @include screen('mobile') {
         box-shadow: none;
     }

@@ -1,5 +1,5 @@
 // 按鈕設定
-$btn-font-color:$btn-word;
+$btn-font-color:#fff;
 $btn-border:darken($btn-font-color, 5);
 $btn-padding:.5em 1.25em;
 $btn-radius:.2em;
@@ -10,7 +10,7 @@ $btn-radius:.2em;
 }
 
 // 按鈕的共用設定
-@mixin btn_setting($btn-bg:#e0e0e0, $btn-font-color:$btn-font-color) {
+@mixin btn_setting($btn-bg:#898989, $btn-font-color:$btn-font-color) {
     background: $btn-bg;
     border: 1px solid $btn-bg;
     color: $btn-font-color;
@@ -104,7 +104,8 @@ $btn-radius:.2em;
 }
 .btn-reset {
     // @extend %btn;
-    color:lighten($color-word,15);
+    // color:lighten($color-word,15);
+    color:#fff;
 }
 .btn-search {
     // @extend %btn;

@@ -396,160 +396,145 @@ $(function() {
         dots: false,
         infinite: false,
         autoplay: false,
-         arrows: true,
+        arrows: true,
         autoplaySpeed: 3000,
         slidesToShow: 3,
-        slidesToScroll: 1, 
+        slidesToScroll: 1,
         responsive: [{
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    
-                }
-            }, {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            }, {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
             }
-            
-        ]
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }]
     });
     // 相關最新消息
     $('.relatednews_silder').slick({
         dots: false,
         infinite: false,
         autoplay: false,
-         arrows: true,
+        arrows: true,
         autoplaySpeed: 3000,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [{
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    
-                }
-            }, {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            }, {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
             }
-            
-        ]
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
     });
     // 相關社群動態
     $('.social_networks_silder').slick({
         dots: false,
         infinite: false,
         autoplay: false,
-         arrows: true,
+        arrows: true,
         autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
         responsive: [{
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    
-                }
-            }, {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }, {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
             }
-            
-        ]
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
     });
     // 相關最新消息
     $('.relatedpic_silder').slick({
         dots: false,
         infinite: false,
         autoplay: false,
-         arrows: true,
+        arrows: true,
         autoplaySpeed: 3000,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [{
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    
-                }
-            }, {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            }, {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
             }
-            
-        ]
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
     });
     // videos
     $('.videos_silder').slick({
         dots: false,
         infinite: false,
         autoplay: false,
-         arrows: true,
+        arrows: true,
         autoplaySpeed: 3000,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [{
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    
-                }
-            }, {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            }, {
-                breakpoint:767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
             }
-            
-        ]
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
     });
     // svg
 });
@@ -568,7 +553,7 @@ $(function() {
         $('body').removeClass('noscroll');
     })
 })
-// 影音專區
+// 影音專區燈箱
 $(function() {
     $('.movie_block .movie_group .movie_list .image.movie').click(function() {
         $('.movie_lightbox').fadeIn();
@@ -583,7 +568,7 @@ $(function() {
         $('body').removeClass('noscroll');
     })
 })
-// 國家頁面
+// 國家頁面燈箱
 $(function() {
     $('.community_block .youtube_block a.movie').click(function() {
         $('.movie_lightbox').fadeIn();
@@ -598,7 +583,7 @@ $(function() {
         $('body').removeClass('noscroll');
     })
 })
-// 人才公告 videos
+// 人才公告 videos燈箱
 $(function() {
     $('.videos_block .videos_block a.movie').click(function() {
         $('.movie_lightbox').fadeIn();
@@ -613,7 +598,7 @@ $(function() {
         $('body').removeClass('noscroll');
     })
 })
-// 條件查詢
+// 條件查詢燈箱
 $(function() {
     $('.function_panel a.condition_btn').click(function() {
         $('.search_lightbox').fadeIn();
@@ -628,16 +613,36 @@ $(function() {
         $('body').removeClass('noscroll');
     })
 })
-// 當內容頁上方沒有function_panel時
-$(function(){
-    $( ".breadcrumb:only-child" ).css( "margin-bottom", "3em" );
+// 條件查詢燈箱
+$(function() {
+    $('.calendar ').click(function() {
+        $('.activcalendar_lightbox').fadeIn();
+        $('body').addClass('noscroll');
+    })
+    $('.activcalendar_lightbox .close').click(function() {
+        $('.activcalendar_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+    $('.activcalendar_lightbox .overlay').click(function() {
+        $('.activcalendar_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
 })
-
+// 當內容頁上方沒有function_panel時
+$(function() {
+    $(".breadcrumb:only-child").css("margin-bottom", "3em");
+})
 // 招募流程
-
-$(function(){
-    $('.recruitment_list .jobprocess>a').click(function(){
+$(function() {
+    $('.recruitment_list .jobprocess>a').click(function() {
         $(this).parents('.recruitment_list').addClass('open');
-         $(this).parents('.recruitment_list').siblings('.recruitment_list').removeClass('open');
+        $(this).parents('.recruitment_list').siblings('.recruitment_list').removeClass('open');
+    })
+})
+// 活動查詢區塊
+$(function() {
+    $('.active_search_group .active_search_btn>a').click(function() {
+        $(this).stop().toggleClass('open');
+        $('.active_search_content').stop().slideToggle();
     })
 })
