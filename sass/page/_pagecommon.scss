@@ -2459,7 +2459,7 @@
 // 活動訊息
 .activitymessage_block {}
 // 年份區塊
-.active_year_group {
+.activity_year_group {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2526,7 +2526,7 @@
     }
 }
 // 月份區塊
-.active_month_group {
+.activity_month_group {
     margin-bottom: 2em;
     ul {
         display: flex;
@@ -2587,9 +2587,9 @@
     }
 }
 // 活動查詢區塊
-.active_search_group {
+.activity_search_group {
     margin-bottom: 2em;
-    .active_search_btn {
+    .activity_search_btn {
         a {
             padding: 20px;
             display: block;
@@ -2651,7 +2651,7 @@
         }
     }
     // 內容
-    .active_search_content {
+    .activity_search_content {
         display: none;
         background-color: #eeeeee;
         overflow: hidden;
@@ -2790,12 +2790,12 @@
     }
 }
 // 活動資訊
-.active_message_group {
+.activity_message_group {
     margin-bottom: 5em;
-    .activemessage_list_group {
+    .activitymessage_list_group {
         display: flex;
         flex-wrap: wrap;
-        .activemessage_list {
+        .activitymessage_list {
             flex: none;
             flex-basis: 31%;
             margin: 0 1.75% 0;
@@ -3019,7 +3019,7 @@
     }
 }
 // 活動月份
-.activemonth_group {
+.activitymonth_group {
     text-align: center;
     margin-bottom: 2em;
     .monthtitle {
@@ -3034,10 +3034,10 @@
         color: #0b1e2d;
         margin: 0 auto 1em;
     }
-    .activemonth_content {
+    .activitymonth_content {
         display: flex;
         flex-wrap: wrap;
-        .activemonth_list {
+        .activitymonth_list {
             flex: none;
             flex-basis: 48%;
             margin: 0 2% 30px;
@@ -3173,3 +3173,5 @@
         }
     }
 }
+// 活動訊息內容
+.activitycontent_block {}

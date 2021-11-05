@@ -616,15 +616,15 @@ $(function() {
 // 條件查詢燈箱
 $(function() {
     $('.calendar ').click(function() {
-        $('.activcalendar_lightbox').fadeIn();
+        $('.activitycalendar_lightbox').fadeIn();
         $('body').addClass('noscroll');
     })
-    $('.activcalendar_lightbox .close').click(function() {
-        $('.activcalendar_lightbox').fadeOut();
+    $('.activitycalendar_lightbox .close').click(function() {
+        $('.activitycalendar_lightbox').fadeOut();
         $('body').removeClass('noscroll');
     })
-    $('.activcalendar_lightbox .overlay').click(function() {
-        $('.activcalendar_lightbox').fadeOut();
+    $('.activitycalendar_lightbox .overlay').click(function() {
+        $('.activitycalendar_lightbox').fadeOut();
         $('body').removeClass('noscroll');
     })
 })
@@ -641,8 +641,8 @@ $(function() {
 })
 // 活動查詢區塊
 $(function() {
-    $('.active_search_group .active_search_btn>a').click(function() {
+    $('.activity_search_group .activity_search_btn>a').click(function() {
         $(this).stop().toggleClass('open');
-        $('.active_search_content').stop().slideToggle();
+        $('.activity_search_content').stop().slideToggle();
     })
 })

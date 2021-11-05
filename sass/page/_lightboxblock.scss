@@ -1,5 +1,5 @@
 // 
-.movie_lightbox, .search_lightbox, .activcalendar_lightbox {
+.movie_lightbox, .search_lightbox, .activitycalendar_lightbox {
     position: fixed;
     top: 0;
     right: 0;
@@ -108,7 +108,7 @@
     }
 }
 // 燈箱活動行事曆
-.activcalendar_lightbox {
+.activitycalendar_lightbox {
     .content {
         width: 700px;
         height: 300px;
@@ -130,14 +130,14 @@
             width: 90vw;
         }
         // 活動行事曆內容
-        .activ_list_group {
+        .activity_list_group {
             .title {
                 background-color: $primaryColor;
                 color: #fff;
                 padding: 15px 20px;
                 font-size: 1.25em;
             }
-            .activ_list {
+            .activity_list {
                 padding: 10px 20px;
                 box-sizing: border-box;
                 overflow-y: scroll;
