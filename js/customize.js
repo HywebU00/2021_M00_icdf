@@ -536,6 +536,56 @@ $(function() {
             }
         }]
     });
+    // 活動按鈕
+    $('.activitybutton_list').slick({
+        dots: false,
+        infinite: false,
+        autoplay: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }]
+    });
+    // 主持人講者
+    $('.speaker_silder').slick({
+        dots: false,
+        infinite: false,
+        autoplay: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 1250,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 850,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }]
+    });
     // svg
 });
 // 影片燈箱
@@ -628,6 +678,21 @@ $(function() {
         $('body').removeClass('noscroll');
     })
 })
+// 活動資料按鈕
+$(function() {
+    $('.activitybutton ').click(function() {
+        $('.activitydata_lightbox').fadeIn();
+        $('body').addClass('noscroll');
+    })
+    $('.activitydata_lightbox .close').click(function() {
+        $('.activitydata_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+    $('.activitydata_lightbox .overlay').click(function() {
+        $('.activitydata_lightbox').fadeOut();
+        $('body').removeClass('noscroll');
+    })
+})
 // 當內容頁上方沒有function_panel時
 $(function() {
     $(".breadcrumb:only-child").css("margin-bottom", "3em");
@@ -645,4 +710,10 @@ $(function() {
         $(this).stop().toggleClass('open');
         $('.activity_search_content').stop().slideToggle();
     })
+})
+// 讀者介紹連結
+$(function() {
+    $('.speaker_link').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.speaker_block').offset().top - 70 }, 0, 'easeOutExpo');
+    });
 })

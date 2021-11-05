@@ -1059,7 +1059,7 @@ a.more {
                                 transform: scale(1.1);
                                 text-shadow: 0 0 5px #333;
                                 span {
-                                    background-color: rgba(88, 117, 113, 1);
+                                    background-color: darken($primaryColor, 10);
                                 }
                             }
                         }
