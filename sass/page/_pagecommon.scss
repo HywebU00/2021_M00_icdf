@@ -209,6 +209,19 @@
     .container {}
 }
 // 季刊列表頁面
+// 說明區
+.explanation_block {
+    margin-bottom: 3em;
+    .explanation_group {
+        padding: 30px;
+        background-color: #eee;
+        border-radius: 5px;
+        .btn_grp {
+            text-align: left;
+            padding: 0;
+        }
+    }
+}
 // 季刊 block
 .periodical_block {
     .container {
@@ -3184,7 +3197,6 @@
     }
 }
 // 活動訊息內容
-.activitycontent_block {}
 // 活動時間
 .activitytime_group {
     margin-bottom: 2em;
