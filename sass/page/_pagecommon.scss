@@ -2957,7 +2957,7 @@
                     }
                     .date {
                         color: #fff;
-                        margin-bottom: 20px;
+                        margin-bottom: 10px;
                         text-shadow: 0 0 8px #666;
                         padding: 0 0 0 22px;
                         position: relative;
@@ -3057,6 +3057,7 @@
     .activitymonth_content {
         display: flex;
         flex-wrap: wrap;
+
         .activitymonth_list {
             flex: none;
             flex-basis: 48%;
@@ -3074,6 +3075,7 @@
             }
             a {
                 display: flex;
+                align-items:stretch;
                 @include screen('xs_mobile') {
                     display: block;
                 }
@@ -3170,7 +3172,7 @@
                     }
                     .date {
                         color: $color-word;
-                        margin-bottom: 20px;
+                        margin-bottom: 10px;
                         padding: 0 0 0 22px;
                         position: relative;
                         background-image: url('../images/icon/icon_clock.svg');
@@ -3179,7 +3181,7 @@
                         background-size: 16px;
                     }
                     .priority {
-                        margin-bottom: 30px;
+                        margin-bottom: 15px;
                         span {
                             display: inline-block;
                             margin-right: 5px;
