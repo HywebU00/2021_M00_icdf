@@ -704,6 +704,13 @@ $(function() {
         $(this).parents('.recruitment_list').siblings('.recruitment_list').removeClass('open');
     })
 })
+// 優先領域介紹
+$(function() {
+    $('.priorityareas_list .jobprocess>a').click(function() {
+        $(this).parents('.priorityareas_list').addClass('open');
+        $(this).parents('.priorityareas_list').siblings('.priorityareas_list').removeClass('open');
+    })
+})
 // 活動查詢區塊
 $(function() {
     $('.activity_search_group .activity_search_btn>a').click(function() {
