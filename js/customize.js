@@ -717,3 +717,14 @@ $(function() {
         $('body,html').stop(true, true).animate({ scrollTop: $('.speaker_block').offset().top - 70 }, 0, 'easeOutExpo');
     });
 })
+// 各處室執掌
+$(function(){
+    var _inchargebtn =$('.incharge_group .incharge_list .incharge_title');
+    _inchargebtn.click(function(){
+        $(this).next('.content').stop().slideDown();
+        $(this).addClass('open');
+        $(this).parent().siblings().children('.incharge_title').removeClass('open');
+        $(this).parent().siblings().find('.content').stop().slideUp();
+    })
+})
+

@@ -65,10 +65,14 @@ h1.title {
         }
     }
     a {
-        @include aSetting;
+        color:darken($secondaryColor,20);
+        &:hover{
+            color:darken($secondaryColor,20);
+            text-decoration: underline;
+        }
     }
     .publish_info {
-        font-size: 0.875em;
+        font-size: .983em;
         line-height: 1.5em;
         list-style: none;
         margin: 0 0 0.7em 0;
@@ -114,7 +118,7 @@ h1.title {
         flex-wrap: wrap;
         position: relative;
         padding: 0.5em 0 0.5em 1.5em;
-        border-bottom: solid 1px #eee;
+        border-bottom: solid 1px #ddd;
         &:before {
             content: '·';
             font-size: 2em;
@@ -287,7 +291,7 @@ h1.title {
     li {
         position: relative;
         padding: 0.25em 0;
-        border-bottom: solid 1px #eee;
+        border-bottom: solid 1px #ddd;
         padding-left: 1.5em;
         &:before {
             content: '·';

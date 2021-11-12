@@ -103,6 +103,12 @@
                     }
                 }
             }
+            .form_grp {
+                .form_title {
+                    max-width: 120px;
+                    flex: 0 0 120px;
+                }
+            }
         }
         // 
     }
@@ -205,7 +211,6 @@
 }
 // 燈箱活動資料
 .activitydata_lightbox {
-   
     .content {
         width: 700px;
         height: 300px;

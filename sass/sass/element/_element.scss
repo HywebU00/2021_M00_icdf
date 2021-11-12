@@ -55,105 +55,107 @@
 //     background-size: contain;
 //   }
 // }
-span {
-    &.file {
-        display: block;
-        text-align: center;
-        border-radius: 5px;
-        width: 50px;
-        height: 30px;
-        line-height: 1.8em;
-        color: #fff;
-        flex: none;
-        flex-basis: 70px;
-    }
-    &.file_doc,
-    &.file_docx,
-    &.file_odt {
-        background: #275cb7;
-        &:hover,
-        &:focus {
-            background: darken(#275cb7, 5%);
+.activity_list {
+    span {
+        &.file {
+            display: block;
+            text-align: center;
+            border-radius: 5px;
+            width: 50px;
+            height: 30px;
+            line-height: 1.8em;
+            color: #fff;
+            flex: none;
+            flex-basis: 70px;
         }
-    }
-    &.file_xls,
-    &.file_xlsx,
-    &.file_csv,
-    &.file_ods {
-        color: #fff;
-        background: #387947;
-        &:hover,
-        &:focus {
-            background: darken(#387947, 5%);
+        &.file_doc,
+        &.file_docx,
+        &.file_odt {
+            background: #275cb7;
+            &:hover,
+            &:focus {
+                background: darken(#275cb7, 5%);
+            }
         }
-    }
-    &.file_ppt,
-    &.file_pptx,
-    &.file_odp,
-    &.file_pdf {
-        color: #fff;
-        background: #c55a3b;
-        &:hover,
-        &:focus {
-            background: darken(#c55a3b, 5%);
+        &.file_xls,
+        &.file_xlsx,
+        &.file_csv,
+        &.file_ods {
+            color: #fff;
+            background: #387947;
+            &:hover,
+            &:focus {
+                background: darken(#387947, 5%);
+            }
         }
-    }
-    &.file_pdf {
-        color: #fff;
-        background: #c00;
-        &:hover,
-        &:focus {
-            background: darken(#c00, 5%);
+        &.file_ppt,
+        &.file_pptx,
+        &.file_odp,
+        &.file_pdf {
+            color: #fff;
+            background: #c55a3b;
+            &:hover,
+            &:focus {
+                background: darken(#c55a3b, 5%);
+            }
         }
-    }
-    &.file_zip {
-        color: #fff;
-        background: #eb712e;
-        &:hover,
-        &:focus {
-            background: darken(#eb712e, 5%);
+        &.file_pdf {
+            color: #fff;
+            background: #c00;
+            &:hover,
+            &:focus {
+                background: darken(#c00, 5%);
+            }
         }
-    }
-    &.file_txt,
-    &.file_other {
-        color: #fff;
-        background: #555;
-        &:hover,
-        &:focus {
-            background: darken(#555, 5%);
+        &.file_zip {
+            color: #fff;
+            background: #eb712e;
+            &:hover,
+            &:focus {
+                background: darken(#eb712e, 5%);
+            }
         }
-    }
-    &.file_mov {
-        color: #fff;
-        background: #009999;
-        &:hover,
-        &:focus {
-            background: darken(#009999, 5%);
+        &.file_txt,
+        &.file_other {
+            color: #fff;
+            background: #555;
+            &:hover,
+            &:focus {
+                background: darken(#555, 5%);
+            }
         }
-    }
-    &.file_mp3,
-    &.file_mp4 {
-        color: #fff;
-        background: #088ecc;
-        &:hover,
-        &:focus {
-            background: darken(#088ecc, 5%);
+        &.file_mov {
+            color: #fff;
+            background: #009999;
+            &:hover,
+            &:focus {
+                background: darken(#009999, 5%);
+            }
         }
-    }
-    &.file_jpg {
-        color: #fff;
-        background: #6c29a4;
-        &:hover,
-        &:focus {
-            background: darken(#6c29a4, 5%);
+        &.file_mp3,
+        &.file_mp4 {
+            color: #fff;
+            background: #088ecc;
+            &:hover,
+            &:focus {
+                background: darken(#088ecc, 5%);
+            }
         }
-    }
-    &.file_wmv {
-        color: #fff;
-        background: #430a1f;
-        &:hover,
-        &:focus {
-            background: darken(#430a1f, 5%);
+        &.file_jpg {
+            color: #fff;
+            background: #6c29a4;
+            &:hover,
+            &:focus {
+                background: darken(#6c29a4, 5%);
+            }
+        }
+        &.file_wmv {
+            color: #fff;
+            background: #430a1f;
+            &:hover,
+            &:focus {
+                background: darken(#430a1f, 5%);
+            }
         }
     }
 }

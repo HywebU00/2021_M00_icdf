@@ -23,8 +23,8 @@
         &:focus,
         &.active {
             color: #fff;
-            background-color: darken($lightColor, 20);
-            border: 1px solid darken($lightColor, 20);
+            background-color: $secondaryColor;
+            border: 1px solid $secondaryColor;
             box-shadow: none;
         }
         span {

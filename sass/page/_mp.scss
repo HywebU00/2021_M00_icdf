@@ -1055,12 +1055,14 @@ a.more {
                                 transition: .5s;
                                 margin-bottom: 20px;
                             }
+
                             &:hover {
                                 transform: scale(1.1);
                                 text-shadow: 0 0 5px #333;
                                 span {
                                     background-color: darken($primaryColor, 10);
                                 }
+                                
                             }
                         }
                     }
@@ -1483,7 +1485,7 @@ a.more {
                 .title {
                     font-weight: bolder;
                     font-size: 1.438em;
-                    color:#fff;
+                    color: #fff;
                     @include screen('xs_mobile') {
                         margin-bottom: 15px;
                     }

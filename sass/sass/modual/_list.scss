@@ -39,6 +39,7 @@
                     position: relative;
                     line-height: 1.45em;
                     font-weight: bold;
+                    font-size: 1.063em;
                     color: $color-word;
                     &:hover {
                         color: $aHover;
@@ -57,15 +58,16 @@
                 }
                 span.dept {
                     display: inline-block;
-                    font-size: 0.938em;
+                    font-size: 1em;
                     font-weight: normal;
+                     color: #555;
                     @include screen('mobile') {
                         display: block;
                     }
                 }
                 time {
                     display: block;
-                    color: #aaa;
+                    color: #999;
                     font-size: 0.938em;
                     font-weight: normal;
                 }

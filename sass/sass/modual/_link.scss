@@ -27,7 +27,7 @@
             }
         }
         a {
-            border: 1px solid #ddd;
+            border:2px solid #ddd;
             padding: 1em 1em 1em 2.5em;
             display: block;
             vertical-align: top;
@@ -48,7 +48,7 @@
             }
             &:hover,
             &:focus {
-                border: 1px solid $aHover;
+                border: 2px solid $aHover;
                 color: $aHover;
             }
         }
