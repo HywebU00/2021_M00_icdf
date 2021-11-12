@@ -30,6 +30,8 @@
         // text-shadow: rgba(0, 0, 0, 1) 4px 5px 5px;
         letter-spacing: 0.05em;
         line-height: 1.3em;
+        font-family: 'Oswald', sans-serif;
+        // font-weight: 400;
         @include screen('mobile') {
             bottom: 1em;
             font-size: 1.75em;
@@ -2126,7 +2128,7 @@
                 .explain {
                     font-size: 1em;
                     line-height: 1.85em;
-                    @include text-line(5,1.85em);     
+                    @include text-line(5, 1.85em);
                     p {
                         margin: 0 0 10px 0;
                         padding: 0;
@@ -2173,7 +2175,7 @@
                         background-repeat: no-repeat;
                         background-position: center;
                         position: absolute;
-                        bottom: 4em;
+                        bottom: 3.5em;
                         left: 50%;
                         margin-left: -20px;
                         z-index: 11;
@@ -2190,10 +2192,7 @@
                             color: rgba(255, 255, 255, .9);
                         }
                         .title {
-                            top: 37%;
-                            @include screen('tablet') {
-                                top: 27%;
-                            }
+                            top: 30%;
                         }
                     }
                     .image {
@@ -2250,7 +2249,6 @@
                             right: -30%;
                         }
                     }
-                    
                     .title {
                         color: #fff;
                         font-size: 1.75em;
@@ -2258,22 +2256,19 @@
                         position: absolute;
                         z-index: 11;
                         width: 100%;
-                        top: 40%;
+                        top: 35%;
                         transition: .8s;
-                        padding:0 15px;
+                        padding: 0 15px;
                         box-sizing: border-box;
-                        
+                        line-height: 1.2em;
                         span {
                             display: block;
-                            margin-top: 10px;
+                            margin-top: 5px;
                             font-size: 1.125em;
                             line-height: 1.2em;
                             font-weight: bold;
                             font-family: 'Oswald', sans-serif;
                             font-weight: 400;
-                        }
-                        @include screen('tablet') {
-                            top: 30%;
                         }
                     }
                 }
@@ -3905,5 +3900,137 @@
 .qp {
     .btn_grp {
         margin: 2em 0;
+    }
+}
+// Podcast介紹
+.podcast_introduce_block {
+    margin-bottom: 60px;
+    // 介紹
+    .podcast_introduce_group {
+        display: flex;
+        margin-bottom: 30px;
+        @include screen('mobile') {
+            flex-wrap: wrap;
+        }
+        .podcast_leftblock {
+            flex: auto;
+            flex-basis: calc(100% - 350px);
+            p {
+                margin: 0 0 15px;
+                padding: 0;
+                line-height: 1.85em;
+            }
+            @include screen('mobile') {
+                flex-basis: 100%;
+            }
+        }
+        .podcast_rightblock {
+            flex: none;
+            flex-basis: 350px;
+            .image {
+                padding: 0 0 0 30px;
+                box-sizing: border-box;
+                img {
+                    width: 100%;
+                }
+            }
+            @include screen('mobile') {
+                flex-basis: 100%;
+                .image {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    // 播客平台
+    .podcast_platform {
+        ul {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            @include screen('mobile') {
+                flex-wrap: wrap;
+            }
+            li {
+                flex-basis: none;
+                flex-basis: 17%;
+                margin: 0 1.5%;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 18%, rgba(232, 232, 232, 1) 100%, rgba(103, 172, 176, 1) 158%);
+                transition: .5s;
+                @include screen('tablet') {
+                    flex-basis: 18%;
+                    margin: 0 1%;
+                }
+                @include screen('mobile') {
+                    flex-basis: 30%;
+                    margin: 0 1.66% 20px;
+                }
+                @media(max-width: 480px) {
+                    flex-basis: 46%;
+                    margin: 0 2% 20px;
+                }
+                @media(max-width: 380px) {
+                    flex-basis: 100%;
+                    margin: 0 0 20px;
+                }
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+                }
+                a {
+                    display: block;
+                    text-align: center;
+                    font-size: 1.125em;
+                    font-weight: bolder;
+                    img {
+                        width: 80px;
+                        margin: 0 auto 20px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+// Podcast節目
+.Podcastshow {
+    h2.title {
+        span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+    .episodes_btn {
+        display: flex;
+        justify-content: right;
+        margin: 0 0 30px;
+        display: none;
+        a {
+            display: block;
+            background-color: $color-yellow;
+            color: #333;
+            padding: 5px 20px;
+            border-radius: 50px;
+            border: 1px solid #333;
+            &:hover {
+                background-color: lighten($color-yellow, 10);
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+            }
+        }
+    }
+}
+// 最新集數
+.latest_episodes_block {
+    .latest_episodes_group {
+        padding-bottom: 50px;
+        .latest_episodes_list {
+            padding:10px 0;
+            border-bottom: 1px solid #ccc;
+        }
     }
 }
