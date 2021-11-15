@@ -4029,8 +4029,243 @@
     .latest_episodes_group {
         padding-bottom: 50px;
         .latest_episodes_list {
-            padding:10px 0;
+            padding: 10px 0;
             border-bottom: 1px solid #ccc;
+        }
+    }
+}
+// 業務推動工具
+.business_tools_block {
+    .business_tools_group {
+        p {
+            line-height: 1.85em;
+        }
+    }
+    .business_tools_content {
+        display: flex;
+        .tools_leftblock {
+            flex: none;
+            flex-basis: calc(100% - 300px);
+            max-width: calc(100% - 300px);
+            display: flex;
+            align-items: center;
+            position: relative;
+            @include screen('mobile') {
+                display: none;
+            }
+            &:after {
+                content: '';
+                border: 1px solid #ddd;
+                width: 440px;
+                height: 440px;
+                border-radius: 50%;
+                position: absolute;
+                left: -164px;
+                top: 0;
+                z-index: 1;
+                @include screen('tablet') {
+                    left: -213px;
+                }
+                @media(max-width: 870px) {
+                    left: -245px;
+                }
+                @media(max-width: 770px) {
+                    left: -260px;
+                }
+            }
+            .tools_title {
+                font-size: 1.75em;
+                font-weight: bolder;
+                flex: none;
+                flex-basis: 250px;
+                max-width: 250px;
+                text-align: center;
+                line-height: 1.3em;
+                @include screen('tablet') {
+                    flex-basis: 200px;
+                    max-width: 200px;
+                }
+                @media(max-width: 870px) {
+                    flex-basis: 130px;
+                    max-width: 130px;
+                }
+            }
+            .tools_list {
+                flex: auto;
+                flex-basis: calc(100% - 250px);
+                max-width: calc(100% - 250px);
+                box-sizing: border-box;
+                @include screen('tablet') {
+                    flex-basis: calc(100% - 200px);
+                    max-width: calc(100% - 200px);
+                }
+                @media(max-width: 870px) {
+                    padding-left: 38px;
+                    flex-basis: calc(100% - 130px);
+                    max-width: calc(100% - 130px);
+                }
+                @media(max-width: 800px) {
+                    padding-left: 50px;
+                }
+                @media(max-width: 770px) {
+                    padding-left: 38px;
+                }
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        font-size: 1.375em;
+                        margin-bottom: 0px;
+                        a {
+                            display: block;
+                            padding: 25px 10px 25px 110px;
+                            color: $color-word;
+                            font-weight: bolder;
+                            position: relative;
+                            line-height: 1.3em;
+                            &.checked {
+                                &:before {
+                                    background: $secondaryColor;
+                                    box-shadow: #fff 0 0 0 6px inset;
+                                }
+                            }
+                            &:before {
+                                content: '';
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 10px;
+                                width: 25px;
+                                height: 25px;
+                                font-size: 25px;
+                                line-height: 25px;
+                                text-align: center;
+                                transform: translateY(-50%);
+                                border: 1px solid $secondaryColor;
+                                background: #FFFFFF;
+                                border-radius: 50%;
+                                z-index: 2;
+                            }
+                            &:after {
+                                content: '';
+                                height: 1px;
+                                width: 94px;
+                                background-color: $secondaryColor;
+                                position: absolute;
+                                top: 49%;
+                                left: 10px;
+                            }
+                            &:hover {
+                                color: $secondaryColor;
+                            }
+                        }
+                        &:nth-child(1) {
+                            margin-left: -22px;
+                            @media(max-width: 800px) {
+                                margin-left: -35px;
+                            }
+                        }
+                        &:nth-child(2) {
+                            margin-left: 0;
+                            @media(max-width: 800px) {
+                                margin-left: -9px;
+                            }
+                        }
+                        &:nth-child(3) {
+                            margin-left: -3px;
+                            @media(max-width: 800px) {
+                                margin-left: -14px;
+                            }
+                        }
+                        &:nth-child(4) {
+                            margin-left: -40px;
+                            @media(max-width: 800px) {
+                                margin-left: -51px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .toolsexplain_rightblock {
+            flex: none;
+            flex-basis: 300px;
+            max-width: 300px;
+            @include screen('mobile') {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+            .toolsexplain_group {
+                background-color: darken($secondaryColor, 10);
+                .toolsexplain_list {
+                    color: #fff;
+                    padding: 30px;
+                    box-sizing: border-box;
+                    min-height: 470px;
+                    .toolsexplain_title {
+                        font-size: 1.25em;
+                        margin-bottom: 1em;
+                        font-weight: bolder;
+                    }
+                    .explain_content {
+                        line-height: 1.85em;
+                        @include text-line(10, 1.85em);
+                    }
+                    .more {
+                        a {
+                            color: #fff;
+                            &:after {
+                                background-image: url('../images/more_icon02.png');
+                            }
+                            &:before {
+                                background: darken($secondaryColor, 20);
+                            }
+                        }
+                    }
+                }
+                // 箭頭
+                .slick-prev, .slick-next {
+                    top: auto;
+                    bottom: 20px;
+                    width: 45px !important;
+                    height: 45px !important;
+                    padding: 0 !important;
+                }
+                .slick-prev {
+                    left: 25px;
+                    background: url('../images/slick/icon_arrow_left_inverse3.png') center center no-repeat RGBA(255, 255, 255, 1);
+                    background-size: 24px 11px;
+                    background-color: transparent;
+                    border: 1px solid #fff;
+                    /* 箭頭 hover及focus 樣式 */
+                    &:hover, &:focus {
+                        background: url('../images/slick/icon_arrow_left_inverse3.png') center center no-repeat RGBA(255, 255, 255, 1);
+                        background-size: 24px 11px;
+                        background-color: transparent;
+                    }
+                }
+                .slick-next {
+                    right: auto;
+                    left: 80px;
+                    background: url('../images/slick/icon_arrow_right_inverse3.png') center center no-repeat RGBA(255, 255, 255, 1);
+                    background-size: 24px 11px;
+                    background-color: transparent;
+                    /* 箭頭 hover及focus 樣式 */
+                    &:hover, &:focus {
+                        background: url('../images/slick/icon_arrow_right_inverse3.png') center center no-repeat RGBA(255, 255, 255, 1);
+                        background-size: 24px 11px;
+                        background-color: transparent;
+                    }
+                }
+                .slick-disabled {
+                    opacity: .5;
+                    background-color: transparent;
+                    &:hover, &:focus {
+                        background-color: transparent;
+                    }
+                }
+            }
         }
     }
 }

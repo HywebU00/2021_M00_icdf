@@ -586,6 +586,15 @@ $(function() {
             }
         }]
     });
+    // 推動工具
+    $('.toolsexplain_group').slick({
+        autoplay: false,
+        infinite: false,
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
     // svg
 });
 // 影片燈箱
@@ -725,13 +734,20 @@ $(function() {
     });
 })
 // 各處室執掌
-$(function(){
-    var _inchargebtn =$('.incharge_group .incharge_list .incharge_title');
-    _inchargebtn.click(function(){
+$(function() {
+    var _inchargebtn = $('.incharge_group .incharge_list .incharge_title');
+    _inchargebtn.click(function() {
         $(this).next('.content').stop().slideDown();
         $(this).addClass('open');
         $(this).parent().siblings().children('.incharge_title').removeClass('open');
         $(this).parent().siblings().find('.content').stop().slideUp();
     })
 })
-
+// 推動工具
+$(function(){
+    var _toolslistbtn = $('.business_tools_content .tools_leftblock .tools_list ul li a');
+    _toolslistbtn.click(function(){
+        $(this).stop().addClass('checked');
+        $(this).parent().siblings('li').children('a').removeClass('checked');
+    })
+})
