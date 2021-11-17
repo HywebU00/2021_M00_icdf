@@ -744,9 +744,9 @@ $(function() {
     })
 })
 // 推動工具
-$(function(){
+$(function() {
     var _toolslistbtn = $('.business_tools_content .tools_leftblock .tools_list ul li a');
-    _toolslistbtn.click(function(){
+    _toolslistbtn.click(function() {
         $(this).stop().addClass('checked');
         $(this).parent().siblings('li').children('a').removeClass('checked');
     })
