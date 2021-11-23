@@ -882,9 +882,23 @@
         }
     }
 }
-// 相關最新消息
+// 相關最新消息   多元合作
 .related_news_block {
     padding: 0;
+    &.cooperate_block {
+        .relatednews_silder {
+            .relatednews_block {
+                a {
+                    .image {
+                        .date, .details {
+                            background-color: $lightColor;
+                            color:#000;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .container {}
     .relatednews_group {
         overflow: hidden;
@@ -4262,4 +4276,24 @@
             }
         }
     }
+}
+// 抗疫說明區塊
+.anti_epidemic_block {
+    font-size: 1.063em;
+    margin-bottom: 50px;
+    h3 {
+        font-size: 1.25em;
+    }
+    p {
+        font-size: 1em;
+        line-height: 1.85em;
+    }
+}
+// COVID-19病例地圖 
+.COVID19_map_block {
+    margin-bottom: 50px;
+}
+// InSPIRE啟發
+.InSPIRE_block{
+    
 }

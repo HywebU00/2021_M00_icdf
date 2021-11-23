@@ -751,3 +751,26 @@ $(function() {
         $(this).parent().siblings('li').children('a').removeClass('checked');
     })
 })
+// 探索地圖卷軸
+// $(".slider").slider({
+//     max: 100,
+//     min: 0,
+//     range: "min",
+// }).slider("pips", {
+//     rest: false,
+//     step: 1
+// })
+// var setValue = function() {
+//     // slider 內容的總長度 
+//     var contentWidth = $(".partner_group").innerWidth();
+//     // slider 外層空間的總長度   
+//     var slider_container = $(".partner_block").width();
+//     //可移動長度
+//     var scrollValue = ((contentWidth - slider_container) / 100)
+//     //slider移動位置
+//     var sliderValue = $(".slider").slider('value');
+//     var leftValue = -(scrollValue * sliderValue) + 'px'
+//     $(".partner_group").css('left', leftValue)
+// }
+// $(".slider").on("slide slidechange", setValue);
+

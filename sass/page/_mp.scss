@@ -275,7 +275,7 @@ a.more {
 .mpslider_block {
     position: relative;
     .sharelist {
-        position:fixed;
+        position: fixed;
         top: 22%;
         left: 0.5%;
         background-color: rgba(83, 83, 83, .5);
@@ -1248,7 +1248,7 @@ a.more {
                                 &:focus {
                                     &:before {
                                         box-shadow: none;
-                                         bottom: auto;
+                                        bottom: auto;
                                     }
                                 }
                             }
@@ -1476,6 +1476,7 @@ a.more {
         // 探索地圖區塊
         .exploremap_group {
             flex: auto;
+            position: relative;
             // position: absolute;
             // z-index: 8;
             // top: 0;
@@ -1570,13 +1571,15 @@ a.more {
                 }
             }
             // 夥伴區塊
+            .partner_module, .tool_module {
+                position: relative;
+            }
             .partner_block, .tool_block {
                 clear: both;
                 flex: auto;
                 flex-basis: 100%;
-                // @include screen('tablet') {
-                //     overflow-x: auto;
-                // }
+                // width: 1100px;
+                // overflow: hidden;
                 .tool_group, .partner_group {
                     @include screen('tablet') {
                         min-width: 1100px;
@@ -1673,6 +1676,22 @@ a.more {
             .tool_block {
                 display: none;
             }
+            // .slider_width {
+            //     display: none;
+            //     padding: 3em;
+            //     width: 400px;
+            //     clear: both;
+            //     margin: 0 auto;
+            //     @include screen('tablet'){
+            //         display: block;
+            //     }
+            // }
+            // .ui-slider-line {
+            //     display: none;
+            // }
+            // .ui-slider-pips .ui-slider-pip-label .ui-slider-label {
+            //     display: none;
+            // }
         }
     }
 }

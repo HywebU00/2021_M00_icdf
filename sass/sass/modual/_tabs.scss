@@ -256,6 +256,78 @@
             }
         }
     }
+    // InSPIRE啟發
+    &.InSPIRE_tab {
+        &>.tabItem {
+            &.active {
+                background-color: $primaryColor;
+                color: #fff;
+                position: relative;
+                &:before {
+                    content: '';
+                    border-style: solid;
+                    border-width: 15px 0 15px 15px;
+                    border-color: transparent transparent transparent $primaryColor;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    z-index: 5;
+                    right: -15px;
+                    top: 50%;
+                    margin-top: -15px;
+                    @include screen('mobile') {
+                        border-width: 16px 25px 0 25px;
+                        border-color: $primaryColor transparent transparent transparent;
+                        right: auto;
+                        top: auto;
+                        bottom: -15px;
+                        left: 50%;
+                        margin-left: -25px;
+                    }
+                }
+            }
+            float:none;
+            width:25% !important;
+            margin: 0 0 8px 0;
+            padding: 0;
+            font-size: 1.125em;
+            line-height: 1;
+            display: block;
+            padding: 23px 5px 20px;
+            text-align: center;
+            background-color: #434343;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            border:none;
+            letter-spacing: 0.05em;
+            @include text-overflow;
+            overflow: visible !important;
+            box-sizing: border-box;
+            border-radius: 0;
+            @include screen('tablet') {
+                width: 30% !important;
+            }
+            em {
+                color: $lightColor;
+                font-style: normal;
+            }
+            &:hover,
+            &:focus {
+                background: $primaryColor;
+                box-shadow: none;
+                color: #fff;
+            }
+            @include screen('mobile') {
+                float: none;
+                width: 100% !important;
+                border-bottom: 1px solid #888;
+                &.active {
+                    border-color: #bbb;
+                }
+            }
+        }
+    }
 }
 //多組 可設定差異
 // .example-2 {
@@ -532,5 +604,61 @@
         // 歷屆首長
         .previous_heads_group {}
         // 
+    }
+}
+// InSPIRE啟發 
+.InSPIRE_tab {
+    .tabContent {
+        position: absolute;
+        top: 0;
+        left: 25%;
+        right: 4%;
+        clear: both;
+        padding: 20px 30px 40px;
+        box-sizing: border-box;
+        display: none;
+        background-color: #eee;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.15) 3px 5px 10px;
+        min-height: 500px;
+        @include screen('tablet') {
+            left: 30%;
+        }
+        @include screen('mobile') {
+            position: static;
+             min-height: auto;
+        }
+        ul {
+            @include li-reset;
+        }
+        li {
+            margin: 0 0 1em 30px;
+            padding: 0;
+            line-height: 1.6;
+            border-bottom: none;
+            list-style-type: disc !important;
+            @include screen('mobile') {
+                @include text-overflow();
+                white-space: normal;
+                overflow: visible;
+            }
+            a {
+                @include aSetting_nocolor;
+            }
+            time {
+                display: inline-block;
+                margin: 0 0 0 1em;
+                font-size: 0.813em;
+                color: #666;
+            }
+            ol {
+                margin: 1em 0 0 20px;
+                padding: 0;
+                >li {
+                    list-style-type: decimal !important;
+                    margin: 0 0 1em 0;
+                }
+            }
+        }
     }
 }
