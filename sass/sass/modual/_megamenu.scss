@@ -14,6 +14,7 @@
     z-index: 9;
     clear: both;
     background-color: $primaryColor;
+    padding:0 15px;
     @include screen('mobile') {
         display: none;
     }

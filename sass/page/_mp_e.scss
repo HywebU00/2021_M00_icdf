@@ -506,6 +506,7 @@ a.more {
                     left: auto;
                     top: auto;
                     bottom: 13%;
+                     padding: 30px 40px 30px 60px;
                 }
             }
             &.align_right {
@@ -620,6 +621,7 @@ a.more {
                     font-weight: 300;
                      @include text-line(4,1.6em); 
                     height: auto;
+                    letter-spacing: 0.03em;
                     
                 }
             }
