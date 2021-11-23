@@ -937,18 +937,16 @@ a.more {
         .popular_services_pic {
             position: relative;
             height: 900px;
-            flex-basis: 30%;
-            max-width: 30%;
-            @media(max-width: 1300px) {
-                flex-basis: 40%;
-                max-width: 40%;
-            }
+            flex:none;
+            flex-basis: 25%;
+            max-width: 25%;
+            
             @media(max-width: 1200px) {
                 height: 810px;
             }
             @include screen('tablet') {
-                flex-basis: 50%;
-                max-width: 50%;
+                flex-basis: 28%;
+                max-width: 28%;
                 height: 1000px;
             }
             @include screen('mobile') {
@@ -1045,7 +1043,7 @@ a.more {
                             max-width: 28%;
                             margin: 0 1.7% 40px;
                         }
-                        @media(max-width: 480px) {
+                       @include screen('xs_mobile'){
                             flex-basis: 45%;
                             max-width: 45%;
                             margin: 0 2.5% 40px;

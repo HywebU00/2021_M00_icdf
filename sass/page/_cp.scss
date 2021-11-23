@@ -7,7 +7,6 @@ h1.title {
 }
 // .tt{ color: #222; }
 .cp {
-    
     .pic {
         float: left;
         margin: 0px 1em 1em 0;
@@ -65,9 +64,9 @@ h1.title {
         }
     }
     a {
-        color:darken($secondaryColor,20);
-        &:hover{
-            color:darken($secondaryColor,20);
+        color: darken($secondaryColor, 20);
+        &:hover {
+            color: darken($secondaryColor, 20);
             text-decoration: underline;
         }
     }
@@ -76,14 +75,11 @@ h1.title {
         line-height: 1.5em;
         list-style: none;
         margin: 0 0 0.7em 0;
-        border-left: solid 5px $primaryColor;
-        padding: 0.8em 1.5em 0.8em;
-        background: #f2f2f2;
+        padding: 0.8em 0em 0.8em;
         display: flex;
         flex-wrap: wrap;
         @extend %clearfix;
         box-sizing: border-box;
-
         li {
             flex: 1 1 calc(100% / 3);
             margin-bottom: 0.5em;
@@ -96,7 +92,6 @@ h1.title {
         }
     }
 }
-
 // 檔案下載
 .file_download {
     width: 100%;
@@ -130,12 +125,11 @@ h1.title {
             left: 0.1em;
             color: #666;
         }
-
         .file_name {
             line-height: 1.8em;
             margin: 0.2em 0.5em 0.2em 0;
             color: #222;
-            ~ span {
+            ~span {
                 flex: 0 0 auto;
                 margin: 0.2em;
                 font-size: 0.875em;
