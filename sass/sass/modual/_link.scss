@@ -7,24 +7,22 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: flex-start;
         margin: 0;
         padding: 1em 0;
         list-style-type: none;
     }
     li {
-        flex: 1 1 48%;
-        margin-bottom: 10px;
+        flex: 0 0 48%;
+        flex-basis: 48%;
+        margin:0 1% 10px;
         border-radius: 5px;
-        &:nth-child(odd) {
-            margin-right: 10px;
-        }
+        
 
         @include screen('mobile') {
-            flex: 1 1 100%;
-            &:nth-child(odd) {
-                margin-right: 0;
-            }
+            flex: 0 0 100%;
+            flex-basis: 100%;
+           
         }
         a {
             border:2px solid #ddd;
