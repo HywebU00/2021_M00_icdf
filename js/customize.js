@@ -320,20 +320,31 @@ $(function() {
     _partnerbtn.click(function() {
         $(this).toggleClass('check');
         $(this).parent('.partner_list').toggleClass('active');
-        $(this).parent().siblings('.partner_list').find('button.select').removeClass('check');
-        $(this).parent().siblings('.partner_list').removeClass('active');
+        //$(this).parent().siblings('.partner_list').find('button.select').removeClass('check');
+        //$(this).parent().siblings('.partner_list').removeClass('active');
     })
     // 工具區塊
     var _partnerbtn = $('.tool_block .tool_list button.select');
     _partnerbtn.click(function() {
         $(this).toggleClass('check');
         $(this).parent('.tool_list').toggleClass('active');
-        // $(this).parent().siblings('.tool_list').find('button.select').removeClass('check')
-        // $(this).parent().siblings('.tool_list').removeClass('active')
+        $(this).parent().siblings('.tool_list').find('button.select').removeClass('check');
+        $(this).parent().siblings('.tool_list').removeClass('active');
+        $('.worldmap > div').removeClass('hidden').toggleClass('hidden');
     })
     // 探索地圖中間鈕
     var _switchbtn = $('.exploremap_btn .contentbtn .switchbtn')
     _switchbtn.click(function() {
+        var partnerbtn = $('.partner_block .partner_list button.select');
+        partnerbtn.parent().siblings('.partner_list').find('button.select').removeClass('check');
+        partnerbtn.parent().siblings('.partner_list').removeClass('active');
+
+        partnerbtn = $('.tool_block .tool_list button.select');
+        partnerbtn.parent().siblings('.tool_list').find('button.select').removeClass('check');
+        partnerbtn.parent().siblings('.tool_list').removeClass('active');
+        
+        $('.worldmap > div').removeClass('hidden').toggleClass('hidden');
+        
         if (_switchbtn.hasClass("right")) {
             $('.tool').find('a').removeClass('active');
             $('.partner').find('a').addClass('active');
@@ -594,6 +605,19 @@ $(function() {
         arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+    });
+    
+    $('.toolsexplain_group').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      var currentSlide = $('.toolsexplain_group').slick('slickCurrentSlide');
+      for (let i = 0; i < 4; i++) {
+        var itemName = "#tool_" + i;
+        if (i == Number(currentSlide)) {
+            $(itemName).attr("class","checked");
+        } else {
+            $(itemName).attr("class","");
+        }
+      }
+      
     });
     // svg
 });
