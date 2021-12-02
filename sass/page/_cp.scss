@@ -328,6 +328,21 @@ h1.title {
         .image {
             width: 90%;
             margin: 0 auto;
+
+
+        }
+        .image_260 {
+            width: 260px;
+            margin: 0 auto;
+            
+        }
+        .image_130 {
+            width: 130px;
+            margin: 0 auto;
+            
+        }
+        img{
+            border:1px solid #ddd;
         }
         @include screen('mobile') {
             order: 0;

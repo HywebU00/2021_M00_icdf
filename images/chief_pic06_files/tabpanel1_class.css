@@ -1,0 +1,180 @@
+@charset "utf-8";
+/* CSS Document */
+#container div.tabpanel{
+	clear: both;
+	width:100%;
+	float:left; /* 解決firefox tab內的資料少於圖示高度外框會往上縮的問題 */	
+	margin:0 0 10px 0;
+}
+
+/*標籤底線*/
+#container div.tabpanel ul.tablist {
+	margin: 0px;
+	padding:2px 0 0 5px;
+	list-style-type: none;
+	background-image: none;
+	border-bottom:1px solid #cccccc;
+	height:27px;
+	*height:27px;
+	_height:23px;
+	position:relative;
+}
+
+#container div.tabpanel li.tab {
+	background-image: url(../images/PanelsTab_Leftbg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;	
+	float: left;
+	display:block;
+	padding:0px 0 0px 5px;	
+	margin:0 0 0 2px;
+	border:0px none;
+	font-weight: normal;
+	border-bottom:1px solid #cccccc;
+}
+#container div.tabpanel li.tab span{
+	text-align:center;
+	background-image: url(../images/PanelsTab_Rightbg.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	font-size:.95em;
+	color: #333333;
+	margin:0 0 0 5px;
+	display:block;
+	padding:6px 8px 2px 0px;
+	cursor: hand;	
+	
+}
+
+
+
+#container div.tabpanel li.selected {
+  background-image: url(../images/PanelsTab_Leftbg2.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  float: left;
+  display:block;
+  margin:0 0 0 2px;
+  padding:0px 0 0px 5px;
+  border-bottom: 0px none;
+  color: black;
+ 
+}
+#container div.tabpanel li.selected span{
+	text-align:center;
+	background-image: url(../images/PanelsTab_Rightbg2.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	font-size: .95em;
+	color: #0e6fe6;
+	display:block;
+	margin:0 0 0 5px;
+	padding:6px 8px 3px 0px;
+	font-weight: normal;
+	cursor: hand;
+	
+}
+
+
+
+
+#container div.tabpanel div.tabpanel {
+	clear: both;
+	
+	border-right: solid 1px #cccccc;
+	border-left: solid 1px #cccccc;
+	border-bottom: solid 1px #cccccc;
+	
+	background-color: #FFFFFF;
+	/*background-image: url(../images/ajax_bodybg.gif);
+	background-repeat: repeat-x;
+	background-position: 0px top;*/
+	margin:0 0 10px 0;
+	padding:10px 0px 0px 0px;
+}
+
+
+
+/*-----Main center headline-- 公板樣式 *************************************************************************************************/
+#container div.tabpanel div.tabpanel .headline{ margin:0px 0 10px 0; }
+
+#container div.tabpanel div.tabpanel .headline h2{
+	
+	background: url(../images/bg_control.jpg) no-repeat right 0px;padding:0px 0 0px 0px;margin:0px 0;
+	height:23px;border-bottom:0px solid #cccccc;
+					
+					}
+#container div.tabpanel div.tabpanel .headline h2 a{color: #63ba1c;font-weight: bold;}
+#container div.tabpanel div.tabpanel .headline h2 .rss{  margin:0px 0 0 0px; }
+
+#container div.tabpanel div.tabpanel .headline .body {
+	background:none;height:auto;width:auto;padding:0 0 0 0;margin:0;borde:0px solid #cccccc;
+	
+	}
+#container div.tabpanel div.tabpanel .headline .body h3{color: #07509b;margin:0px 0 0px 0px;padding:5px 0 2px 16px;background: url(../images/icon_menu1.gif) no-repeat 0px 7px;
+							font-weight: bold;border:0px none;font-size: 1em;line-height: 1.3em;clear:both;}
+#container div.tabpanel div.tabpanel .headline .body h3 a{color: #07509b;text-decoration: underline;}
+#container div.tabpanel div.tabpanel .headline .body h4{color: #009933;padding:3px ;clear:both;margin:0 0 2px 0;	font-weight: bold;
+							background: url(../images/h2_bg.gif) no-repeat 0px bottom;}
+							
+							
+#container div.tabpanel div.tabpanel .headline .body p{color: #666666;letter-spacing: 1px;margin:5px 0;padding:0px;line-height: 18px;}
+#container div.tabpanel div.tabpanel .headline .body ul{
+	margin:7px 15px 0 15px;
+	background-image: none;
+	padding:0px 0px 0px 0px;
+	float:none;width:auto;height:auto;background:none;text-align:left;}
+#container div.tabpanel div.tabpanel .headline .body li{
+	border-bottom:1px dotted #d2d2d2;
+	padding:0px 0 2px 20px;
+	margin:0px 0 4px 0px;	
+	height:auto;
+	_height:20px;	
+	
+	list-style-image: url(noe);
+	list-style-position: outside;
+	background: url(../images/icon_arrow12.gif) no-repeat 0px 2px;
+	display:inline-block;
+						}
+#container div.tabpanel div.tabpanel .headline .body li .date{color: #999;padding:3px 2px;font-size: 80%;margin:0px 0 0 0;}
+
+
+
+
+
+
+#container div.tabpanel div.tabpanel .headline .body .list{	margin:0px 0 0 140px;background-image: none;}
+#container div.tabpanel div.tabpanel .headline .body .list li{background: url(../images/icon_arrow7.gif) no-repeat 0px 5px;padding-left: 15px;	display:block;	text-align:left;				
+								line-height: 22px;	border-bottom: 1px dashed #dddddd;}
+#container div.tabpanel div.tabpanel .headline .body .list li .date{color: #999;padding:0 2px 0 2px;font-size: 80%;	margin:0px 0 0 0;}
+
+#container div.tabpanel div.tabpanel .headline .pic{	border:1px solid #CCCCCC;padding:1px;margin: 0px 5px 0 0px;width:120px;height:100px;}
+#container div.tabpanel div.tabpanel .headline .image{float:left;padding:5px 0 0 0;}
+#container div.tabpanel div.tabpanel .headline .image img{border:1px solid #CCCCCC;padding:1px;	margin: 0px 5px 0px 0px;width:120px;height:100px;}
+#container div.tabpanel div.tabpanel .headline .source{background: url(../images/scorebg.gif) repeat-y left 0px;padding:2px 0 2px 5px;margin:5px 0;clear:both;}
+#container div.tabpanel div.tabpanel .headline .source em{color: #CC0000;}
+#container div.tabpanel div.tabpanel .headline .source img{ vertical-align:middle;}
+
+/*------ headline Footer--*/
+#container div.tabpanel div.tabpanel .headline .foot{
+	display: block;height:0px;
+	background: none no-repeat right top;
+}
+html>body #container div.tabpanel div.tabpanel .headline .foot{height: 0px;}
+*+ html>body #container div.tabpanel div.tabpanel .headline .foot{height: 0px;}
+
+
+/*
+div#container div.tabpanel div.tabpanel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+div#container div.tabpanel div.tabpanel h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: .25em;
+}
+*/
+

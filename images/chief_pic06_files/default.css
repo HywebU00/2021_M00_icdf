@@ -1,0 +1,27 @@
+@charset "utf-8";
+/**/
+@import url(reset.css);
+
+.layout {
+	border-collapse:collapse;
+	font-size: 100%;
+	line-height: 150%;
+	margin: 0;
+	width: 100%;
+	clear: both;
+}
+
+.footer {
+	clear: both;
+}
+
+/*--hide column--*/
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+.clear {
+	border-collapse:collapse;
+	clear: both;
+}
