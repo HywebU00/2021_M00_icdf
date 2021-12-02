@@ -7,6 +7,7 @@ h1.title {
 }
 // .tt{ color: #222; }
 .cp {
+    margin-bottom: 1em;
     .pic {
         float: left;
         margin: 0px 1em 1em 0;
@@ -302,6 +303,26 @@ h1.title {
             padding: 0.2em 0px;
             display: block;
             @include aSetting_nocolor;
+        }
+    }
+}
+//季刊cp頁
+.quarterly_block {
+    display: flex;
+    margin-bottom: 50px;
+    .quarterly_leftblock {
+        flex: auto;
+        h4{
+            color:$color-orange;
+            
+        }
+    }
+    .quarterly_rightblock {
+        flex: none;
+        flex-basis: 50%;
+        .image {
+            width: 90%;
+            margin: 0 auto;
         }
     }
 }
