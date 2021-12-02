@@ -310,11 +310,16 @@ h1.title {
 .quarterly_block {
     display: flex;
     margin-bottom: 50px;
+    @include screen('mobile') {
+        flex-wrap: wrap;
+    }
     .quarterly_leftblock {
         flex: auto;
-        h4{
-            color:$color-orange;
-            
+        h4 {
+            color: $color-orange;
+        }
+        @include screen('mobile') {
+            order: 1;
         }
     }
     .quarterly_rightblock {
@@ -323,6 +328,18 @@ h1.title {
         .image {
             width: 90%;
             margin: 0 auto;
+        }
+        @include screen('mobile') {
+            order: 0;
+            flex-basis: 100%;
+            .image {
+                width: 80%;
+            }
+        }
+        @media(max-width: 500px) {
+            .image {
+                width: 100%;
+            }
         }
     }
 }
