@@ -390,6 +390,10 @@
         @include text-overflow;
         transition: .3s ease-out;
     }
+    ul,
+    ol {
+        overflow: visible;
+    }
     // dots
     .slick-dots {
         bottom: -60px;
