@@ -338,13 +338,10 @@ $(function() {
         var partnerbtn = $('.partner_block .partner_list button.select');
         partnerbtn.parent().siblings('.partner_list').find('button.select').removeClass('check');
         partnerbtn.parent().siblings('.partner_list').removeClass('active');
-
         partnerbtn = $('.tool_block .tool_list button.select');
         partnerbtn.parent().siblings('.tool_list').find('button.select').removeClass('check');
         partnerbtn.parent().siblings('.tool_list').removeClass('active');
-        
         $('.worldmap > div').removeClass('hidden').toggleClass('hidden');
-        
         if (_switchbtn.hasClass("right")) {
             $('.tool').find('a').removeClass('active');
             $('.partner').find('a').addClass('active');
@@ -606,18 +603,61 @@ $(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
     });
-    
-    $('.toolsexplain_group').on('afterChange', function(event, slick, currentSlide, nextSlide){
-      var currentSlide = $('.toolsexplain_group').slick('slickCurrentSlide');
-      for (let i = 0; i < 4; i++) {
-        var itemName = "#tool_" + i;
-        if (i == Number(currentSlide)) {
-            $(itemName).attr("class","checked");
-        } else {
-            $(itemName).attr("class","");
+    $('.toolsexplain_group').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+        var currentSlide = $('.toolsexplain_group').slick('slickCurrentSlide');
+        for (let i = 0; i < 4; i++) {
+            var itemName = "#tool_" + i;
+            if (i == Number(currentSlide)) {
+                $(itemName).attr("class", "checked");
+            } else {
+                $(itemName).attr("class", "");
+            }
         }
-      }
-      
+    });
+    // 合作模式
+    // 相關最新消息
+    $('.cooperation_silder').slick({
+        dots: false,
+        infinite: false,
+        autoplay: false,
+        arrows: true,
+        autoplaySpeed: 3000,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 1300,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }]
+    });
+    //募款計畫
+    $('.fundraising_plan_silder').slick({
+        autoplay: false,
+        infinite: false,
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
     });
     // svg
 });
@@ -775,6 +815,22 @@ $(function() {
         $(this).parent().siblings('li').children('a').removeClass('checked');
     })
 })
+// 募款夥伴
+$(function(){
+    var _partnerbtn = $('.fundraising_partner_group .partner_list .years_title a');
+    _partnerbtn.click(function(){
+        $(this).stop().addClass('open');
+        $(this).parent().siblings('.content').stop().slideDown();
+        $(this).parents().siblings('.partner_list').children('.years_title').find('a').removeClass('open');
+        $(this).parents().siblings('.partner_list').find('.content').stop().slideUp();
+
+    })
+})
+
+
+
+
+
 // 探索地圖卷軸
 // $(".slider").slider({
 //     max: 100,
@@ -797,4 +853,3 @@ $(function() {
 //     $(".partner_group").css('left', leftValue)
 // }
 // $(".slider").on("slide slidechange", setValue);
-

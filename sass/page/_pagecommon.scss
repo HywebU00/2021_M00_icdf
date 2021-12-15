@@ -641,11 +641,10 @@
     }
 }
 // 技術團
-.technical_block{
+.technical_block {
     margin-bottom: 50px;
-    .technical_group{
-
-        p{
+    .technical_group {
+        p {
             line-height: 1.85em;
         }
     }
@@ -902,7 +901,7 @@
                     .image {
                         .date, .details {
                             background-color: $lightColor;
-                            color:#000;
+                            color: #000;
                         }
                     }
                 }
@@ -1932,7 +1931,7 @@
                             }
                         }
                         .number {
-                            background-color: rgba(11, 184, 156, .8);
+                            background-color: rgba(88, 117, 113, .8);
                             color: rgba(255, 255, 255, .9);
                         }
                         .title {
@@ -1977,7 +1976,7 @@
                         width: 270px;
                         height: 270px;
                         border-radius: 50%;
-                        background-color: rgba(11, 184, 156, .6);
+                        background-color: rgba(88, 117, 113, .6);
                         font-size: 10em;
                         line-height: 1.7em;
                         color: rgba(255, 255, 255, .7);
@@ -2205,7 +2204,7 @@
                             }
                         }
                         .number {
-                            background-color: rgba(11, 184, 156, .8);
+                            background-color: rgba(88, 117, 113, .8);
                             color: rgba(255, 255, 255, .9);
                         }
                         .title {
@@ -2247,7 +2246,7 @@
                         width: 270px;
                         height: 270px;
                         border-radius: 50%;
-                        background-color: rgba(11, 184, 156, .6);
+                        background-color: rgba(88, 117, 113, .6);
                         font-size: 0;
                         line-height: 1.7em;
                         color: rgba(255, 255, 255, .7);
@@ -3849,10 +3848,24 @@
 }
 // 各處室執掌
 .incharge_block {
+    margin-bottom: 50px;
     .incharge_group {
+        margin:0 auto;
+        // width:70%;
+        padding:40px 20px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        display: flex;
+        flex-wrap: wrap;
         .incharge_list {
             position: relative;
             margin-bottom: 10px;
+            flex:none;
+            flex-basis:46%;
+            margin:0 2% 20px;
+            @include screen('mobile'){
+                flex-basis:100%;
+                margin:0 0 20px;
+            }
             .incharge_title {
                 font-size: 1.25em;
                 font-weight: bolder;
@@ -3883,9 +3896,11 @@
             }
             .content {
                 padding: 15px 15px 25px;
-                background-color: #eee;
+                background-color: #fff;
                 display: none;
                 ul {
+                    margin:0 20px;
+                    padding:0;
                     li {
                         margin-bottom: 8px;
                     }
@@ -4304,6 +4319,1065 @@
     margin-bottom: 50px;
 }
 // InSPIRE啟發
-.InSPIRE_block{
-    
+.InSPIRE_block {}
+// 推動緣起
+.promoting_origin_block {
+    margin-bottom: 20px;
+    .promoting_origin_group {
+        h3 {
+            font-size: 1.375em;
+        }
+        .promoting_origin_list {
+            display: flex;
+            margin-bottom: 50px;
+            @include screen('mobile') {
+                display: block;
+            }
+            &:nth-of-type(2n) {
+                .origin_introduction {
+                    order: 2;
+                    padding: 90px 40px 30px 80px;
+                    margin-left: -40px;
+                    height: 450px;
+                    flex-basis: 55%;
+                    max-width: 55%;
+                    .title {
+                        &:before {
+                            z-index: 2;
+                        }
+                    }
+                    @include screen('tablet') {
+                        padding: 30px 40px 30px 80px;
+                        height: auto;
+                    }
+                    @include screen('mobile') {
+                        height: auto;
+                        flex-basis: 100%;
+                        max-width: 100%;
+                        padding: 30px 40px;
+                        margin-left: 0;
+                        order: 1;
+                    }
+                }
+                .origin_pic {
+                    order: 1;
+                    justify-content: right;
+                    margin-left: auto;
+                    flex-basis: 40%;
+                    max-width: 40%;
+                    @include screen('tablet') {
+                        flex-basis: 45%;
+                        max-width: 45%;
+                    }
+                    .image {
+                        padding: 15px 50px;
+                    }
+                    @include screen('mobile') {
+                        flex-basis: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                .origin_pic {
+                    .image {
+                        background-color: transparent;
+                        box-shadow: none;
+                        padding: 30px 0px;
+                        img {
+                            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                        }
+                        @include screen('mobile') {
+                            padding: 15px 30px;
+                            img {
+                                box-shadow: none;
+                            }
+                        }
+                        @media(max-width: 500px) {
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+            .origin_introduction {
+                flex: none;
+                flex-basis: 50%;
+                max-width: 50%;
+                padding: 50px 80px 30px 40px;
+                box-sizing: border-box;
+                background-color: #eeeeee;
+                color: #333;
+                @include screen('mobile') {
+                    flex-basis: 100%;
+                    max-width: 100%;
+                    padding: 50px 40px 30px 40px;
+                }
+                .title {
+                    font-size: 1.375em;
+                    font-weight: bolder;
+                    margin-bottom: 25px;
+                    position: relative;
+                    padding-left: 30px;
+                    line-height: 1.4em;
+                    em {
+                        font-family: 'Oswald', sans-serif;
+                        font-weight: 600;
+                        font-size: 1.75em;
+                        font-style: normal;
+                        padding-right: 10px;
+                        margin-left: -30px;
+                    }
+                    &:before {
+                        content: '';
+                        width: 65px;
+                        height: 1px;
+                        background-color: #333;
+                        position: absolute;
+                        left: -75px;
+                        top: 20px
+                    }
+                }
+                p {
+                    line-height: 1.85em;
+                }
+            }
+            .origin_pic {
+                flex: none;
+                flex-basis: 45%;
+                max-width: 45%;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                margin-left: -40px;
+                @include screen('tablet') {
+                    flex-basis: 50%;
+                    max-width: 50%;
+                }
+                .image {
+                    background-color: #fff;
+                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                    padding: 15px 30px;
+                    box-sizing: border-box;
+                    position: relative;
+                }
+                @include screen('mobile') {
+                    flex-basis: 100%;
+                    max-width: 100%;
+                    margin-left: 0;
+                    background-color: #fff;
+                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                    text-align: center;
+                    padding: 15px 30px;
+                    .image {
+                        background-color: transparent;
+                        box-shadow: none;
+                        padding: 0;
+                        text-align: center;
+                        margin: auto;
+                    }
+                }
+                @media(max-width: 500px) {
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}
+// 合作回饋
+.cooperation_feedback_block {
+    margin-bottom: 50px;
+    .cooperation_feedback_group {
+        background-color: #f1f1f1;
+        padding: 70px 30px 150px;
+        .cooperation_silder {
+            margin: 0;
+            position: relative;
+            &:before {
+                content: '';
+                width: 30%;
+                height: 2px;
+                background-color: #bec1ba;
+                position: absolute;
+                left: 25%;
+                bottom: -67px;
+                z-index: 1;
+                @include screen('tablet') {
+                    left: 25%;
+                }
+                @include screen('mobile') {
+                    width: 40%;
+                    left: 15%;
+                }
+                @include screen('xs_mobile') {
+                    left: 0;
+                }
+            }
+            &:after {
+                content: '';
+                width: 10%;
+                height: 2px;
+                background-color: $secondaryColor;
+                position: absolute;
+                left: 25%;
+                bottom: -67px;
+                z-index: 2;
+                @include screen('tablet') {
+                    left: 25%;
+                }
+                @include screen('mobile') {
+                    width: 20%;
+                    left: 15%;
+                }
+                @include screen('xs_mobile') {
+                    left: 0;
+                }
+            }
+            .cooperation_block {
+                padding: 10px;
+                a {
+                    display: block;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    background-color: #fff;
+                    color: #333;
+                    transition: .5s;
+                    .image {
+                        position: relative;
+                        width: 100%;
+                        @include aspect-ratio(4, 3.5);
+                        margin-bottom: 10px;
+                        img {
+                            position: absolute;
+                            width: 100% !important;
+                            height: 100% !important;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            object-fit: cover;
+                            transition: .5s;
+                        }
+                        &:after {
+                            content: '';
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            ;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            background-color: rgba(0, 0, 0, 0.2);
+                            z-index: 3;
+                            transition: .5s;
+                        }
+                    }
+                    .title {
+                        display: flex;
+                        padding: 20px 20px 30px;
+                        justify-content: center;
+                        align-items: center;
+                        box-sizing: border-box;
+                        font-weight: bolder;
+                    }
+                    &:hover {
+                        background-color: $secondaryColor;
+                        color: #fff;
+                        .image {
+                            img {
+                                transform: scale(1.05);
+                            }
+                            &:after {
+                                background-color: rgba(0, 0, 0, 0);
+                            }
+                        }
+                    }
+                }
+            }
+            // 箭頭
+            .slick-prev, .slick-next {
+                top: auto;
+                bottom: -100px;
+                border: 1px solid #ccc;
+                width: 70px !important;
+                height: 70px !important;
+                &:hover, &:focus {
+                    border: none !important;
+                    outline: none;
+                    box-shadow: 0px 0px 0px 2px $secondaryColor inset;
+                }
+            }
+            .slick-prev {
+                left: 60%;
+                background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
+                background-size: 24px 11px;
+                background-color: #e6eae9;
+                @include screen('xs_mobile') {
+                    left: 50%;
+                }
+                /* 箭頭 hover及focus 樣式 */
+                &:hover, &:focus {
+                    background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
+                    background-size: 24px 11px;
+                    background-color: #ccc;
+                }
+            }
+            .slick-next {
+                right: auto;
+                left: calc(60% + 85px);
+                background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
+                background-size: 24px 11px;
+                background-color: #e6eae9;
+                @include screen('xs_mobile') {
+                    left: calc(50% + 85px);
+                }
+                /* 箭頭 hover及focus 樣式 */
+                &:hover, &:focus {
+                    background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
+                    background-size: 24px 11px;
+                    background-color: #ccc;
+                }
+            }
+            .slick-disabled {
+                opacity: .7;
+                background-color: #fff;
+                &:hover, &:focus {
+                    background-color: #fff;
+                }
+            }
+        }
+        // 
+    }
+}
+// 立刻行動
+.actnow_block {
+    margin-bottom: 50px;
+    .actnow_group {
+        background-color: #f1f1f1;
+        padding: 70px 100px;
+        text-align: center;
+        @include screen('mobile') {
+            padding: 70px 30px;
+        }
+        .title {
+            font-size: 1.25em;
+            font-weight: bolder;
+            line-height: 1.5em;
+        }
+        p {
+            line-height: 1.85em;
+        }
+        .contact_us_btn {
+            display: inline-block;
+            min-width: 250px;
+            margin: 20px 0 0;
+            @media(max-width: 480px) {
+                min-width: auto;
+            }
+            a {
+                display: block;
+                padding: 20px 40px;
+                background-color: $primaryColor;
+                color: #fff;
+                letter-spacing: 0.05em;
+                font-size: 1.125em;
+                transition: .5s;
+                @media(max-width: 480px) {
+                    padding: 20px;
+                }
+                &:hover {
+                    background-color: $secondaryColor;
+                }
+                img {
+                    margin-right: 15px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+// 捐款說明
+.donation_explain_block {
+    margin-bottom: 50px;
+    .donation_explai_group {
+        background-color: #eeeeee;
+        padding: 40px 60px;
+        @include screen('xs_mobile') {
+            padding: 40px 30px;
+        }
+        .title {
+            font-size: 1.5em;
+            font-weight: bolder;
+            margin-bottom: 40px;
+            span {
+                display: block;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 400;
+                margin-bottom: 40px;
+                font-size: 1.75em;
+            }
+        }
+        p {
+            line-height: 1.85em;
+        }
+        .link {
+            margin: 20px 0;
+            a {
+                display: inline-block;
+                position: relative;
+                color: $primaryColor;
+                padding-right: 40px;
+                transition: .5s;
+                &:before {
+                    content: '';
+                    background-image: url('../images/more_icon.png');
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    right: 0;
+                    top: 7px;
+                    width: 24px;
+                    height: 11px;
+                    transition: .3s;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    padding-right: 35px;
+                }
+            }
+        }
+    }
+}
+// 我們需要你
+.need_you_block {
+    margin-bottom: 50px;
+    .container {}
+    .need_you_group {
+        position: relative;
+        margin-bottom: 100px;
+        @include screen('tablet') {
+            margin-bottom: 30px;
+        }
+        &:before {
+            content: '';
+            background-color: #eeeeee;
+            position: absolute;
+            left: 0;
+            width: 75%;
+            min-height: 300px;
+            @include screen('mobile') {
+                display: none;
+            }
+        }
+        .need_you_list {
+            margin: 0 auto;
+            max-width: $container-max; //請看_variable.scss
+            @include gutter();
+            display: flex;
+            @media(max-width: 1200px) {
+                @include gutter(60px);
+            }
+            @include screen('mobile') {
+                flex-wrap: wrap;
+            }
+            .need_you_introduction {
+                flex: auto;
+                padding-top: 50px;
+                padding-bottom: 60px;
+                padding-right: 100px;
+                box-sizing: border-box;
+                position: relative;
+                @include screen('tablet') {
+                    padding-right: 30px;
+                }
+                @include screen('mobile') {
+                    background-color: #eeeeee;
+                    flex-basis: 100%;
+                    max-width: 100%;
+                    padding: 30px 30px 70px 30px;
+                }
+                &:after {
+                    content: '';
+                    width: 60px;
+                    height: 60px;
+                    border: 3px solid #d4d4d7;
+                    border-bottom: none;
+                    border-left: none;
+                    position: absolute;
+                    right: 39px;
+                    top: 50%;
+                    transform: rotate(45deg);
+                    margin-top: -30px;
+                    @include screen('tablet') {
+                        display: none;
+                    }
+                }
+                .num {
+                    font-family: 'Oswald', sans-serif;
+                    font-weight: 400;
+                    font-size: 1.5em;
+                    margin-bottom: 30px;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 50px;
+                        height: 1px;
+                        background-color: #333;
+                        left: 40px;
+                        top: 12px;
+                    }
+                }
+                .title {
+                    font-size: 1.375em;
+                    font-weight: bolder;
+                }
+                p {
+                    line-height: 1.85em;
+                }
+                .btn_grp {
+                    text-align: left;
+                    padding: 0;
+                    button {
+                        min-width: 140px;
+                        margin-right: 5px;
+                        @include screen('xs_mobile') {
+                            min-width: initial;
+                        }
+                    }
+                }
+            }
+            .need_you_pic {
+                margin-top: -50px;
+                position: relative;
+                flex: none;
+                flex-basis: 400px;
+                max-width: 400px;
+                @include screen('tablet') {
+                    flex-basis: 350px;
+                    max-width: 350px;
+                    margin-top: 14px;
+                }
+                @include screen('mobile') {
+                    margin: -40px auto 0;
+                    flex-basis: 350px;
+                    max-width: 350px;
+                }
+                @include screen('xs_mobile') {
+                    flex-basis: 80%;
+                    max-width: 80%;
+                }
+                .image {
+                    position: relative;
+                    width: 100%;
+                    @include aspect-ratio(4, 3);
+                    img {
+                        position: absolute;
+                        width: 100% !important;
+                        height: 100% !important;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        object-fit: cover;
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            &:before {
+                left: auto;
+                right: 0;
+            }
+            .need_you_list {
+                .need_you_introduction {
+                    order: 2;
+                    padding-right: auto;
+                    padding-left: 100px;
+                    @include screen('tablet') {
+                        padding-left: 30px;
+                    }
+                    @include screen('mobile') {
+                        order: 1;
+                    }
+                    &:after {
+                        content: '';
+                        width: 60px;
+                        height: 60px;
+                        border: 3px solid #d4d4d7;
+                        border-bottom-color: transparent;
+                        border-left-color: transparent;
+                        position: absolute;
+                        left: 39px;
+                        right: auto;
+                        top: 50%;
+                        transform: rotate(-135deg);
+                        margin-top: -30px;
+                        @include screen('tablet') {
+                            display: none;
+                        }
+                    }
+                }
+                .need_you_pic {
+                    order: 1;
+                    @include screen('mobile') {
+                        order: 2;
+                    }
+                }
+            }
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+// 募款原因用途
+.fundraising_reason_block {
+    margin-bottom: 50px;
+    .fundraising_reason_group {
+        display: flex;
+        background-color: #eeeeee;
+        @include screen('xs_mobile') {
+            flex-wrap: wrap;
+        }
+        .reason_block, .use_block {
+            flex: none;
+            flex-basis: 50%;
+            max-width: 50%;
+            padding: 40px;
+            box-sizing: border-box;
+            @include screen('mobile') {
+                padding: 30px 25px;
+            }
+            @include screen('xs_mobile') {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+            .title {
+                font-size: 1.25em;
+                font-weight: bolder;
+                margin-bottom: 20px;
+                position: relative;
+                padding: 0 0 10px;
+                &:before {
+                    content: '';
+                    width: 44px;
+                    height: 3px;
+                    background-color: #000;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+        }
+        .link {
+            margin: 20px 0 0;
+            a {
+                display: inline-block;
+                position: relative;
+                color: $primaryColor;
+                padding-right: 40px;
+                transition: .5s;
+                &:before {
+                    content: '';
+                    background-image: url('../images/more_icon.png');
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    right: 0;
+                    top: 7px;
+                    width: 24px;
+                    height: 11px;
+                    transition: .3s;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    padding-right: 35px;
+                }
+            }
+        }
+    }
+}
+// 募款計畫
+.fundraising_plan_block {
+    margin-bottom: 50px;
+    .container {
+        background-color: #f1f1f1;
+        padding: 50px 0 130px;
+    }
+    .fundraising_plan_group {
+        max-width: $container-max;
+        margin: 0 auto;
+        @include gutter();
+        @include screen('tablet') {
+            @include gutter(60px);
+        }
+        .fundraising_plan_silder {
+            position: relative;
+            &:before {
+                content: '';
+                width: 30%;
+                height: 2px;
+                background-color: #bec1ba;
+                position: absolute;
+                left: 25%;
+                bottom: -67px;
+                z-index: 1;
+                @include screen('tablet') {
+                    left: 25%;
+                }
+                @include screen('mobile') {
+                    width: 40%;
+                    left: 15%;
+                }
+                @include screen('xs_mobile') {
+                    left: 0;
+                }
+            }
+            &:after {
+                content: '';
+                width: 10%;
+                height: 2px;
+                background-color: $secondaryColor;
+                position: absolute;
+                left: 25%;
+                bottom: -67px;
+                z-index: 2;
+                @include screen('tablet') {
+                    left: 25%;
+                }
+                @include screen('mobile') {
+                    width: 20%;
+                    left: 15%;
+                }
+                @include screen('xs_mobile') {
+                    left: 0;
+                }
+            }
+        }
+        .fundraising_plan_list {
+            display: flex;
+            align-items: flex-start;
+            @include screen('mobile') {
+                display: block;
+            }
+            .image {
+                flex: none;
+                flex-basis: 40%;
+                max-width: 40%;
+                position: relative;
+                @include aspect-ratio(4, 2.5);
+                // img {
+                //     height: auto;
+                //     width: 100%;
+                //     bottom:auto;
+                // }
+                @include screen('tablet') {
+                    flex-basis: 50%;
+                    max-width: 50%;
+                }
+                @include screen('mobile') {
+                    flex-basis: 100%;
+                    max-width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+            .fundraising_explanation {
+                flex: auto;
+                padding: 0 0 0 30px;
+                @include screen('mobile') {
+                    padding: 0;
+                }
+                .title {
+                    font-size: 1.5em;
+                    margin-bottom: 10px;
+                    font-weight: bolder;
+                }
+                h3 {
+                    font-size: 1.125em;
+                    margin: 0 0 10px;
+                }
+                p {
+                    // line-height: 1.85em;
+                    @include text-line(5, 1.85em);
+                }
+            }
+        }
+        // 箭頭
+        .slick-prev, .slick-next {
+            top: auto;
+            bottom: -100px;
+            border: 1px solid #ccc;
+            width: 70px !important;
+            height: 70px !important;
+            &:hover, &:focus {
+                border: none !important;
+                outline: none;
+                box-shadow: 0px 0px 0px 2px $secondaryColor inset;
+            }
+        }
+        .slick-prev {
+            left: 60%;
+            background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
+            background-size: 24px 11px;
+            background-color: #e6eae9;
+            @include screen('xs_mobile') {
+                left: 50%;
+            }
+            /* 箭頭 hover及focus 樣式 */
+            &:hover, &:focus {
+                background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
+                background-size: 24px 11px;
+                background-color: #ccc;
+            }
+        }
+        .slick-next {
+            right: auto;
+            left: calc(60% + 85px);
+            background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
+            background-size: 24px 11px;
+            background-color: #e6eae9;
+            @include screen('xs_mobile') {
+                left: calc(50% + 85px);
+            }
+            /* 箭頭 hover及focus 樣式 */
+            &:hover, &:focus {
+                background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
+                background-size: 24px 11px;
+                background-color: #ccc;
+            }
+        }
+        .slick-disabled {
+            opacity: .7;
+            background-color: #fff;
+            &:hover, &:focus {
+                background-color: #fff;
+            }
+        }
+        // 
+    }
+}
+// 夥伴名冊
+.fundraising_partner_block {
+    margin-bottom: 50px;
+    // 募款金額
+    .fundraising_amount_group {
+        background-image: url('../images/fundraising_amount_pic.jpg');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        height: 550px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        @include screen('mobile') {
+            background-image: url('../images/fundraising_amount_pic2.jpg');
+            background-position: center -80px;
+            height: auto;
+            padding: 50px 10px 500px;
+        }
+        @media(max-width: 400px) {
+            background-position: center top;
+        }
+        .fundraising_amount_content {
+            flex: none;
+            flex-basis: 60%;
+            text-align: center;
+            box-sizing: border-box;
+            @include screen('mobile') {
+                flex-basis: 100%;
+            }
+            .title {
+                text-align: center;
+                padding: 20px 20px 20px 40px;
+                box-sizing: border-box;
+                font-size: 2em;
+                font-weight: bolder;
+                letter-spacing: 0.1em;
+                margin-bottom: 0;
+                line-height: 1.3em;
+                @include screen('mobile') {
+                    padding: 20px;
+                    font-size: 1.875em;
+                    letter-spacing: 0.05em;
+                }
+            }
+            .content {
+                text-align: center;
+                padding: 20px 20px 20px 40px;
+                box-sizing: border-box;
+                @include screen('mobile') {
+                    padding: 0 20px;
+                }
+                p {
+                    line-height: 1.85em;
+                    font-size: 1.313em;
+                }
+                .amount_block {
+                    font-size: 1.313em;
+                    span {
+                        color: #a40000;
+                        font-family: 'Oswald', sans-serif;
+                        font-weight: 600;
+                        font-size: 2em;
+                        display: block;
+                        padding: 40px 0;
+                        letter-spacing: 0.05em;
+                    }
+                }
+            }
+        }
+    }
+    // 夥伴
+    .fundraising_partner_group {
+        .partner_list {}
+        .years_title {
+            font-size: 1.875em;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            a {
+                display: block;
+                padding: 20px 10px;
+                position: relative;
+                border-bottom: 1px solid #ccc;
+                color: #000;
+                &.open {
+                    &:after {
+                        transform: rotate(-45deg);
+                        top: 33px;
+                    }
+                }
+                &:after {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #666;
+                    border-left: none;
+                    border-bottom: none;
+                    transform: rotate(135deg);
+                    position: absolute;
+                    right: 10px;
+                    top: 20px;
+                    transition: .5s;
+                }
+            }
+        }
+        .content {
+            display: none;
+            ul {
+                margin: 15px 0;
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    flex: none;
+                    flex-basis: 23%;
+                    margin: 0 1% 15px;
+                    @include screen('tablet') {
+                        flex-basis: 31%;
+                        margin: 0 1.16% 15px;
+                    }
+                    @include screen('xs_mobile') {
+                        flex-basis: 48%;
+                        margin: 0 1% 15px;
+                    }
+                    @media(max-width: 380px) {
+                        flex-basis: 100%;
+                        margin: 0 0 15px;
+                    }
+                    a {
+                        text-align: center;
+                        display: block;
+                        padding: 0;
+                        box-sizing: border-box;
+                        img {
+                            max-width: 100%;
+                            max-height: 80px;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 立刻行動
+.act_now_block {
+    margin-bottom: 50px;
+    .act_now_group {
+        background-color: #eeeeee;
+        padding: 40px 60px;
+        display: flex;
+        box-sizing: border-box;
+        @include screen('mobile') {
+            flex-wrap: wrap;
+        }
+        @include screen('xs_mobile') {
+            padding: 40px 30px;
+        }
+        .act_now_content {
+            flex: none;
+            flex-basis: 60%;
+            max-width: 60%;
+            text-align: center;
+            @include screen('tablet') {
+                flex-basis: 70%;
+                max-width: 70%;
+            }
+            @include screen('mobile') {
+                flex-basis: 100%;
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+            .title {
+                font-size: 1.5em;
+                font-weight: bolder;
+                margin-bottom: 45px;
+            }
+            .content {
+                font-size: 1.125em;
+                p {
+                    margin: 0 0 10px;
+                }
+            }
+        }
+        .act_now_btn {
+            flex: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include screen('tablet') {
+                flex-wrap: wrap;
+            }
+            .btn_block {
+                flex: none;
+                flex-basis: 46%;
+                max-width: 46%;
+                margin: 0 2%;
+                @include screen('tablet') {
+                    flex-basis: 80%;
+                    max-width: 80%;
+                    margin: 0 auto 20px;
+                }
+                @include screen('xs_mobile'){
+                    flex-basis: 100%;
+                    max-width: 100%;
+                }
+                a {
+                    display: block;
+                    padding: 15px;
+                    text-align: center;
+                    color: #FFF;
+                    background-color: $primaryColor;
+                    font-size: 1.125em;
+                    img {
+                        display: block;
+                        width: 40px;
+                        margin: 0 auto 15px;
+                    }
+                    &:hover {
+                        background-color: $secondaryColor;
+                    }
+                }
+            }
+        }
+    }
 }
