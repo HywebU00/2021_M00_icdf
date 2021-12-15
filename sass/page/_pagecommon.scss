@@ -542,14 +542,15 @@
         display: flex;
         align-items: flex-start;
         max-width: 1200px;
-        margin: 20px 0;
+        margin: 20px 0 0;
         @include screen('mobile') {
-            display: block;
+            flex-wrap: wrap;
         }
         .leftbg {
             flex: auto;
             @include screen('mobile') {
-                margin: 0 0 30px;
+                margin: 0 0 0px;
+                order: 2;
             }
             .title {
                 color: $color-word;
@@ -596,11 +597,23 @@
                     letter-spacing: 0.05em;
                     margin-bottom: 25px;
                     font-weight: bolder;
+                    line-height: 1.3em;
                 }
                 .sdgscontent {
                     padding: 15px;
+                    display: flex;
+                    flex-wrap: wrap;
                     .sdgs_list {
+                        flex: none;
+                        flex-basis: 48%;
+                        margin: 0 1% 20px;
                         margin-bottom: 20px;
+                        display: flex;
+                        align-items: center;
+                        @include screen('tablet') {
+                            flex-basis: 100%;
+                            margin: 0 0 20px;
+                        }
                         img {
                             vertical-align: middle;
                             width: 50px;
@@ -620,10 +633,13 @@
             @include screen('mobile') {
                 flex-basis: 100%;
                 max-width: 100%;
+                order: 1;
+                margin: 0 auto 30px;
             }
             .country_map {
                 width: 300px;
                 border-radius: 50%;
+                margin: 0 auto;
                 @include screen('mobile') {
                     width: 300px;
                     margin: 0 auto;
@@ -3850,21 +3866,21 @@
 .incharge_block {
     margin-bottom: 50px;
     .incharge_group {
-        margin:0 auto;
+        margin: 0 auto;
         // width:70%;
-        padding:40px 20px;
+        padding: 40px 20px;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
         display: flex;
         flex-wrap: wrap;
         .incharge_list {
             position: relative;
             margin-bottom: 10px;
-            flex:none;
-            flex-basis:46%;
-            margin:0 2% 20px;
-            @include screen('mobile'){
-                flex-basis:100%;
-                margin:0 0 20px;
+            flex: none;
+            flex-basis: 46%;
+            margin: 0 2% 20px;
+            @include screen('mobile') {
+                flex-basis: 100%;
+                margin: 0 0 20px;
             }
             .incharge_title {
                 font-size: 1.25em;
@@ -3899,8 +3915,8 @@
                 background-color: #fff;
                 display: none;
                 ul {
-                    margin:0 20px;
-                    padding:0;
+                    margin: 0 20px;
+                    padding: 0;
                     li {
                         margin-bottom: 8px;
                     }
@@ -5357,7 +5373,7 @@
                     max-width: 80%;
                     margin: 0 auto 20px;
                 }
-                @include screen('xs_mobile'){
+                @include screen('xs_mobile') {
                     flex-basis: 100%;
                     max-width: 100%;
                 }
