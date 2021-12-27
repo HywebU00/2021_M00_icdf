@@ -215,6 +215,12 @@
         .btn_grp {
             text-align: left;
             padding: 0;
+            .btn {
+                border-radius: 0.2em;
+                a {
+                    color: #fff;
+                }
+            }
         }
     }
 }
@@ -3921,11 +3927,10 @@
                         margin-bottom: 8px;
                     }
                 }
-               
-                .btn{
+                .btn {
                     border-radius: 0.2em;
-                    a{
-                        color:#fff;
+                    a {
+                        color: #fff;
                     }
                 }
             }

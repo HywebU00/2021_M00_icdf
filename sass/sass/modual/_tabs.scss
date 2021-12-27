@@ -575,7 +575,8 @@
                         display: block;
                         img {
                             width: 150px;
-                            border-radius: 50%;
+                            max-height: 150px;
+                            border-radius:0.2em;
                             display: block;
                             margin: 0 auto 20px;
                             transition: .5s;
