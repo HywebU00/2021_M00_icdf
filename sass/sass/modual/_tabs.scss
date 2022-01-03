@@ -574,9 +574,9 @@
                     a {
                         display: block;
                         img {
-                            width: 150px;
-                            max-height: 150px;
-                            border-radius:0.2em;
+                            max-width: 160px;
+                            height: 180px;
+                            border-radius: 0.2em;
                             display: block;
                             margin: 0 auto 20px;
                             transition: .5s;
@@ -627,7 +627,7 @@
         }
         @include screen('mobile') {
             position: static;
-             min-height: auto;
+            min-height: auto;
         }
         ul {
             @include li-reset;
