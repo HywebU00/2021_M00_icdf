@@ -165,9 +165,16 @@ div.function {
                         left: 20%;
                     }
                 }
+
                 &.en {
                     a:before {
                         background: url(../images/basic/icon_EN.svg) no-repeat center center;
+                        background-size: 100%;
+                    }
+                }
+                &.ch {
+                    a:before {
+                        background: url(../images/basic/icon_ch.svg) no-repeat center center;
                         background-size: 100%;
                     }
                 }
