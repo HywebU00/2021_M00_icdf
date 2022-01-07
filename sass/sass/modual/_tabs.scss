@@ -532,9 +532,9 @@
         }
         // 現任首長
         .current_chief_group {
-            width: 70%;
+            width: 90%;
             margin: 30px auto 0;
-            @include screen('mobile') {
+            @include screen('tablet') {
                 width: 100%;
             }
             ul {
@@ -551,21 +551,44 @@
                     border-bottom: none;
                     flex: none;
                     flex-basis: 31%;
-                    margin: 0 1.16% 30px;
-                    &:first-child, &:nth-child(2) {
-                        flex-basis: 48%;
-                        margin: 0 1% 30px;
+                    margin: 0 1.16% 50px;
+                    @include screen('tablet') {
+                        margin: 0 0.5% 50px;
                     }
                     @include screen('xs_mobile') {
                         flex-basis: 48%;
-                        margin: 0 1% 30px;
+                        margin: 0 0.5% 30px;
                     }
-                    @media(max-width: 500px) {
+                    @media(max-width: 540px) {
                         flex-basis: 100%;
                         margin: 0 0 30px;
-                        &:first-child, &:nth-child(2) {
+                    }
+                    &:first-child, &:nth-child(2) {
+                        flex-basis: 48%;
+                        margin: 0 1% 50px;
+                        @include screen('tablet') {
+                            margin: 0 0.5% 50px;
+                        }
+                        @media(max-width: 540px) {
                             flex-basis: 100%;
                             margin: 0 0 30px;
+                        }
+                        a {
+                            .image {
+                                background: rgb(255, 255, 255);
+                                background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(227, 231, 234, 1) 6%, rgba(227, 231, 234, 1) 47%, rgba(227, 231, 234, 1) 94%, rgba(255, 255, 255, 1) 100%);
+                                img {
+                                    max-width: 300px;
+                                    height: 300px;
+                                }
+                                @include screen('mobile') {
+                                    img {
+                                        max-width: 90%;
+                                        width: 90%;
+                                        height: 90%;
+                                    }
+                                }
+                            }
                         }
                     }
                     &:before {
@@ -573,29 +596,45 @@
                     }
                     a {
                         display: block;
-                        img {
-                            max-width: 160px;
-                            height: 180px;
-                            border-radius: 0.2em;
-                            display: block;
-                            margin: 0 auto 20px;
-                            transition: .5s;
+                        
+                        .image {
+                            background: rgb(255, 255, 255);
+                            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(249, 217, 158, 1) 6%, rgba(249, 217, 158, 1) 47%, rgba(249, 217, 158, 1) 94%, rgba(255, 255, 255, 1) 100%);
+                            margin-bottom: 20px;
+                            border-radius: 15px;
+                            overflow: hidden;
+                            img {
+                                max-width: 250px;
+                                height: 250px;
+                                display: block;
+                                transition: .5s;
+                                margin: 0 auto;
+                            }
+                            @include screen('mobile') {
+                                img {
+                                    max-width: 100%;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
                         }
                         span {
                             font-size: 1.375em;
                             font-weight: bolder;
+                            line-height: 1em;
                             em {
                                 font-style: normal;
-                                padding: 10px;
+                                padding: 0px;
                                 display: block;
                                 font-size: 0.813em;
                                 font-weight: normal;
                             }
                         }
                         &:hover {
-                            transform: scale(1.1);
-                            img {
-                                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                            .image {
+                                img {
+                                    transform: scale(1.15);
+                                }
                             }
                         }
                     }
