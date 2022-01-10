@@ -596,13 +596,26 @@
                     }
                     a {
                         display: block;
-                        
                         .image {
                             background: rgb(255, 255, 255);
                             background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(249, 217, 158, 1) 6%, rgba(249, 217, 158, 1) 47%, rgba(249, 217, 158, 1) 94%, rgba(255, 255, 255, 1) 100%);
                             margin-bottom: 20px;
                             border-radius: 15px;
                             overflow: hidden;
+                            position: relative;
+                           
+                            &:before {
+                                content: '';
+                                height: 100%;
+                                width: 100%;
+                                background: rgb(255, 255, 255);
+                                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 6%);
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                left: 0;
+                                z-index: 9;
+                            }
                             img {
                                 max-width: 250px;
                                 height: 250px;
