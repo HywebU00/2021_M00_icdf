@@ -39,6 +39,14 @@ h1.title {
     }
     table {
         background: #fff;
+        margin-bottom: 1em;
+        &.noborder {
+            border: none;
+            th, td {
+                border: none;
+                background-color: transparent;
+            }
+        }
     }
     img {
         &.float_left {
