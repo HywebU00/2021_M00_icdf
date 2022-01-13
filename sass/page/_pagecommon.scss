@@ -4861,11 +4861,15 @@
                 .btn_grp {
                     text-align: left;
                     padding: 0;
-                    button {
+                    border-radius: 5px;
+                    .btn {
+                        border-radius: 0.2em;
                         min-width: 140px;
-                        margin-right: 5px;
                         @include screen('xs_mobile') {
                             min-width: initial;
+                        }
+                        a {
+                            color: #fff;
                         }
                     }
                 }

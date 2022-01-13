@@ -1201,8 +1201,10 @@ a.more {
                             list-style-type: none;
                             margin: 10px 0 0 0;
                             padding: 0;
+                            flex-wrap: wrap;
                             li {
                                 margin-right: 5px;
+                                margin-bottom: 5px;
                                 width: 74px;
                                 @media(max-width: 1200px) {
                                     width: 50px;
