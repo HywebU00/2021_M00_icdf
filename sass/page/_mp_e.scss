@@ -275,7 +275,7 @@ a.more {
 .mpslider_block {
     position: relative;
     .sharelist {
-        position:fixed;
+        position: fixed;
         top: 22%;
         left: 0.5%;
         background-color: rgba(83, 83, 83, .5);
@@ -506,7 +506,7 @@ a.more {
                     left: auto;
                     top: auto;
                     bottom: 13%;
-                     padding: 30px 40px 30px 60px;
+                    padding: 30px 40px 30px 60px;
                 }
             }
             &.align_right {
@@ -604,9 +604,8 @@ a.more {
                 a {
                     font-family: 'Oswald', sans-serif;
                     font-weight: 400;
-                    @include text-line(3,1.3em); 
-                    height: auto; 
-                    
+                    @include text-line(3, 1.3em);
+                    height: auto;
                 }
             }
             .smallword {
@@ -619,10 +618,9 @@ a.more {
                 a {
                     font-family: 'Oswald', sans-serif;
                     font-weight: 300;
-                     @include text-line(4,1.6em); 
+                    @include text-line(4, 1.6em);
                     height: auto;
                     letter-spacing: 0.03em;
-                    
                 }
             }
             @keyframes bigworddynamic {
@@ -941,10 +939,9 @@ a.more {
         .popular_services_pic {
             position: relative;
             height: 900px;
-            flex:none;
+            flex: none;
             flex-basis: 25%;
             max-width: 25%;
-            
             @media(max-width: 1200px) {
                 height: 900px;
             }
@@ -1047,7 +1044,7 @@ a.more {
                             max-width: 28%;
                             margin: 0 1.7% 40px;
                         }
-                        @include screen('xs_mobile'){
+                        @include screen('xs_mobile') {
                             flex-basis: 45%;
                             max-width: 45%;
                             margin: 0 2.5% 40px;
@@ -1093,8 +1090,10 @@ a.more {
 .themes_block {
     padding: 80px 0;
     .themes_group {
-        .themes_slider {
-            >div {}
+        .themes_slider_block {
+            >.themes_slider {
+                padding: 0;
+            }
             // .slick-slide {
             //     outline: 1px solid red;
             // }
@@ -1115,6 +1114,8 @@ a.more {
                 transition: .5s;
                 opacity: .6;
                 border-radius: 5px;
+                align-items: flex-start;
+                flex-wrap: wrap;
                 @media(max-width: 1400px) {
                     margin: 40px;
                 }
@@ -1124,17 +1125,18 @@ a.more {
                 @include screen('mobile') {
                     margin: 30px 50px;
                 }
-                @media(max-width: 480px) {
-                    margin: 30px 40px;
+                @include screen('xs_mobile') {
+                    margin: 50px;
                 }
-                // @media(max-width: 1200px){
-                //     margin:30px;
-                // }
+                @media(max-width: 480px) {
+                    margin: 40px 40px;
+                }
                 .image {
                     position: relative;
                     flex: none;
                     flex-basis: 300px;
                     max-width: 300px;
+                    @include aspect-ratio(4, 3);
                     @media(max-width: 1200px) {
                         flex-basis: 250px;
                         max-width: 250px;
@@ -1147,20 +1149,13 @@ a.more {
                         flex-basis: 150px;
                         max-width: 150px;
                     }
-                    @include screen('mobile') {
-                        display: none;
+                    @include screen('xs_mobile') {
+                        flex-basis: 100%;
+                        max-width: 100%;
+                        margin-bottom: 20px;
                     }
                     img {
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        right: 0;
-                        left: 0;
-                        margin: 0 auto;
-                        width: 100%;
-                        height: 94%;
-                        object-fit: cover;
+                        height: auto;
                     }
                     // @include screen('xs_mobile') {
                     //     flex-basis: 100%;
@@ -1168,12 +1163,28 @@ a.more {
                     //     margin-bottom: 20px;
                     // }
                 }
-                .content {
+                .content_sdgs {
                     flex: auto;
+                    flex-basis: calc(100% - 300px);
+                    max-width: calc(100% - 300px);
                     padding: 0 0 0 20px;
                     box-sizing: border-box;
+                    @media(max-width: 1200px) {
+                        flex-basis: calc(100% - 250px);
+                        max-width: calc(100% - 250px);
+                    }
+                    @include screen('tablet') {
+                        flex-basis: calc(100% - 200px);
+                        max-width: calc(100% - 200px);
+                    }
+                    @include screen('mobile') {
+                        flex-basis: calc(100% - 150px);
+                        max-width: calc(100% - 150px);
+                    }
                     @include screen('xs_mobile') {
                         padding: 0;
+                        flex-basis: 100%;
+                        max-width: 100%;
                     }
                     .title {
                         font-weight: bold;
@@ -1185,7 +1196,7 @@ a.more {
                         margin-top: 10px;
                         // @include text-line(2, 1.5em);
                         span {
-                            margin-left: 0;
+                            margin-left: 10px;
                             letter-spacing: 0.03em;
                         }
                         &:before {
@@ -1220,6 +1231,11 @@ a.more {
                             }
                         }
                     }
+                }
+                .content {
+                    flex: auto;
+                    flex-basis: 100%;
+                    max-width: 100%;
                     p {
                         @include text-line(2, 1.5em);
                         margin-bottom: 15px;
@@ -1246,7 +1262,6 @@ a.more {
                                     position: absolute;
                                     left: 0;
                                     top: 6px;
-
                                 }
                                 &:hover {
                                     color: $aHover;
@@ -1600,8 +1615,8 @@ a.more {
                     color: #000;
                     position: relative;
                     min-height: 100px;
-                    @media(max-width: 1200px){
-                         min-height: 120px;
+                    @media(max-width: 1200px) {
+                        min-height: 120px;
                     }
                     @include screen('tablet') {
                         width: 250px;

@@ -266,9 +266,9 @@ $(function() {
         }
     });
     // 優先領域
-    $('.themes_slider').slick({
+    $('.themes_slider_block').slick({
         centerMode: true,
-        centerPadding: '200px',
+        centerPadding: '350px',
         slidesToShow: 1,
         arrows: true,
         dots: true,
@@ -276,6 +276,20 @@ $(function() {
         infinite: true,
         autoplaySpeed: 8000,
         responsive: [{
+            breakpoint: 1600,
+            settings: {
+                centerMode: true,
+                centerPadding: '250px',
+                slidesToShow: 1
+            }
+        },{
+            breakpoint: 1400,
+            settings: {
+                centerMode: true,
+                centerPadding: '200px',
+                slidesToShow: 1
+            }
+        },{
             breakpoint: 1200,
             settings: {
                 centerMode: true,
@@ -293,7 +307,14 @@ $(function() {
             breakpoint: 767,
             settings: {
                 centerMode: true,
-                centerPadding: '0',
+                centerPadding: '30px',
+                slidesToShow: 1
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                centerMode: true,
+                centerPadding: '10px',
                 slidesToShow: 1
             }
         }]
