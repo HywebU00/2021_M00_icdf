@@ -282,14 +282,14 @@ $(function() {
                 centerPadding: '250px',
                 slidesToShow: 1
             }
-        },{
+        }, {
             breakpoint: 1400,
             settings: {
                 centerMode: true,
                 centerPadding: '200px',
                 slidesToShow: 1
             }
-        },{
+        }, {
             breakpoint: 1200,
             settings: {
                 centerMode: true,
@@ -837,40 +837,12 @@ $(function() {
     })
 })
 // 募款夥伴
-$(function(){
+$(function() {
     var _partnerbtn = $('.fundraising_partner_group .partner_list .years_title a');
-    _partnerbtn.click(function(){
+    _partnerbtn.click(function() {
         $(this).stop().addClass('open');
         $(this).parent().siblings('.content').stop().slideDown();
         $(this).parents().siblings('.partner_list').children('.years_title').find('a').removeClass('open');
         $(this).parents().siblings('.partner_list').find('.content').stop().slideUp();
-
     })
 })
-
-
-
-
-
-// 探索地圖卷軸
-// $(".slider").slider({
-//     max: 100,
-//     min: 0,
-//     range: "min",
-// }).slider("pips", {
-//     rest: false,
-//     step: 1
-// })
-// var setValue = function() {
-//     // slider 內容的總長度 
-//     var contentWidth = $(".partner_group").innerWidth();
-//     // slider 外層空間的總長度   
-//     var slider_container = $(".partner_block").width();
-//     //可移動長度
-//     var scrollValue = ((contentWidth - slider_container) / 100)
-//     //slider移動位置
-//     var sliderValue = $(".slider").slider('value');
-//     var leftValue = -(scrollValue * sliderValue) + 'px'
-//     $(".partner_group").css('left', leftValue)
-// }
-// $(".slider").on("slide slidechange", setValue);

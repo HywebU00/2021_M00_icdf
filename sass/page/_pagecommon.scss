@@ -69,7 +69,13 @@
         .img-container {
             position: relative;
             background: #F1F1F1;
-            @include aspect-ratio(16, 5.5);
+            @include aspect-ratio(16, 6);
+            @include screen('mobile') {
+                @include aspect-ratio(16, 7);
+            }
+            @media(max-width: 480px) {
+                @include aspect-ratio(16, 8);
+            }
             img {
                 position: absolute;
                 max-width: 100% !important;
@@ -96,15 +102,15 @@
             justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-            padding: 3% 0 0 0;
+            padding: 2% 0 0 0;
             .country_name {
                 flex: none;
-                font-size: 4.5em;
+                font-size: 4em;
                 line-height: 1;
                 color: #fff;
                 font-family: 'Oswald', sans-serif;
                 font-weight: 400;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
                 margin-top: 0;
                 text-shadow: 0px 0px 50px #444;
                 display: flex;
@@ -143,27 +149,29 @@
             }
             .country_title {
                 color: #fff;
-                font-size: 3em;
-                line-height: 1;
+                font-size: 2.5em;
+                line-height: 1.2em;
                 flex: none;
                 text-shadow: 0px 0px 10px #444;
                 margin-bottom: 20px;
-                @include text-line(1, 1);
+                text-align: center;
+                padding: 0 1em;
+                // @include text-line(1, 1);
                 @include screen('notebook') {
-                    font-size: 2.5em;
+                    font-size: 2em;
                 }
                 @include screen('tablet') {
-                    font-size: 1.8em;
+                    font-size: 1.5em;
                 }
                 @include screen('mobile') {
-                    font-size: 1.5em;
+                    font-size: 1.2em;
                     margin-bottom: 10px;
                 }
                 @media(max-width: 500px) {
-                    font-size: 1.2em;
+                    font-size: 1em;
                 }
                 @media(max-width: 400px) {
-                    font-size: 1em;
+                    font-size: 0.813em;
                 }
             }
             .priority_areas {
@@ -579,15 +587,16 @@
                     }
                     li {
                         flex: none;
+                        flex-basis: 100px;
                         margin-right: 15px;
                         margin-bottom: 15px;
-                        font-size: 1.125em;
+                        font-size: 1em;
                         text-align: center;
                         img {
                             width: 90px;
                             height: 90px;
                             display: block;
-                            margin-bottom: 15px;
+                            margin: 0 auto 15px;
                         }
                     }
                 }
@@ -669,6 +678,11 @@
         p {
             line-height: 1.85em;
         }
+        h2 {
+            font-family: 'Oswald', sans-serif, 微軟正黑體;
+            font-weight: 600;
+            margin:0 0 10px; 
+        }
     }
 }
 // 相關計畫區塊
@@ -681,20 +695,8 @@
         @media(max-width: 1700px) {
             min-height: 600px !important;
         }
-        @media(max-width: 1500px) {
-            min-height: 550px !important;
-        }
-        @media(max-width: 1400px) {
-            min-height: 500px !important;
-        }
-        @media(max-width: 1300px) {
-            min-height: 480px !important;
-        }
         @media(max-width: 1200px) {
             min-height: 620px !important;
-        }
-        @media(max-width: 1100px) {
-            min-height: 565px !important;
         }
         @media(max-width:992px) {
             min-height: 600px !important;
@@ -706,209 +708,215 @@
             min-height: 520px !important;
         }
         .tabContent {}
-        .plansilder {
-            margin: 0;
+        .plangroup {
+            overflow: hidden;
+            padding: 0 30px 75px;
             position: relative;
-            &:before {
-                content: '';
-                width: 30%;
-                height: 2px;
-                background-color: #bec1ba;
-                position: absolute;
-                left: 25%;
-                bottom: -67px;
-                z-index: 1;
-                @include screen('tablet') {
+            .plansilder {
+                margin: 0 0 20px;
+                position: initial;
+                &:before {
+                    content: '';
+                    width: 30%;
+                    height: 2px;
+                    background-color: #bec1ba;
+                    position: absolute;
                     left: 25%;
-                }
-                @include screen('mobile') {
-                    width: 40%;
-                    left: 15%;
-                }
-                @include screen('xs_mobile') {
-                    left: 0;
-                }
-            }
-            &:after {
-                content: '';
-                width: 10%;
-                height: 2px;
-                background-color: $secondaryColor;
-                position: absolute;
-                left: 25%;
-                bottom: -67px;
-                z-index: 2;
-                @include screen('tablet') {
-                    left: 25%;
-                }
-                @include screen('mobile') {
-                    width: 20%;
-                    left: 15%;
-                }
-                @include screen('xs_mobile') {
-                    left: 0;
-                }
-            }
-            .plansblock {
-                padding: 0px 30px 30px;
-                position: relative;
-                float: left;
-                @include screen('tablet') {
-                    padding: 0px 20px 30px;
-                }
-                @include screen('mobile') {
-                    padding: 0px 10px 30px;
-                }
-                @include screen('xs_mobile') {
-                    padding: 0px 0 30px;
-                }
-                a {
-                    position: relative;
-                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-                    display: block;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
+                    bottom: 32px;
+                    z-index: 1;
+                    @include screen('tablet') {
+                        left: 25%;
+                    }
+                    @include screen('mobile') {
+                        width: 40%;
+                        left: 15%;
+                    }
+                    @include screen('xs_mobile') {
                         left: 0;
-                        right: 0;
-                        bottom: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0, 0, 0, 0.3);
-                        z-index: 1;
-                        transition: .5s;
                     }
-                    &:hover {
-                        &:before {
-                            background-color: rgba(0, 0, 0, .1);
-                        }
+                }
+                &:after {
+                    content: '';
+                    width: 10%;
+                    height: 2px;
+                    background-color: $secondaryColor;
+                    position: absolute;
+                    left: 25%;
+                    bottom: 32px;
+                    z-index: 2;
+                    @include screen('tablet') {
+                        left: 25%;
                     }
-                    .image {
+                    @include screen('mobile') {
+                        width: 20%;
+                        left: 15%;
+                    }
+                    @include screen('xs_mobile') {
+                        left: 0;
+                    }
+                }
+                .plansblock {
+                    padding: 0px 30px 30px;
+                    position: relative;
+                    float: left;
+                    @include screen('tablet') {
+                        padding: 0px 20px 30px;
+                    }
+                    @include screen('mobile') {
+                        padding: 0px 10px 30px;
+                    }
+                    @include screen('xs_mobile') {
+                        padding: 0px 0 30px;
+                    }
+                    a {
                         position: relative;
-                        width: 100%;
-                        @include aspect-ratio(4, 3);
-                        overflow: visible;
-                        // height: 350px;
-                        @include screen('xs_mobile') {
-                            // height: 300px;
-                        }
-                        img {
+                        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                        display: block;
+                        &:before {
+                            content: '';
                             position: absolute;
-                            width: 100% !important;
-                            height: 100% !important;
                             top: 0;
                             left: 0;
                             right: 0;
                             bottom: 0;
-                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0.3);
+                            z-index: 1;
                             transition: .5s;
                         }
-                    }
-                    .explaincontent {
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        padding: 15px 70px 30px 30px;
-                        box-sizing: border-box;
-                        background: rgb(0, 0, 0);
-                        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 49%, rgba(0, 0, 0, 0) 100%);
-                        z-index: 2;
-                        span {
-                            @include text-line(2, 1.5em);
-                            height: 45px;
-                            color: #fff;
-                            display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-start;
-                            text-align: left;
+                        &:hover {
+                            &:before {
+                                background-color: rgba(0, 0, 0, .1);
+                            }
                         }
-                    }
-                    .details {
-                        background-color: $secondaryColor;
-                        color: #fff;
-                        width: 75px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        position: absolute;
-                        bottom: -20px;
-                        right: -20px;
-                        padding: 30px 20px 20px;
-                        box-sizing: border-box;
-                        z-index: 3;
-                        display: block;
-                        @include screen('mobile') {
-                            right: -1px;
-                        }
-                        img {
-                            width: 24px !important;
-                            height: 11px !important;
-                            margin: 10px auto;
+                        .image {
                             position: relative;
-                            top: auto;
-                            bottom: auto;
-                            right: auto;
-                            left: auto;
-                            object-fit: contain;
+                            width: 100%;
+                            @include aspect-ratio(4, 3);
+                            overflow: visible;
+                            // height: 350px;
+                            @include screen('xs_mobile') {
+                                // height: 300px;
+                            }
+                            img {
+                                position: absolute;
+                                width: 100% !important;
+                                height: 100% !important;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                object-fit: cover;
+                                transition: .5s;
+                            }
                         }
-                        // background-image:url('../images/more_icon02.png');
-                        // background-repeat:no-repeat;
-                        // background-position:center bottom;
+                        .explaincontent {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            padding: 15px 70px 30px 30px;
+                            box-sizing: border-box;
+                            background: rgb(0, 0, 0);
+                            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 49%, rgba(0, 0, 0, 0) 100%);
+                            z-index: 2;
+                            span {
+                                @include text-line(2, 1.5em);
+                                height: 45px;
+                                color: #fff;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                text-align: left;
+                            }
+                        }
+                        .details {
+                            background-color: $secondaryColor;
+                            color: #fff;
+                            width: 75px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                            bottom: -20px;
+                            right: -20px;
+                            padding: 30px 20px 20px;
+                            box-sizing: border-box;
+                            z-index: 3;
+                            display: block;
+                            @include screen('mobile') {
+                                right: -1px;
+                            }
+                            img {
+                                width: 24px !important;
+                                height: 11px !important;
+                                margin: 10px auto;
+                                position: relative;
+                                top: auto;
+                                bottom: auto;
+                                right: auto;
+                                left: auto;
+                                object-fit: contain;
+                            }
+                            // background-image:url('../images/more_icon02.png');
+                            // background-repeat:no-repeat;
+                            // background-position:center bottom;
+                        }
                     }
                 }
-            }
-            // 箭頭
-            .slick-prev, .slick-next {
-                top: auto;
-                bottom: -100px;
-                border: 1px solid #ccc;
-                width: 70px !important;
-                height: 70px !important;
-                &:hover, &:focus {
-                    border: none !important;
-                    outline: none;
-                    box-shadow: 0px 0px 0px 2px $secondaryColor inset;
+                // 箭頭
+                .slick-prev, .slick-next {
+                    top: auto;
+                    bottom: 0;
+                    border: 1px solid #ccc;
+                    width: 70px !important;
+                    height: 70px !important;
+                    &:hover, &:focus {
+                        border: none !important;
+                        outline: none;
+                        box-shadow: 0px 0px 0px 2px $secondaryColor inset;
+                    }
                 }
-            }
-            .slick-prev {
-                left: 60%;
-                background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
-                background-size: 24px 11px;
-                background-color: #e6eae9;
-                /* 箭頭 hover及focus 樣式 */
-                &:hover, &:focus {
+                .slick-prev {
+                    left: 60%;
                     background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
                     background-size: 24px 11px;
-                    background-color: #ccc;
+                    background-color: #e6eae9;
+                    /* 箭頭 hover及focus 樣式 */
+                    &:hover, &:focus {
+                        background: url('../images/slick/icon_arrow_left_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
+                        background-size: 24px 11px;
+                        background-color: #ccc;
+                    }
+                    @include screen('xs_mobile') {
+                        left: 50%;
+                    }
                 }
-                @include screen('xs_mobile') {
-                    left: 50%;
-                }
-            }
-            .slick-next {
-                right: auto;
-                left: calc(60% + 85px);
-                background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
-                background-size: 24px 11px;
-                background-color: #e6eae9;
-                /* 箭頭 hover及focus 樣式 */
-                &:hover, &:focus {
+                .slick-next {
+                    right: auto;
+                    left: calc(60% + 85px);
                     background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
                     background-size: 24px 11px;
-                    background-color: #ccc;
+                    background-color: #e6eae9;
+                    /* 箭頭 hover及focus 樣式 */
+                    &:hover, &:focus {
+                        background: url('../images/slick/icon_arrow_right_inverse2.png') center center no-repeat RGBA(255, 255, 255, 1);
+                        background-size: 24px 11px;
+                        background-color: #ccc;
+                    }
+                    @include screen('xs_mobile') {
+                        left: calc(50% + 85px);
+                    }
                 }
-                @include screen('xs_mobile') {
-                    left: calc(50% + 85px);
-                }
-            }
-            .slick-disabled {
-                opacity: .7;
-                background-color: #fff;
-                &:hover, &:focus {
+                .slick-disabled {
+                    opacity: .7;
                     background-color: #fff;
+                    &:hover, &:focus {
+                        background-color: #fff;
+                    }
                 }
+                // 
             }
         }
     }
@@ -916,6 +924,7 @@
 // 相關最新消息   多元合作
 .related_news_block {
     padding: 0;
+    margin-bottom: 30px;
     &.cooperate_block {
         .relatednews_silder {
             .relatednews_block {
@@ -933,14 +942,15 @@
     .container {}
     .relatednews_group {
         overflow: hidden;
-        padding: 0 30px 50px;
+        padding: 0 30px 75px;
+        position: relative;
         &.relatedpic_group {
             padding: 0 0 100px;
         }
     }
     .relatednews_silder {
-        margin: 0px;
-        position: relative;
+        margin: 0 0 20px;
+        position: initial;
         &:before {
             content: '';
             width: 30%;
@@ -948,7 +958,7 @@
             background-color: #bec1ba;
             position: absolute;
             left: 25%;
-            bottom: -67px;
+            bottom: 32px;
             z-index: 1;
             @include screen('tablet') {
                 left: 25%;
@@ -958,7 +968,8 @@
                 left: 15%;
             }
             @include screen('xs_mobile') {
-                left: 0;
+                width: 35%;
+                left: 7%;
             }
         }
         &:after {
@@ -968,7 +979,7 @@
             background-color: $secondaryColor;
             position: absolute;
             left: 25%;
-            bottom: -67px;
+            bottom: 32px;
             z-index: 2;
             @include screen('tablet') {
                 left: 25%;
@@ -978,7 +989,8 @@
                 left: 15%;
             }
             @include screen('xs_mobile') {
-                left: 0;
+                width: 15%;
+                left: 7%;
             }
         }
         .relatednews_block {
@@ -1099,7 +1111,7 @@
         // 箭頭
         .slick-prev, .slick-next {
             top: auto;
-            bottom: -100px;
+            bottom: 0px;
             border: 1px solid #ccc;
             width: 70px !important;
             height: 70px !important;
@@ -1149,10 +1161,7 @@
         }
     }
     .more {
-        margin: 45px 5% 0 0;
-        @include screen('tablet') {
-            margin: 120px 3% 0 0;
-        }
+        margin-bottom: 20px;
     }
 }
 // 相關社群動態
@@ -1492,9 +1501,11 @@
     .relatedpic_group {
         overflow: hidden;
         padding: 0 30px 100px;
+        position: relative;
     }
     .relatedpic_silder {
-        position: relative;
+        margin: 0 0 20px;
+        position: initial;
         &:before {
             content: '';
             width: 30%;
@@ -1502,7 +1513,7 @@
             background-color: #bec1ba;
             position: absolute;
             left: 25%;
-            bottom: -67px;
+            bottom: 32px;
             z-index: 1;
             @include screen('tablet') {
                 left: 25%;
@@ -1512,7 +1523,8 @@
                 left: 15%;
             }
             @include screen('xs_mobile') {
-                left: 0;
+                width: 35%;
+                left: 7%;
             }
         }
         &:after {
@@ -1522,7 +1534,7 @@
             background-color: $secondaryColor;
             position: absolute;
             left: 25%;
-            bottom: -67px;
+            bottom: 32px;
             z-index: 2;
             @include screen('tablet') {
                 left: 25%;
@@ -1532,21 +1544,22 @@
                 left: 15%;
             }
             @include screen('xs_mobile') {
-                left: 0;
+                width: 15%;
+                left: 7%;
             }
         }
         .pic_block {
-            padding: 0px 30px 30px;
+            padding: 0px 30px 0px;
             position: relative;
             float: left;
             @include screen('tablet') {
-                padding: 0px 20px 30px;
+                padding: 0px 20px 0px;
             }
             @include screen('mobile') {
-                padding: 0px 10px 30px;
+                padding: 0px 10px 0px;
             }
             @include screen('xs_mobile') {
-                padding: 0px 0 30px;
+                padding: 0;
             }
             a {
                 position: relative;
@@ -1641,7 +1654,7 @@
         // 箭頭
         .slick-prev, .slick-next {
             top: auto;
-            bottom: -100px;
+            bottom: 0px;
             border: 1px solid #ccc;
             width: 70px !important;
             height: 70px !important;
@@ -1690,27 +1703,21 @@
             }
         }
     }
-    .more {
-        margin: 45px 5% 0 0;
-        @include screen('tablet') {
-            margin: 120px 3% 0 0;
-        }
-    }
 }
 // 發布資料
 .publish_info_block {
     padding: 2em 0;
     ul {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         flex-wrap: wrap;
         margin: 0;
-        padding: 1em 1em .5em;
+        padding: 1em 0em .5em;
         list-style-type: none;
         text-align: center;
         li {
             flex: none;
-            margin: 0 1em 10px;
+            margin: 0 0 10px 2em;
         }
     }
 }
@@ -2326,12 +2333,13 @@
     margin-bottom: 50px;
     .container {}
     .videos_group {
-        margin: 0;
-        padding: 0 30px 50px;
         overflow: hidden;
+        padding: 0 30px 75px;
+        position: relative;
     }
     .videos_silder {
-        position: relative;
+        margin: 0 0 20px;
+        position: initial;
         &:before {
             content: '';
             width: 30%;
@@ -2339,7 +2347,7 @@
             background-color: #bec1ba;
             position: absolute;
             left: 25%;
-            bottom: -17px;
+            bottom: 32px;
             z-index: 1;
             @include screen('tablet') {
                 left: 25%;
@@ -2349,7 +2357,8 @@
                 left: 15%;
             }
             @include screen('xs_mobile') {
-                left: 0;
+                width: 35%;
+                left: 7%;
             }
         }
         &:after {
@@ -2359,7 +2368,7 @@
             background-color: $secondaryColor;
             position: absolute;
             left: 25%;
-            bottom: -17px;
+            bottom: 32px;
             z-index: 2;
             @include screen('tablet') {
                 left: 25%;
@@ -2369,21 +2378,22 @@
                 left: 15%;
             }
             @include screen('xs_mobile') {
-                left: 0;
+                width: 15%;
+                left: 7%;
             }
         }
-        .videos_block {
-            padding: 0px 30px 30px;
+        .videos_item {
+            padding: 0px 30px 0px;
             position: relative;
             float: left;
             @include screen('tablet') {
-                padding: 0px 20px 30px;
+                padding: 0px 20px 0px;
             }
             @include screen('mobile') {
-                padding: 0px 10px 30px;
+                padding: 0px 10px 0px;
             }
             @include screen('xs_mobile') {
-                padding: 0px 0 30px;
+                padding: 0px 0 0px;
             }
             a {
                 position: relative;
@@ -2492,7 +2502,7 @@
         // 箭頭
         .slick-prev, .slick-next {
             top: auto;
-            bottom: -50px;
+            bottom: 0px;
             border: 1px solid #ccc;
             width: 70px !important;
             height: 70px !important;
@@ -2542,10 +2552,7 @@
         }
     }
     .more {
-        margin: 45px 5% 0 0;
-        @include screen('tablet') {
-            margin: 120px 3% 0 0;
-        }
+        margin-bottom: 20px;
     }
 }
 // 新聞訊息列表頁
@@ -4513,10 +4520,12 @@
     margin-bottom: 50px;
     .cooperation_feedback_group {
         background-color: #f1f1f1;
-        padding: 70px 30px 150px;
+        padding: 30px 30px 100px;
+        overflow: hidden;
+        position: relative;
         .cooperation_silder {
-            margin: 0;
-            position: relative;
+            margin: 0 0 20px;
+            position: initial;
             &:before {
                 content: '';
                 width: 30%;
@@ -4524,7 +4533,7 @@
                 background-color: #bec1ba;
                 position: absolute;
                 left: 25%;
-                bottom: -67px;
+                bottom: 55px;
                 z-index: 1;
                 @include screen('tablet') {
                     left: 25%;
@@ -4534,7 +4543,8 @@
                     left: 15%;
                 }
                 @include screen('xs_mobile') {
-                    left: 0;
+                    width: 35%;
+                    left: 7%;
                 }
             }
             &:after {
@@ -4544,7 +4554,7 @@
                 background-color: $secondaryColor;
                 position: absolute;
                 left: 25%;
-                bottom: -67px;
+                bottom: 55px;
                 z-index: 2;
                 @include screen('tablet') {
                     left: 25%;
@@ -4554,7 +4564,8 @@
                     left: 15%;
                 }
                 @include screen('xs_mobile') {
-                    left: 0;
+                    width: 15%;
+                    left: 7%;
                 }
             }
             .cooperation_block {
@@ -4621,7 +4632,7 @@
             // 箭頭
             .slick-prev, .slick-next {
                 top: auto;
-                bottom: -100px;
+                bottom: 22px;
                 border: 1px solid #ccc;
                 width: 70px !important;
                 height: 70px !important;

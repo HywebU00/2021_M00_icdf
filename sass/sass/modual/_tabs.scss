@@ -383,11 +383,10 @@
         left: 0;
         right: 0;
         clear: both;
-        padding: 30px 0px 100px;
+        padding: 30px 0px;
         display: none;
         @include screen('mobile') {
             position: static;
-            padding: 30px 0 30px;
         }
         ul {
             @include li-reset;
@@ -411,10 +410,7 @@
             }
         }
         .more {
-            margin: 45px 5% 0 0;
-            @include screen('tablet') {
-                margin: 120px 3% 0 0;
-            }
+            margin-top: 20px;
         }
     }
 }
@@ -603,7 +599,6 @@
                             border-radius: 15px;
                             overflow: hidden;
                             position: relative;
-                           
                             &:before {
                                 content: '';
                                 height: 100%;
