@@ -729,7 +729,7 @@ $(function() {
 })
 // 人才公告 videos燈箱
 $(function() {
-    $('.videos_block .videos_block a.movie').click(function() {
+    $('.videos_block .videos_item a.movie').click(function() {
         $('.movie_lightbox').fadeIn();
         $('body').addClass('noscroll');
     })
