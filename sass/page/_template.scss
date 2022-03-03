@@ -65,6 +65,11 @@ h2.title {
         letter-spacing: 0.02em;
         line-height: 1em;
     }
+    em{
+        display: block;
+        font-style: normal;
+        margin-bottom: 6px;
+    }
 }
 h3 {
     font-size: 1.25em;

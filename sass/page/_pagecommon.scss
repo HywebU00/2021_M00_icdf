@@ -807,7 +807,7 @@
                                 left: 0;
                                 right: 0;
                                 bottom: 0;
-                                object-fit: cover;
+                                object-fit: contain;
                                 transition: .5s;
                             }
                         }
@@ -1045,7 +1045,7 @@
                         left: 0;
                         right: 0;
                         bottom: 0;
-                        object-fit: cover;
+                        object-fit:contain;
                         transition: .5s;
                     }
                     .date {
@@ -1600,7 +1600,7 @@
                         left: 0;
                         right: 0;
                         bottom: 0;
-                        object-fit: cover;
+                        object-fit: contain;
                         transition: .5s;
                     }
                     .explaincontent {
