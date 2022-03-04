@@ -61,23 +61,6 @@
                 text-align: center;
                 font-size: 1.063em;
             }
-            &.hasChild {
-                >a {
-                    &:after {
-                        content: '';
-                        width: 4px;
-                        height: 4px;
-                        display: inline-block;
-                        margin-left: 0.5em;
-                        vertical-align: middle;
-                        border: 2px solid #fff;
-                        transform: rotate(135deg);
-                        border-bottom: none;
-                        border-left: none;
-                        margin-bottom: 0.2em;
-                    }
-                }
-            }
             &:hover {
                 >a {
                     color: $linkColor;
@@ -96,6 +79,23 @@
             a {
                 display: block;
                 text-decoration: none;
+            }
+            &.hasChild {
+                >a {
+                    &:after {
+                        content: '';
+                        width: 4px;
+                        height: 4px;
+                        display: inline-block;
+                        margin-left: 0.5em;
+                        vertical-align: middle;
+                        border: 2px solid #fff;
+                        transform: rotate(135deg);
+                        border-bottom: none;
+                        border-left: none;
+                        margin-bottom: 0.2em;
+                    }
+                }
             }
             // 第二層選單樣式
             ul {
@@ -144,7 +144,7 @@
                             background-color: $linkColor;
                             position: absolute;
                             left: 8px;
-                            top: 13px;
+                            top: 17px;
                         }
                         &:hover,
                         &:focus {

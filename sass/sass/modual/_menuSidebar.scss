@@ -137,7 +137,7 @@ $menuItems: 15;
                         background-color: transparent;
                         font-size: 0.938em;
                         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-                        padding: 20px;
+                        padding: 20px 0 20px 20px;
                         overflow: hidden;
                         li {
 
@@ -176,7 +176,7 @@ $menuItems: 15;
                             &.plancountry {
                                 display: block;
                                 ul.countryarea {
-                                    padding: 0px 0px 20px 5px !important;
+                                    padding: 0px 15px 20px 5px !important;
                                     li {
                                         width: 100% !important;
                                         flex-basis: 100% !important;
