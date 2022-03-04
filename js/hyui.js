@@ -111,6 +111,32 @@ $(function() {
         liHasChild2_level2 = $('aside .megamenu ul ul').children('li.hasChild'),
         liHasChild2_level3 = $('aside .megamenu ul ul ul').children('li.hasChild'),
         subMenuWidth2 = liHasChild2.first().children('ul').outerWidth();
+
+    // megamenu 國家
+    var _countrygroup01 = $('.m_area .megamenu .countrylist:first-of-type ul'),
+        _countrygroup02 = $('.m_area .megamenu .countrylist:nth-of-type(2) ul'),
+        _countrygroup03 = $('.m_area .megamenu .countrylist:nth-of-type(3) ul'),
+        _countrygroup04 = $('.m_area .megamenu .countrylist:nth-of-type(4) ul'),
+        _countrygroup05 = $('.m_area .megamenu .countrylist:nth-of-type(5) ul'),
+        _countrygroup06 = $('.m_area .megamenu .countrylist:nth-of-type(6) ul'),
+        _countrygroup07 = $('.m_area .megamenu .countrylist:nth-of-type(7) ul');
+    // megamenu 國家 先複製過去 手機
+    var _countrygroupA = $('.m_area .megamenu .mappic .plancountry .countryarea li:first-child a'),
+        _countrygroupB = $('.m_area .megamenu .mappic .plancountry .countryarea li:nth-child(2) a'),
+        _countrygroupC = $('.m_area .megamenu .mappic .plancountry .countryarea li:nth-child(3) a'),
+        _countrygroupD = $('.m_area .megamenu .mappic .plancountry .countryarea li:nth-child(4) a'),
+        _countrygroupE = $('.m_area .megamenu .mappic .plancountry .countryarea li:nth-child(5) a'),
+        _countrygroupF = $('.m_area .megamenu .mappic .plancountry .countryarea li:nth-child(6) a'),
+        _countrygroupG = $('.m_area .megamenu .mappic .plancountry .countryarea li:nth-child(7) a');
+    _countrygroup01.insertAfter(_countrygroupA);
+    _countrygroup02.insertAfter(_countrygroupB);
+    _countrygroup03.insertAfter(_countrygroupC);
+    _countrygroup04.insertAfter(_countrygroupD);
+    _countrygroup05.insertAfter(_countrygroupE);
+    _countrygroup06.insertAfter(_countrygroupF);
+    _countrygroup07.insertAfter(_countrygroupG);
+
+     // $('.m_area .megamenu .countryarea li').has('ul').addClass('hasChild');
     // 切換PC/Mobile 選單
     function mobileMenu() {
         ww = _window.outerWidth();
@@ -171,6 +197,7 @@ $(function() {
             liHasChild2.on('touchstart', function() {
                 $(this).off('mouseenter,mouseleave');
             });
+
             // 第一層選單
             liHasChild2_level1.off().on('click', function(e) {
                 $(this).siblings('li').find('ul').stop(true, true).slideUp('600', 'easeOutQuint');
@@ -183,8 +210,12 @@ $(function() {
             });
             // 第三層選單
             liHasChild2_level3.off().on('click', function(e) {
-                e.preventDefault();
+                $(this).siblings('li').children('ul').stop(true, true).slideUp('600', 'easeOutQuint');
+                $(this).children('ul').stop(true, true).slideDown('600', 'easeOutQuint');
+                // e.preventDefault();
             });
+            // 刪除countrylist
+            $('.m_area .megamenu .mappic').find('.countrylist').remove();
             //手機版第第一層點了不會進入內頁，拿掉第一層的連結無作用
             $('.sidebar .megamenu .hasChild').children('a').off().on('click', function(e) {
                 e.preventDefault();
@@ -257,6 +288,36 @@ $(function() {
             //         $('.menu').find('li ul').hide();
             //     }
             // });
+            // megamenu 各國合作計畫
+            $('.megamenu .countrylist:nth-of-type(1)').show();
+            $('.megamenu .countryarea li:first-child').mouseover(function() {
+                $('.megamenu .countrylist').hide();
+                $('.megamenu .countrylist:nth-of-type(1)').show();
+            })
+            $('.megamenu .countryarea li:nth-child(2)').mouseover(function() {
+                $('.megamenu .countrylist').hide();
+                $('.megamenu .countrylist:nth-of-type(2)').show();
+            })
+            $('.megamenu .countryarea li:nth-child(3)').mouseover(function() {
+                $('.megamenu .countrylist').hide();
+                $('.megamenu .countrylist:nth-of-type(3)').show();
+            })
+            $('.megamenu .countryarea li:nth-child(4)').mouseover(function() {
+                $('.megamenu .countrylist').hide();
+                $('.megamenu .countrylist:nth-of-type(4)').show();
+            })
+            $('.megamenu .countryarea li:nth-child(5)').mouseover(function() {
+                $('.megamenu .countrylist').hide();
+                $('.megamenu .countrylist:nth-of-type(5)').show();
+            })
+            $('.megamenu .countryarea li:nth-child(6)').mouseover(function() {
+                $('.megamenu .countrylist').hide();
+                $('.megamenu .countrylist:nth-of-type(6)').show();
+            })
+            $('.megamenu .countryarea li:nth-child(7)').mouseover(function() {
+                $('.megamenu .countrylist').hide();
+                $('.megamenu .countrylist:nth-of-type(7)').show();
+            })
         }
     }
     //行動版/電腦版切換
@@ -688,6 +749,7 @@ $(function() {
             }
         });
     }
+
     function tabSet5() {
         $('.InSPIRE_tab').each(function() {
             var _tab = $(this),

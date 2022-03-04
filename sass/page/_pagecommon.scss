@@ -802,13 +802,14 @@
                             img {
                                 position: absolute;
                                 width: 100% !important;
-                                height: 100% !important;
+                                height: auto !important;
                                 top: 0;
                                 left: 0;
                                 right: 0;
                                 bottom: 0;
                                 object-fit: contain;
                                 transition: .5s;
+                                margin:0 auto auto;
                             }
                         }
                         .explaincontent {
@@ -1040,13 +1041,15 @@
                     img {
                         position: absolute;
                         width: 100% !important;
-                        height: 100% !important;
+                        height: auto !important;
                         top: 0;
                         left: 0;
                         right: 0;
                         bottom: 0;
                         object-fit:contain;
                         transition: .5s;
+                        margin:0 auto auto;
+
                     }
                     .date {
                         background-color: $primaryColor;
@@ -1595,13 +1598,14 @@
                     img {
                         position: absolute;
                         width: 100% !important;
-                        height: 100% !important;
+                        height: auto !important;
                         top: 0;
                         left: 0;
                         right: 0;
                         bottom: 0;
                         object-fit: contain;
                         transition: .5s;
+                        margin:0 auto auto;
                     }
                     .explaincontent {
                         position: absolute;

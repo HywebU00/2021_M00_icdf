@@ -14,7 +14,7 @@
     z-index: 9;
     clear: both;
     background-color: $primaryColor;
-    padding:0 15px;
+    padding: 0 15px;
     @include screen('mobile') {
         display: none;
     }
@@ -113,13 +113,11 @@
                 align-items: flex-start;
                 flex-wrap: wrap;
                 background-color: #fff;
-                &.mappic{
-                    background-image:url('../images/menu_map.png');
-                    background-repeat:no-repeat;
+                &.mappic {
+                    background-image: url('../images/menu_map.png');
+                    background-repeat: no-repeat;
                     background-position: center;
-                    background-size:contain;
-
-
+                    background-size: contain;
                 }
                 li {
                     flex: none;
@@ -159,7 +157,7 @@
                         flex-wrap: wrap;
                         ul.countryarea {
                             display: block !important;
-                            background-color:transparent;
+                            background-color: transparent;
                             li {
                                 display: block;
                                 float: left;
@@ -167,35 +165,33 @@
                                 width: auto !important;
                                 flex-basis: auto !important;
                                 position: static;
-                                a{
-                                    padding:0.3em 1em;
-
+                                a {
+                                    padding: 0.3em 1em;
                                 }
                             }
                         }
                         .countrylist {
-                            display:none;
+                            display: none;
                             clear: both;
                             float: none;
                             margin-bottom: 40px;
-                           
                             >ul {
                                 position: relative;
                                 left: auto;
-                                padding:0;
-                                margin:0;
+                                padding: 0;
+                                margin: 0;
                                 display: flex;
                                 flex-wrap: wrap;
                                 font-size: 0.938em;
-                                background-color:transparent;
+                                background-color: transparent;
                                 li {
-                                    flex:none;
+                                    flex: none;
                                     flex-basis: 22%;
-                                    margin:0 1.5% ;
+                                    margin: 0 1.5%;
                                     a {
                                         white-space: nowrap;
-                                        padding:0.3em 1em;
-                                        box-sizing:border-box;
+                                        padding: 0.3em 1em;
+                                        box-sizing: border-box;
                                         &:before {
                                             display: none;
                                         }

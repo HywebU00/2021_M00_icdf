@@ -199,36 +199,7 @@ $(function() {
     setTimeout(function() {
         $carousel.find('.start').removeClass('start');
     }, 0)
-    // megamenu 各國合作計畫
-    $('.megamenu .countrylist:nth-of-type(1)').show();
-    $('.megamenu .countryarea li:first-child').mouseover(function() {
-        $('.megamenu .countrylist').hide();
-        $('.megamenu .countrylist:nth-of-type(1)').show();
-    })
-    $('.megamenu .countryarea li:nth-child(2)').mouseover(function() {
-        $('.megamenu .countrylist').hide();
-        $('.megamenu .countrylist:nth-of-type(2)').show();
-    })
-    $('.megamenu .countryarea li:nth-child(3)').mouseover(function() {
-        $('.megamenu .countrylist').hide();
-        $('.megamenu .countrylist:nth-of-type(3)').show();
-    })
-    $('.megamenu .countryarea li:nth-child(4)').mouseover(function() {
-        $('.megamenu .countrylist').hide();
-        $('.megamenu .countrylist:nth-of-type(4)').show();
-    })
-    $('.megamenu .countryarea li:nth-child(5)').mouseover(function() {
-        $('.megamenu .countrylist').hide();
-        $('.megamenu .countrylist:nth-of-type(5)').show();
-    })
-    $('.megamenu .countryarea li:nth-child(6)').mouseover(function() {
-        $('.megamenu .countrylist').hide();
-        $('.megamenu .countrylist:nth-of-type(6)').show();
-    })
-    $('.megamenu .countryarea li:nth-child(7)').mouseover(function() {
-        $('.megamenu .countrylist').hide();
-        $('.megamenu .countrylist:nth-of-type(7)').show();
-    })
+    
     // 首頁固定側邊區塊選單
     var _sidebargroup2 = $('.fixed_sidebar_group')
     _sidebargroup2.children('ul').children('li').find('a').each(function(index, el) {
