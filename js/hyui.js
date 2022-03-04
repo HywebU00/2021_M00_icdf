@@ -106,12 +106,6 @@ $(function() {
         liHasChild_level2 = $('aside .menu ul ul').children('li.hasChild'),
         liHasChild_level3 = $('aside .menu ul ul ul').children('li.hasChild'),
         subMenuWidth = liHasChild.first().children('ul').outerWidth();
-    // megamenu
-    var liHasChild2_level1 = $('aside .megamenu ul').children('li.hasChild'),
-        liHasChild2_level2 = $('aside .megamenu ul ul').children('li.hasChild'),
-        liHasChild2_level3 = $('aside .megamenu ul ul ul').children('li.hasChild'),
-        subMenuWidth2 = liHasChild2.first().children('ul').outerWidth();
-
     // megamenu 國家
     var _countrygroup01 = $('.m_area .megamenu .countrylist:first-of-type ul'),
         _countrygroup02 = $('.m_area .megamenu .countrylist:nth-of-type(2) ul'),
@@ -135,8 +129,13 @@ $(function() {
     _countrygroup05.insertAfter(_countrygroupE);
     _countrygroup06.insertAfter(_countrygroupF);
     _countrygroup07.insertAfter(_countrygroupG);
-
-     // $('.m_area .megamenu .countryarea li').has('ul').addClass('hasChild');
+    // megamenu
+    $('.m_area .megamenu .countryarea li').has('ul').addClass('hasChild');
+    // 
+    var liHasChild2_level1 = $('aside .megamenu ul').children('li.hasChild'),
+        liHasChild2_level2 = $('aside .megamenu ul ul').children('li.hasChild'),
+        liHasChild2_level3 = $('aside .megamenu ul ul ul').children('li.hasChild a'),
+        subMenuWidth2 = liHasChild2.first().children('ul').outerWidth();
     // 切換PC/Mobile 選單
     function mobileMenu() {
         ww = _window.outerWidth();
@@ -197,7 +196,6 @@ $(function() {
             liHasChild2.on('touchstart', function() {
                 $(this).off('mouseenter,mouseleave');
             });
-
             // 第一層選單
             liHasChild2_level1.off().on('click', function(e) {
                 $(this).siblings('li').find('ul').stop(true, true).slideUp('600', 'easeOutQuint');
@@ -210,8 +208,8 @@ $(function() {
             });
             // 第三層選單
             liHasChild2_level3.off().on('click', function(e) {
-                $(this).siblings('li').children('ul').stop(true, true).slideUp('600', 'easeOutQuint');
-                $(this).children('ul').stop(true, true).slideDown('600', 'easeOutQuint');
+                $(this).parent('li').children('ul').stop(true, true).slideUp('600', 'easeOutQuint');
+                $(this).siblings('ul').stop(true, true).slideDown('600', 'easeOutQuint');
                 // e.preventDefault();
             });
             // 刪除countrylist
