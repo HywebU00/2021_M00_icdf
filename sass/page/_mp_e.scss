@@ -620,12 +620,15 @@ a.more {
             z-index: 2;
             font-size: 1.5em;
             color: #fff;
-            background-color: rgba(134, 176, 167, 0.9);
+            background-color: rgba(134, 176, 167, 0.6);
             padding: 30px 40px;
             box-sizing: border-box;
             width: 40vw;
             top: 10%;
             left: 6%;
+            @include screen('mobile'){
+                background-color: rgba(134, 176, 167, 1);
+            }
             a {
                 position: relative;
             }
@@ -645,6 +648,10 @@ a.more {
                 opacity: 0;
                 a {
                     color: #fff;
+                    text-shadow: rgba(0, 0, 0, 0.25) 0px 8px 20px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
+                    @include screen('mobile'){
+                        text-shadow:none;
+                    }
                     &:hover {
                         color: #fff;
                         text-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
