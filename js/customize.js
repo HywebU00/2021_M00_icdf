@@ -177,8 +177,9 @@ $(function() {
         infinite: true,
     });
     // 圖片輪播圖變大
+
     var $carousel = $('.mpSlider2').slick({
-        mobileFirst: true,
+        
         dots: true,
         arrows: false,
         infinite: true,
@@ -189,7 +190,19 @@ $(function() {
         lazyLoaded: true,
         lazyLoad: 'ondemand',
         ease: 'ease',
-        pauseOnHover: false
+        pauseOnHover: false,
+        responsive: [ {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
     /* The first slide will not get the animation,
     therefore I add and remove a class that will trigger the css animation */
@@ -199,7 +212,6 @@ $(function() {
     setTimeout(function() {
         $carousel.find('.start').removeClass('start');
     }, 0)
-    
     // 首頁固定側邊區塊選單
     var _sidebargroup2 = $('.fixed_sidebar_group')
     _sidebargroup2.children('ul').children('li').find('a').each(function(index, el) {

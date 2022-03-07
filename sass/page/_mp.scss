@@ -371,6 +371,7 @@ a.more {
         height: 70px;
         margin: 0 auto;
         text-align: center;
+        display: none;
         @include screen('mobile') {
             display: none;
         }
@@ -462,11 +463,11 @@ a.more {
                         width: 100px;
                         height: 100px;
                         background-image: url('../images/icon_movie.svg');
-                        background-repeat:no-repeat;
-                        background-position:center;
+                        background-repeat: no-repeat;
+                        background-position: center;
                         background-size: 100%;
                         position: absolute;
-                        border-radius:50%;
+                        border-radius: 50%;
                         left: 50%;
                         top: 25%;
                         margin-left: -50px;
@@ -475,19 +476,23 @@ a.more {
                         z-index: 2;
                         transition: .5s;
                         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                       
                         @include screen('tablet') {
                             width: 80px;
                             height: 80px;
                         }
                         @include screen('mobile') {
-                            top: 63%;
-                            left: 55%;
+                            left: 50%;
+                            top: 150px;
                             width: 60px;
                             height: 60px;
                         }
+                        @include screen('xs_mobile') {
+                            top: 120px;
+                            left: 55%;
+                            width: 46px;
+                            height: 46px;
+                        }
                     }
-                    
                     &:hover {
                         &:before {
                             background-image: url('../images/icon_movie_hover.svg');
@@ -520,11 +525,8 @@ a.more {
                     width: 100vw;
                     left: auto;
                     top: auto;
-                    bottom: 12%;
-                    padding: 15px 30px 15px 60px;
-                    @include screen('tablet') {
-                        bottom: 20%;
-                    }
+                    bottom: 0%;
+                    padding: 15px 30px 35px 60px;
                     @include screen('mobile') {
                         width: 100%;
                         left: 0;
@@ -540,7 +542,7 @@ a.more {
                     width: 35vw;
                     left: auto;
                     top: 10%;
-                    right: 5%;
+                    right: 7%;
                     @include screen('tablet') {
                         width: 40vw;
                     }
@@ -595,8 +597,11 @@ a.more {
             width: 35vw;
             top: 10%;
             left: 6%;
-            &.bggray{
-               background-color: rgba(153, 153, 153, .6); 
+            &.bggray {
+                background-color: rgba(0, 0, 0, .6);
+                @include screen('mobile') {
+                    background-color: rgba(0, 0, 0, 1);
+                }
             }
             a {
                 position: relative;
@@ -663,9 +668,9 @@ a.more {
                 @include screen('xs_mobile') {
                     font-size: 0.688em;
                 }
-                p{
-                    margin:0;
-                    padding:0;
+                p {
+                    margin: 0;
+                    padding: 0;
                 }
                 a {
                     @include screen('xs_mobile') {
@@ -712,23 +717,47 @@ a.more {
             }
         }
     }
+    // 箭頭
+    .slick-prev, .slick-next {
+        top: 100px;
+        width: 60px !important;
+        height: 60px !important;
+        @include screen('xs_mobile') {
+            top: 70px;
+            width: 46px !important;
+            height: 46px !important;
+        }
+    }
+    .slick-prev {
+        left: 40px;
+        @include screen('xs_mobile') {
+            left: 20px;
+        }
+    }
+    .slick-next {
+        right: 40px;
+        @include screen('xs_mobile') {
+            right: 20px;
+        }
+    }
     // 點點
     .slick-dots {
         justify-content: flex-start;
-        padding-left: 5%;
-        bottom: 40px;
+        padding: 0 60px;
+        bottom: 5px;
+        flex-wrap: wrap;
         @include screen('mobile') {
             bottom: 0;
             position: relative;
             justify-content: center;
-            padding-left: 0;
+            padding: 0 60px;
             margin-top: 20px;
         }
         li {
             /* 兩點的距離 */
-            margin: 0 5px;
+            margin: 0 5px 15px;
             @include screen('mobile') {
-                margin: 0 3px;
+                margin: 0 3px 15px;
                 position: relative;
                 bottom: 0;
             }
@@ -736,7 +765,7 @@ a.more {
                 /* 點的顏色 */
                 background: #fff;
                 opacity: 1;
-                width: 80px;
+                width: 40px;
                 height: 2px;
                 border-radius: 0;
                 position: relative;
@@ -765,7 +794,7 @@ a.more {
                     }
                     &:before {
                         content: '';
-                        width: 80px;
+                        width: 40px;
                         height: 2px;
                         position: absolute;
                         top: 0;
@@ -794,7 +823,7 @@ a.more {
                                     width: 0;
                                 }
                                 to {
-                                    width: 80px;
+                                    width: 40px;
                                 }
                             }
                             @keyframes dots2 {
