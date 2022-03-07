@@ -746,7 +746,7 @@ a.more {
     // 點點
     .slick-dots {
         justify-content: flex-start;
-        padding: 0 60px;
+        padding: 0 30px;
         bottom: 5px;
         flex-wrap: wrap;
         @include screen('mobile') {
