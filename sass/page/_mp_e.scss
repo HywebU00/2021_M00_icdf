@@ -590,18 +590,16 @@ a.more {
             z-index: 2;
             font-size: 1.5em;
             color: #fff;
-            background-color: rgba(134, 176, 167, 0.6);
+            background-color: rgba(0, 0, 0, .6);
             padding: 15px;
             box-sizing: border-box;
             width: 35vw;
             top: 10%;
             left: 6%;
-            &.bggray {
-                background-color: rgba(0, 0, 0, .6);
-                @include screen('mobile') {
+            @include screen('mobile') {
                     background-color: rgba(0, 0, 0, 1);
                 }
-            }
+           
             a {
                 position: relative;
             }
@@ -806,7 +804,7 @@ a.more {
                         left: 0;
                         max-height: 100%;
                         max-width: 100%;
-                        animation-name: dots;
+                        animation-name: dots2;
                         animation-duration: 8s;
                         background: #65c0b8;
                         @include screen('mobile') {
@@ -821,14 +819,7 @@ a.more {
                     &:focus {
                         /* 點 active  focus的顏色 */
                         &:before {
-                            @keyframes dots {
-                                from {
-                                    width: 0;
-                                }
-                                to {
-                                    width: 40px;
-                                }
-                            }
+                            
                             @keyframes dots2 {
                                 from {
                                     width: 0;
@@ -1871,17 +1862,15 @@ a.more {
                     display: block;
                     position: absolute;
                     top: 0;
-                    bottom: 0;
+                    bottom: auto;
                     right: 0;
                     left: 0;
                     margin: auto;
                     width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                    height:  auto;
+                    object-fit: contain;
                     transition: .5s;
-                    @include screen('tablet') {
-                        object-fit: cover;
-                    }
+                    
                 }
             }
             .content {
