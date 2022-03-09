@@ -191,6 +191,7 @@ $(function() {
         lazyLoad: 'ondemand',
         ease: 'ease',
         pauseOnHover: false,
+        pauseOnFocus:false,
         responsive: [ {
                 breakpoint: 767,
                 settings: {
