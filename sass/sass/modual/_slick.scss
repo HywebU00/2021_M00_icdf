@@ -131,22 +131,22 @@
 /* 上一則 位置 圖片*/
 .slick-prev {
     left: 25px;
-    background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(0, 0, 0, .2);
+    background: url('../images/slick/icon_arrow_left2.svg') center center no-repeat RGBA(0, 0, 0, .2);
     background-size: 30px 30px;
     /* 箭頭 hover及focus 樣式 */
     &:hover, &:focus {
-        background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(0, 0, 0, .6);
+        background: url('../images/slick/icon_arrow_left2.svg') center center no-repeat RGBA(0, 0, 0, .6);
         background-size: 30px 30px;
     }
 }
 /* 下一則 位置 圖片*/
 .slick-next {
     right: 25px;
-    background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(0, 0, 0, .2);
+    background: url('../images/slick/icon_arrow_right2.svg') center center no-repeat RGBA(0, 0, 0, .2);
     background-size: 30px 30px;
     /* 箭頭 hover及focus 樣式 */
     &:hover, &:focus {
-        background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(0, 0, 0, .6);
+        background: url('../images/slick/icon_arrow_right2.svg') center center no-repeat RGBA(0, 0, 0, .6);
         background-size: 30px 30px;
     }
 }

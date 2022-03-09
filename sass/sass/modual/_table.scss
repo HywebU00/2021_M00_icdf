@@ -18,14 +18,14 @@ table {
     //     }
     // }
     td {
-        padding:0.7em 0.5em;
+        padding: 0.7em 0.5em;
         text-align: left;
     }
     td {
         border: #ddd 1px solid;
-        word-break: break-all;
+        word-break: normal;
         a {
-            word-break: break-all;
+            word-break: normal;
         }
     }
     th {
@@ -72,7 +72,6 @@ table {
             position: relative;
             padding-left: 0.5em !important;
             padding-top: 2em;
-
             white-space: normal;
             text-align: left;
             &:before {

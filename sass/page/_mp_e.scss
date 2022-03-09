@@ -596,10 +596,6 @@ a.more {
             width: 35vw;
             top: 10%;
             left: 6%;
-            @include screen('mobile') {
-                    background-color: rgba(0, 0, 0, 1);
-                }
-           
             a {
                 position: relative;
             }
@@ -614,7 +610,7 @@ a.more {
                 top: 100%;
                 bottom: auto;
                 position: relative;
-                background-color: rgba(134, 176, 167, 1);
+                background-color: rgba(0, 0, 0, .6);
             }
             .bigword, .smallword {
                 opacity: 0;
@@ -819,7 +815,6 @@ a.more {
                     &:focus {
                         /* 點 active  focus的顏色 */
                         &:before {
-                            
                             @keyframes dots2 {
                                 from {
                                     width: 0;
@@ -1867,10 +1862,9 @@ a.more {
                     left: 0;
                     margin: auto;
                     width: 100%;
-                    height:  auto;
+                    height: auto;
                     object-fit: contain;
                     transition: .5s;
-                    
                 }
             }
             .content {

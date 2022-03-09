@@ -288,31 +288,31 @@ $(function() {
             // });
             // megamenu 各國合作計畫
             $('.megamenu .countrylist:nth-of-type(1)').show();
-            $('.megamenu .countryarea li:first-child').click(function() {
+            $('.megamenu .countryarea li:first-child').mouseover(function() {
                 $('.megamenu .countrylist').hide();
                 $('.megamenu .countrylist:nth-of-type(1)').show();
             })
-            $('.megamenu .countryarea li:nth-child(2)').click(function() {
+            $('.megamenu .countryarea li:nth-child(2)').mouseover(function() {
                 $('.megamenu .countrylist').hide();
                 $('.megamenu .countrylist:nth-of-type(2)').show();
             })
-            $('.megamenu .countryarea li:nth-child(3)').click(function() {
+            $('.megamenu .countryarea li:nth-child(3)').mouseover(function() {
                 $('.megamenu .countrylist').hide();
                 $('.megamenu .countrylist:nth-of-type(3)').show();
             })
-            $('.megamenu .countryarea li:nth-child(4)').click(function() {
+            $('.megamenu .countryarea li:nth-child(4)').mouseover(function() {
                 $('.megamenu .countrylist').hide();
                 $('.megamenu .countrylist:nth-of-type(4)').show();
             })
-            $('.megamenu .countryarea li:nth-child(5)').click(function() {
+            $('.megamenu .countryarea li:nth-child(5)').mouseover(function() {
                 $('.megamenu .countrylist').hide();
                 $('.megamenu .countrylist:nth-of-type(5)').show();
             })
-            $('.megamenu .countryarea li:nth-child(6)').click(function() {
+            $('.megamenu .countryarea li:nth-child(6)').mouseover(function() {
                 $('.megamenu .countrylist').hide();
                 $('.megamenu .countrylist:nth-of-type(6)').show();
             })
-            $('.megamenu .countryarea li:nth-child(7)').click(function() {
+            $('.megamenu .countryarea li:nth-child(7)').mouseover(function() {
                 $('.megamenu .countrylist').hide();
                 $('.megamenu .countrylist:nth-of-type(7)').show();
             })

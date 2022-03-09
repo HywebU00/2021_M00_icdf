@@ -597,9 +597,7 @@ a.more {
             width: 35vw;
             top: 10%;
             left: 6%;
-             @include screen('mobile') {
-                    background-color: rgba(0, 0, 0, 1);
-                }
+            
             &.bggray {
                 background-color: rgba(0, 0, 0, .6);
                
@@ -618,7 +616,7 @@ a.more {
                 bottom: auto;
                 position: relative;
                 padding: 20px 30px;
-                background-color: rgba(134, 176, 167, 1);
+                background-color: rgba(0, 0, 0, .6);
             }
             .bigword, .smallword {
                 opacity: 0;
