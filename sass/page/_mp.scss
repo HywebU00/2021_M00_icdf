@@ -469,7 +469,7 @@ a.more {
                         position: absolute;
                         border-radius: 50%;
                         left: 50%;
-                        top: 25%;
+                        top: 35%;
                         margin-left: -50px;
                         margin-top: -50px;
                         display: block;
@@ -488,6 +488,12 @@ a.more {
                         }
                         @include screen('xs_mobile') {
                             top: 120px;
+                            left: 55%;
+                            width: 46px;
+                            height: 46px;
+                        }
+                        @media(max-width: 400px) {
+                            top: 110px;
                             left: 55%;
                             width: 46px;
                             height: 46px;
@@ -597,10 +603,8 @@ a.more {
             width: 35vw;
             top: 10%;
             left: 6%;
-            
             &.bggray {
                 background-color: rgba(0, 0, 0, .6);
-               
             }
             a {
                 position: relative;
@@ -721,20 +725,26 @@ a.more {
         top: 100px;
         width: 60px !important;
         height: 60px !important;
+        border: none;
         @include screen('xs_mobile') {
             top: 70px;
             width: 46px !important;
             height: 46px !important;
         }
+        @media(max-width: 400px) {
+            top: 60px;
+        }
     }
     .slick-prev {
         left: 40px;
+        background-color: transparent;
         @include screen('xs_mobile') {
             left: 20px;
         }
     }
     .slick-next {
         right: 40px;
+        background-color: transparent;
         @include screen('xs_mobile') {
             right: 20px;
         }
@@ -817,7 +827,6 @@ a.more {
                     &:focus {
                         /* 點 active  focus的顏色 */
                         &:before {
-                            
                             @keyframes dots2 {
                                 from {
                                     width: 0;
@@ -1146,6 +1155,11 @@ a.more {
                                 width: 80px;
                                 display: block;
                                 margin: 0 auto;
+                            }
+                            svg {
+                                width: 80px;
+                                height: 80px;
+                                display: block;
                             }
                             span {
                                 width: 120px;
@@ -1882,10 +1896,9 @@ a.more {
                     left: 0;
                     margin: auto;
                     width: 100%;
-                    height:  auto;
+                    height: auto;
                     object-fit: contain;
                     transition: .5s;
-                    
                 }
             }
             .content {
