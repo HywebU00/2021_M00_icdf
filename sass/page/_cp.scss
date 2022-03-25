@@ -91,7 +91,6 @@ h1.title {
         @extend %clearfix;
         box-sizing: border-box;
         li {
-           
             text-align: right;
             flex: 0 1 calc(100% / 3);
             margin-bottom: 0.5em;
@@ -339,21 +338,17 @@ h1.title {
         .image {
             width: 90%;
             margin: 0 auto;
-
-
         }
         .image_260 {
             width: 260px;
             margin: 0 auto;
-            
         }
         .image_130 {
             width: 130px;
             margin: 0 auto;
-            
         }
-        img{
-            border:1px solid #ddd;
+        img {
+            border: 1px solid #ddd;
         }
         @include screen('mobile') {
             order: 0;
@@ -365,6 +360,90 @@ h1.title {
         @media(max-width: 500px) {
             .image {
                 width: 100%;
+            }
+        }
+    }
+}
+// 培訓研習班課程
+.course_block {
+    h3 {
+        font-size: 1.5em;
+        padding: 12px 0px 15px 0px;
+        margin: 0.5em 0px 0.2em;
+        border-bottom: 1px solid $primaryColor;
+    }
+    .course_group {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2em 0;
+        .course_list {
+            flex: none;
+            flex-basis: 23%;
+            max-width: 23%;
+            margin: 0 1% 1.5em;
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 5px;
+            transition: .5s;
+            @include screen('tablet'){
+                flex-basis: 31%;
+                max-width: 31%;
+                margin: 0 1.166% 2em;
+            }
+            @include screen('mobile') {
+                flex-basis: 46%;
+                max-width: 46%;
+                margin: 0 2% 2em;
+            }
+            @include screen('xs_mobile') {
+                flex-basis: 100%;
+                max-width: 100%;
+                margin: 0 0 2em;
+            }
+            .image {
+                width: 100%;
+                position: relative;
+                margin: 0 auto 1em;
+                overflow: hidden;
+                @include aspect-ratio(16, 9);
+                img {
+                    position: absolute;
+                    width: 100% !important;
+                    height: 100% !important;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    object-fit: cover;
+                    transition: .5s;
+                }
+            }
+            a {
+                display: block;
+                color: $color-word;
+                &:hover {
+                    color: $aHover;
+                    text-decoration: none;
+                    .title {
+                        color: $aHover;
+                    }
+                }
+                .time{
+                    font-size: 0.875em;
+                    color:#666;
+                }
+                .title {
+                    color: $color-word;
+                    font-weight: bolder;
+                    // @include text-line(2, 1.5em);
+                }
+                p {
+                    // @include text-line(2, 1.5em);
+                    padding: 0;
+                    margin: 8px 0 0;
+                }
             }
         }
     }
