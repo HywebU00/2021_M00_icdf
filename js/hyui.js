@@ -316,6 +316,25 @@ $(function() {
                 $('.megamenu .countrylist').hide();
                 $('.megamenu .countrylist:nth-of-type(7)').show();
             })
+            // 輪播大小字
+            $(function() {
+                var bigword_len = 26; // 超過100個字以"..."取代
+                $(".mpSlider2").find('.bigword>a').each(function(i) {
+                    if ($(this).text().length > bigword_len) {
+                        $(this).attr("title", $(this).text());
+                        var text = $(this).text().substring(0, bigword_len - 1) + "...";
+                        $(this).text(text);
+                    }
+                });
+                var smallword_len = 54; // 超過100個字以"..."取代
+                $(".mpSlider2").find('.smallword>a').each(function(i) {
+                    if ($(this).text().length > smallword_len) {
+                        $(this).attr("title", $(this).text());
+                        var text = $(this).text().substring(0, smallword_len - 1) + "...";
+                        $(this).text(text);
+                    }
+                });
+            })
         }
     }
     //行動版/電腦版切換

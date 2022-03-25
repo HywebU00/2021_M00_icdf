@@ -419,6 +419,10 @@ a.more {
             position: relative;
             overflow: hidden;
             @include aspect-ratio(5.5, 2);
+            display: flex;
+            @include screen('mobile') {
+                display: block;
+            }
             // &:before {
             //     display: inline-block;
             //     content: "";
@@ -506,16 +510,135 @@ a.more {
                     }
                 }
             }
-            &.align_center {
+            &.align_top_left {
+                justify-content: flex-start;
+                align-items: flex-start;
                 .wordcontent {
-                    width: 35vw;
-                    top: 10%;
-                    left: 50%;
-                    margin-left: -17.5vw;
-                    @include screen('tablet') {
-                        width: 40vw;
-                        margin-left: -20vw;
+                    top: 5%;
+                    left: 6%;
+                    @include screen('mobile') {
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        bottom: auto;
+                        margin-left: auto;
                     }
+                }
+            }
+            &.align_top_center {
+                justify-content: center;
+                align-items: flex-start;
+                .wordcontent {
+                    top: 5%;
+                    @include screen('mobile') {
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        bottom: auto;
+                        margin-left: auto;
+                    }
+                }
+            }
+            &.align_top_right {
+                justify-content: flex-end;
+                align-items: flex-start;
+                .wordcontent {
+                    top: 5%;
+                    right: 7%;
+                    @include screen('mobile') {
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        bottom: auto;
+                        margin-left: auto;
+                    }
+                }
+            }
+            &.align_center_left {
+                justify-content: flex-start;
+                align-items: center;
+                .wordcontent {
+                    left: 6%;
+                    @include screen('mobile') {
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        bottom: auto;
+                        margin-left: auto;
+                    }
+                }
+            }
+            &.align_center_center {
+                justify-content: center;
+                align-items: center;
+                .wordcontent {
+                    @include screen('mobile') {
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        bottom: auto;
+                        margin-left: auto;
+                    }
+                }
+            }
+            &.align_center_right {
+                justify-content: flex-end;
+                align-items: center;
+                .wordcontent {
+                   
+                    right: 7%;
+                    @include screen('mobile') {
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        bottom: auto;
+                        margin-left: auto;
+                    }
+                }
+            }
+            &.align_bottom_left {
+                justify-content: flex-start;
+                align-items: flex-end;
+                .wordcontent {
+                    left: 6%;
+                    bottom:5%;
+                    @include screen('mobile') {
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        bottom: auto;
+                        margin-left: auto;
+                    }
+                }
+            }
+            &.align_bottom_center {
+                justify-content: center;
+                align-items: flex-end;
+                .wordcontent {
+                    bottom:5%;
+                    @include screen('mobile') {
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        bottom: auto;
+                        margin-left: auto;
+                    }
+                }
+            }
+            &.align_bottom_right {
+                justify-content: flex-end;
+                align-items: flex-end;
+                .wordcontent {
+                   bottom:5%;
+                    right: 7%;
                     @include screen('mobile') {
                         width: 100%;
                         left: 0;
@@ -543,24 +666,7 @@ a.more {
                     }
                 }
             }
-            &.align_right {
-                .wordcontent {
-                    width: 35vw;
-                    left: auto;
-                    top: 10%;
-                    right: 7%;
-                    @include screen('tablet') {
-                        width: 40vw;
-                    }
-                    @include screen('mobile') {
-                        width: 100%;
-                        left: 0;
-                        right: 0;
-                        top: 100%;
-                        bottom: auto;
-                    }
-                }
-            }
+            
         }
         &.slick-current {
             img {
@@ -600,9 +706,8 @@ a.more {
             background-color: rgba(0, 0, 0, .6);
             padding: 15px;
             box-sizing: border-box;
-            width: 35vw;
-            top: 10%;
-            left: 6%;
+            width: 30vw;
+           
             &.bggray {
                 background-color: rgba(0, 0, 0, .6);
             }
@@ -641,6 +746,7 @@ a.more {
                 margin-bottom: 8px;
                 line-height: 1.3em;
                 word-break: normal;
+               
                 @media(max-width: 1200px) {
                     font-size: 1em;
                 }
@@ -665,6 +771,7 @@ a.more {
                 font-size: 0.75em;
                 line-height: 1.6em;
                 word-break: normal;
+
                 @media(max-width: 1200px) {
                     font-size: 0.625em;
                 }
