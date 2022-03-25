@@ -177,9 +177,7 @@ $(function() {
         infinite: true,
     });
     // 圖片輪播圖變大
-
     var $carousel = $('.mpSlider2').slick({
-        
         dots: true,
         arrows: false,
         infinite: true,
@@ -191,8 +189,8 @@ $(function() {
         lazyLoad: 'ondemand',
         ease: 'ease',
         pauseOnHover: false,
-        pauseOnFocus:false,
-        responsive: [ {
+        pauseOnFocus: false,
+        responsive: [{
                 breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
@@ -830,7 +828,6 @@ $(function() {
         $(this).parents().siblings('.partner_list').find('.content').stop().slideUp();
     })
 })
-
 // svg
 $(function() {
     jQuery('img.svg').each(function() {
@@ -860,5 +857,3 @@ $(function() {
         }, 'xml');
     });
 })
-
-
