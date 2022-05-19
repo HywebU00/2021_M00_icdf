@@ -27,6 +27,32 @@ table {
         a {
             word-break: normal;
         }
+        &.date {
+            text-align: center;
+            color: #666;
+            @include screen('mobile') {
+                text-align: left;
+            }
+        }
+        &.num {
+            text-align: center;
+            color: #666;
+            @include screen('mobile') {
+                text-align: left;
+            }
+        }
+        &.aCenter {
+            text-align: center;
+            @include screen('mobile') {
+                text-align: left;
+            }
+        }
+        &.aRight {
+            text-align: right;
+            @include screen('mobile') {
+                text-align: left;
+            }
+        }
     }
     th {
         background-color: #f3f3f3;
