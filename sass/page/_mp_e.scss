@@ -1670,24 +1670,24 @@ a.more {
                             display: none;
                         }
                     }
-                    &.blue_point {
+                    &.pointcolor01 {
                         span {
-                            background-color: #fd77f8;
+                            background-color: #00cb9b;
                         }
                     }
-                    &.brightblue_point {
+                    &.pointcolor02 {
                         span {
-                            background-color: #08d9ee;
+                            background-color: #45bce6;
                         }
                     }
-                    &.green_point {
+                    &.pointcolor03 {
                         span {
-                            background-color: #49df4f;
+                            background-color: #f8905c;
                         }
                     }
-                    &.orangered_point {
+                    &.pointcolor04 {
                         span {
-                            background-color: #fec003;
+                            background-color: #ffbf34;
                         }
                     }
                 }
@@ -1825,25 +1825,25 @@ a.more {
                     }
                     &:nth-of-type(1) {
                         &.active {
-                            background-color: #fd77f8;
+                            background-color: #00cb9b;
                             color: #333;
                         }
                     }
                     &:nth-of-type(2) {
                         &.active {
-                            background-color: #08d9ee;
+                            background-color: #45bce6;
                             color: #333;
                         }
                     }
                     &:nth-of-type(3) {
                         &.active {
-                            background-color: #49df4f;
+                            background-color: #f8905c;
                             color: #333;
                         }
                     }
                     &:nth-of-type(4) {
                         &.active {
-                            background-color: #fec003;
+                            background-color: #ffbf34;
                             color: #333;
                         }
                     }
