@@ -35,7 +35,7 @@
                 }
                 & > a {
                     display: block;
-                    padding-left: 2em;
+                    padding-left: 2.5em;
                     position: relative;
                     line-height: 1.45em;
                     font-weight: bold;
@@ -45,11 +45,13 @@
                         color: $aHover;
                     }
                     .num {
-                        width: 1.5em;
-                        text-align: right;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
+                        width: 2em;
+                        text-align:center;
+                        position:relative;
+                        margin-left: -2.4em;
+                        // outline: 1px solid red;
+                        display: inline-block;
+
                         &:after {
                             content: '.';
                             display: inline-block;
