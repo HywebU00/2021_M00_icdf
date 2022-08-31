@@ -3915,6 +3915,7 @@
             .speaker_list {
                 display: flex;
                 padding: 0 10px;
+                align-items: flex-start;
                 @media(max-width: 450px) {
                     display: block;
                 }
@@ -5581,4 +5582,8 @@
             }
         }
     }
+}
+// 遊戲教學影片
+.video_exchange_block {
+    margin-bottom: 50px;
 }
