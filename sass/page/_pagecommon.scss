@@ -4557,8 +4557,8 @@
                     order: 1;
                     justify-content: right;
                     margin-left: auto;
-                    flex-basis: 40%;
-                    max-width: 40%;
+                    flex-basis: 45%;
+                    max-width: 45%;
                     @include screen('tablet') {
                         flex-basis: 45%;
                         max-width: 45%;
@@ -4732,6 +4732,38 @@
             }
             .cooperation_block {
                 padding: 10px;
+                &.card_block {
+                    a {
+                        .image {
+                            padding: 10px;
+                            img {
+                                object-fit: contain;
+                                width: 90% !important;
+                                height: 90% !important;
+                                top: 20px;
+                                left: 20px;
+                                right: 20px;
+                                bottom: 20px;
+                            }
+                            // &:after {
+                            //     background-color: rgba(0, 0, 0, 0.1);
+                            // }
+                        }
+                        &:hover {
+                            .image {
+                                img {
+                                    transform: scale(1);
+                                    width: 100% !important;
+                                    height: 100% !important;
+                                    top: 0px;
+                                    left: 0px;
+                                    right: 0px;
+                                    bottom: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
                 a {
                     display: block;
                     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -4912,6 +4944,7 @@
                 font-weight: 400;
                 margin-bottom: 40px;
                 font-size: 1.75em;
+                line-height: 1em;
             }
         }
         p {
@@ -5586,4 +5619,10 @@
 // 遊戲教學影片
 .video_exchange_block {
     margin-bottom: 50px;
+    .video_group {
+        height: 550px;
+        @include screen('tablet') {
+            height: 360px;
+        }
+    }
 }
