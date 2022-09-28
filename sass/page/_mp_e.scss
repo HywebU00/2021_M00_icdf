@@ -661,11 +661,13 @@ a.more {
                 .bigword {
                     animation-name: bigworddynamic;
                     animation-duration: 8s;
+                    
                 }
                 .smallword {
                     animation-name: smallworddynamic;
                     animation-duration: 8s;
                     animation-timing-function: ease-in;
+
                 }
             }
         }
@@ -739,7 +741,8 @@ a.more {
                     font-size: 0.938em;
                 }
                 a {
-                    font-family: 'Oswald', sans-serif;
+                    // font-family: 'Oswald', sans-serif;
+                     font-family: Times New Roman;
                     font-weight: 400;
                     overflow: hidden;
                     text-overflow: -o-ellipsis-lastline;
@@ -768,7 +771,8 @@ a.more {
                     padding: 0;
                 }
                 a {
-                    font-family: 'Oswald', sans-serif;
+                    // font-family: 'Oswald', sans-serif;
+                     font-family: Times New Roman;
                     font-weight: 400;
                     overflow: hidden;
                     text-overflow: -o-ellipsis-lastline;
