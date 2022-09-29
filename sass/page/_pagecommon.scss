@@ -4528,150 +4528,106 @@
                 display: block;
             }
             &:nth-of-type(2n) {
-                .origin_introduction {
+                .origin_introduction_content {
                     order: 2;
-                    padding: 90px 40px 30px 80px;
-                    margin-left: -40px;
-                    height: 450px;
-                    flex-basis: 55%;
-                    max-width: 55%;
-                    .title {
-                        &:before {
-                            z-index: 2;
-                        }
-                    }
-                    @include screen('tablet') {
+                    .origin_introduction {
                         padding: 30px 40px 30px 80px;
-                        height: auto;
-                    }
-                    @include screen('mobile') {
-                        height: auto;
-                        flex-basis: 100%;
-                        max-width: 100%;
-                        padding: 30px 40px;
-                        margin-left: 0;
-                        order: 1;
+                        .title {
+                            &:before {
+                                z-index: 2;
+                            }
+                        }
+                        @include screen('mobile') {
+                            height: auto;
+                            flex-basis: 100%;
+                            max-width: 100%;
+                            padding: 30px 40px;
+                            margin-left: 0;
+                            order: 1;
+                        }
                     }
                 }
                 .origin_pic {
                     order: 1;
-                    justify-content: right;
                     margin-left: auto;
-                    flex-basis: 45%;
-                    max-width: 45%;
-                    @include screen('tablet') {
-                        flex-basis: 45%;
-                        max-width: 45%;
-                    }
-                    .image {
-                        padding: 15px 50px;
-                    }
+                    margin-right: -40px;
+                    justify-content: flex-end;
                     @include screen('mobile') {
                         flex-basis: 100%;
                         max-width: 100%;
+                        margin-right: auto;
+                        justify-content: center;
                     }
                 }
             }
-            &:nth-of-type(3) {
-                .origin_pic {
-                    .image {
-                        background-color: transparent;
-                        box-shadow: none;
-                        padding: 30px 0px;
-                        img {
-                            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-                        }
-                        @include screen('mobile') {
-                            padding: 15px 30px;
-                            img {
-                                box-shadow: none;
-                            }
-                        }
-                        @media(max-width: 500px) {
-                            padding: 5px;
-                        }
-                    }
-                }
-            }
-            .origin_introduction {
-                flex: none;
+            .origin_introduction_content {
+                flex: 1 1 auto;
                 flex-basis: 50%;
                 max-width: 50%;
-                padding: 50px 80px 30px 40px;
-                box-sizing: border-box;
-                background-color: #eeeeee;
-                color: #333;
+                display: flex;
+                align-items: center;
                 @include screen('mobile') {
                     flex-basis: 100%;
                     max-width: 100%;
-                    padding: 50px 40px 30px 40px;
                 }
-                .title {
-                    font-size: 1.375em;
-                    font-weight: bolder;
-                    margin-bottom: 25px;
-                    position: relative;
-                    padding-left: 30px;
-                    line-height: 1.4em;
-                    em {
-                        font-family: 'Oswald', sans-serif;
-                        font-weight: 600;
-                        font-size: 1.75em;
-                        font-style: normal;
-                        padding-right: 10px;
-                        margin-left: -30px;
+                .origin_introduction {
+                    padding: 30px 80px 30px 40px;
+                    box-sizing: border-box;
+                    background-color: #eeeeee;
+                    color: #333;
+                    @include screen('mobile') {
+                        padding: 30px 40px;
                     }
-                    &:before {
-                        content: '';
-                        width: 65px;
-                        height: 1px;
-                        background-color: #333;
-                        position: absolute;
-                        left: -75px;
-                        top: 20px
+                    .title {
+                        font-size: 1.375em;
+                        font-weight: bolder;
+                        margin-bottom: 25px;
+                        position: relative;
+                        padding-left: 30px;
+                        line-height: 1.4em;
+                        em {
+                            font-family: 'Oswald', sans-serif;
+                            font-weight: 600;
+                            font-size: 1.75em;
+                            font-style: normal;
+                            padding-right: 10px;
+                            margin-left: -30px;
+                        }
+                        &:before {
+                            content: '';
+                            width: 45px;
+                            height: 1px;
+                            background-color: #333;
+                            position: absolute;
+                            left: -55px;
+                            top: 20px
+                        }
                     }
-                }
-                p {
-                    line-height: 1.85em;
+                    p {
+                        line-height: 1.85em;
+                    }
                 }
             }
             .origin_pic {
-                flex: none;
-                flex-basis: 45%;
-                max-width: 45%;
+                flex: 1 1 auto;
+                flex-basis: 50%;
+                max-width: 50%;
                 display: flex;
                 align-items: center;
-                justify-content: left;
+                justify-content: flex-start;
                 margin-left: -40px;
-                @include screen('tablet') {
-                    flex-basis: 50%;
-                    max-width: 50%;
-                }
-                .image {
-                    background-color: #fff;
-                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-                    padding: 15px 30px;
-                    box-sizing: border-box;
-                    position: relative;
-                }
                 @include screen('mobile') {
                     flex-basis: 100%;
                     max-width: 100%;
                     margin-left: 0;
+                    justify-content: center;
+                }
+                .image {
                     background-color: #fff;
                     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-                    text-align: center;
-                    padding: 15px 30px;
-                    .image {
-                        background-color: transparent;
-                        box-shadow: none;
-                        padding: 0;
-                        text-align: center;
-                        margin: auto;
-                    }
-                }
-                @media(max-width: 500px) {
-                    padding: 5px 10px;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    position: relative;
                 }
             }
         }
