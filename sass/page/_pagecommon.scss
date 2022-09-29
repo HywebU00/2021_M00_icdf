@@ -4575,6 +4575,7 @@
                     box-sizing: border-box;
                     background-color: #eeeeee;
                     color: #333;
+                    width:100%;
                     @include screen('mobile') {
                         padding: 30px 40px;
                     }
