@@ -4533,7 +4533,7 @@
                     .origin_introduction {
                         padding: 30px 40px 30px 80px;
                         .title {
-                            &:before {
+                            em {
                                 z-index: 2;
                             }
                         }
@@ -4575,7 +4575,7 @@
                     box-sizing: border-box;
                     background-color: #eeeeee;
                     color: #333;
-                    width:100%;
+                    width: 100%;
                     @include screen('mobile') {
                         padding: 30px 40px;
                     }
@@ -4584,7 +4584,7 @@
                         font-weight: bolder;
                         margin-bottom: 25px;
                         position: relative;
-                        padding-left: 30px;
+                        padding-left: 0;
                         line-height: 1.4em;
                         em {
                             font-family: 'Oswald', sans-serif;
@@ -4592,16 +4592,17 @@
                             font-size: 1.75em;
                             font-style: normal;
                             padding-right: 10px;
-                            margin-left: -30px;
-                        }
-                        &:before {
-                            content: '';
-                            width: 45px;
-                            height: 1px;
-                            background-color: #333;
-                            position: absolute;
-                            left: -55px;
-                            top: 20px
+                            margin-left: 0;
+                            position: relative;
+                            &:before {
+                                content: '';
+                                width: 45px;
+                                height: 1px;
+                                background-color: #333;
+                                position: absolute;
+                                left: -55px;
+                                top: 30px;
+                            }
                         }
                     }
                     p {
@@ -4695,8 +4696,8 @@
                             padding: 10px;
                             img {
                                 object-fit: contain;
-                                width: 90% !important;
-                                height: 90% !important;
+                                width: 80% !important;
+                                height: 80% !important;
                                 top: 20px;
                                 left: 20px;
                                 right: 20px;
@@ -4710,8 +4711,8 @@
                             .image {
                                 img {
                                     transform: scale(1);
-                                    width: 100% !important;
-                                    height: 100% !important;
+                                    width: 90% !important;
+                                    height: 90% !important;
                                     top: 0px;
                                     left: 0px;
                                     right: 0px;
@@ -5580,6 +5581,48 @@
         height: 550px;
         @include screen('tablet') {
             height: 360px;
+        }
+    }
+}
+//產品介紹
+.product_description_blcok {
+    padding-bottom: 50px;
+    .product_description_group {
+        display: flex;
+        align-items: flex-start;
+        background-color: #eee;
+        padding: 30px 40px;
+        box-sizing: border-box;
+        @include screen('mobile') {
+            flex-wrap: wrap;
+        }
+        .content_block {
+            flex: 1 1 auto;
+            .title {
+                font-size: 1.875em;
+                line-height: 1.3em;
+                margin: 0 0 30px;
+                color: #0b1e2d;
+                font-weight: bolder;
+            }
+            p {
+                line-height: 1.85em;
+            }
+        }
+        .pic_block {
+            flex: 0 0 auto;
+            flex-basis: 30%;
+            max-width: 30%;
+            margin-left: 50px;
+            @include screen('tablet') {
+                flex-basis: 40%;
+                max-width: 40%;
+            }
+            @include screen('mobile') {
+                flex-basis: 100%;
+                max-width: 100%;
+                margin-left: 0;
+            }
         }
     }
 }
