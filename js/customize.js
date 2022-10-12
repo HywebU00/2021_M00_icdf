@@ -860,6 +860,6 @@ $(function() {
 // buttonblock
 $(function(){
     $('.link_act_now').click(function(e) {
-        $(' body,html').stop(true, true).animate({ scrollTop: $('.act_now_block').offset().top - 70 }, 200, 'easeOutExpo');
+        $(' body,html').stop(true, true).animate({ scrollTop: $('.product_description_blcok').offset().top - 70 }, 200, 'easeOutExpo');
     });
 })
