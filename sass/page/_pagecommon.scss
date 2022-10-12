@@ -1776,6 +1776,9 @@
         padding: 1em 0em .5em;
         list-style-type: none;
         text-align: center;
+        @include screen('tablet') {
+            justify-content: center;
+        }
         li {
             flex: none;
             margin: 0 0 10px 2em;
@@ -5500,6 +5503,23 @@
         padding: 40px 60px;
         display: flex;
         box-sizing: border-box;
+        position: relative;
+        &:last-of-type {
+            &:after {
+                display: none;
+            }
+        }
+        &:after {
+            content: '';
+            width: 90%;
+            height: 1px;
+            background-color: $primaryColor;
+            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
         @include screen('mobile') {
             flex-wrap: wrap;
         }
@@ -5527,8 +5547,21 @@
             }
             .content {
                 font-size: 1.125em;
+                padding: 0 40px;
+                box-sizing: border-box;
+                line-height: 1.85em;
+                @include screen('tablet') {
+                    padding: 0 40px 0 0;
+                }
+                @include screen('mobile') {
+                    padding: 0;
+                }
                 p {
                     margin: 0 0 10px;
+                    text-align: left;
+                    &.aCenter {
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -5625,4 +5658,31 @@
             }
         }
     }
+}
+// 靠右按鈕
+.buttonblock {
+    .container {
+        &.keep_right {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    button {
+        margin-top: -50px;
+        margin-bottom: 20px;
+        &.btn {
+            display: block;
+            background-color: #65c0b8;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.125em;
+            font-weight: bolder;
+            letter-spacing: 0.05em;
+            border: 1px solid #65c0b8;
+            &:hover {
+                background-color: #378881;
+            }
+        }
+    }
+    .keep_right {}
 }
