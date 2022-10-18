@@ -5610,6 +5610,32 @@
 // 遊戲教學影片
 .video_exchange_block {
     margin-bottom: 50px;
+    .title{
+        span{
+            display: inline-block;
+            font-size: 0.65em;
+            position: relative;
+            padding-left: 20px;
+            &:before{
+                content: '';
+                border:8px solid $primaryColor;
+                border-top-color: transparent;
+                border-right-color:transparent;
+                border-bottom-color: transparent;
+                position: absolute;
+                left:5px;
+                top:3px;
+
+            }
+            a{
+                color:$primaryColor;
+               &:hover{
+                color:$aHover;
+                text-decoration: underline;
+               }
+            }
+        }
+    }
     .video_group {
         height: 550px;
         @include screen('tablet') {
