@@ -1205,13 +1205,13 @@ a.more {
                 }
             }
             .services_list {
-                padding: 0 120px 0 40px;
+                padding: 0 120px 20px 40px;
                 box-sizing: border-box;
                 @media(max-width: 1450px) {
-                    padding: 0 30px;
+                    padding: 0 30px 20px;
                 }
                 @media(max-width: 1300px) {
-                    padding: 0 10px 0 30px;
+                    padding: 0 10px 20px 30px;
                 }
                 @include screen('mobile') {
                     padding: 0 20px;
@@ -1219,7 +1219,7 @@ a.more {
                 ul {
                     display: flex;
                     flex-wrap: wrap;
-                    justify-content: center;
+                    justify-content:flex-start;
                     margin: 0;
                     padding: 0;
                     list-style-type: none;
